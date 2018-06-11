@@ -28,6 +28,8 @@ void initializeBufffers(void)
 //   The length of expression on success.
 int getInfixExpression(void)
 {
+    int len;
+
     if (fgets(infix, sizeof(infix), stdin) == NULL) {
         if (errno == 0) {       // Encounter end of file
             return 0;
@@ -37,7 +39,14 @@ int getInfixExpression(void)
         return 0;
     }
 
-    return strlen(infix);
+    len = strlen(infix);
+
+    // Remove newline from infix buffer
+    if(infix[len - 1] == '\n') {
+        infix[len - 1] = 0;
+    }
+
+    return len;
 }
 
 // Return the address to point to infix buffer
