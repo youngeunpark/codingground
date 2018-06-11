@@ -1,0 +1,97 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	calculator/Makefile	/^CC = gcc$/;"	m
+CFLAGS	calculator/Makefile	/^CFLAGS = -I. -g #-DDEBUG$/;"	m
+IsEmpty	stack/stack.c	/^int IsEmpty(void)$/;"	f
+IsFull	stack/stack.c	/^int IsFull(void)$/;"	f
+IsNone	calculator/buffer.h	18;"	d
+IsOperand	calculator/buffer.h	19;"	d
+IsOperator	calculator/buffer.h	20;"	d
+IsParenthesis	calculator/buffer.h	21;"	d
+IsTerminator	calculator/buffer.h	22;"	d
+LIMIT_STACK_SIZE	stack/stack.h	11;"	d
+MAX_STACK_SIZE	stack/stack.h	10;"	d
+MAX_STRING	calculator/buffer.h	5;"	d
+PeekInt	stack/stackInt.c	/^static int PeekInt(int *val)$/;"	f	file:
+PeekString	stack/stackString.c	/^static int PeekString(char **val)$/;"	f	file:
+PeekStruct	stack/stackStruct.c	/^static int PeekStruct(structType **val)$/;"	f	file:
+PopInt	stack/stackInt.c	/^static int PopInt(int *val)$/;"	f	file:
+PopString	stack/stackString.c	/^static int PopString(char **val)$/;"	f	file:
+PopStruct	stack/stackStruct.c	/^static int PopStruct(structType **val)$/;"	f	file:
+PrintInt	stack/stackInt.c	/^static void PrintInt(void)$/;"	f	file:
+PrintString	stack/stackString.c	/^static void PrintString(void)$/;"	f	file:
+PrintStruct	stack/stackStruct.c	/^static void PrintStruct(void)$/;"	f	file:
+PushInt	stack/stackInt.c	/^static int PushInt(int val)$/;"	f	file:
+PushString	stack/stackString.c	/^static int PushString(char *val)$/;"	f	file:
+PushStruct	stack/stackStruct.c	/^static int PushStruct(structType *val)$/;"	f	file:
+SIZE_POSTFIX_BUFFER	calculator/buffer.h	24;"	d
+_NONE_	calculator/buffer.h	7;"	d
+_OPERAND_	calculator/buffer.h	8;"	d
+_OPERATOR_	calculator/buffer.h	9;"	d
+_PARENTHESIS_	calculator/buffer.h	10;"	d
+_TERMINATOR_	calculator/buffer.h	11;"	d
+__BUFFER_H__	calculator/buffer.h	3;"	d
+__CALC_H__	calculator/calculator.h	3;"	d
+__CONVERT_H__	calculator/convert.h	3;"	d
+__STACKINT_H__	stack/stackInt.h	3;"	d
+__STACKSTRUCT_H__	stack/stackStruct.h	3;"	d
+__STACKSTR_H__	stack/stackString.h	3;"	d
+__STACK_H__	stack/stack.h	7;"	d
+_operator	calculator/buffer.h	/^    unsigned char _operator;$/;"	m	struct:__anon1
+_postfixT	calculator/buffer.h	/^} _postfixT;$/;"	t	typeref:struct:__anon1
+_printStruct	stack/stackStruct.c	/^static void _printStruct(void *_val)$/;"	f	file:
+calc	calculator/calculator.c	/^int calc(void)$/;"	f
+convertToPostFix	calculator/convert.c	/^int convertToPostFix(void)$/;"	f
+empty	calculator/calculator.c	/^static int empty(void)$/;"	f	file:
+empty	calculator/convert.c	/^static int empty(void)$/;"	f	file:
+getInfixBuffer	calculator/buffer.c	/^char *getInfixBuffer(void)$/;"	f
+getInfixExpression	calculator/buffer.c	/^int getInfixExpression(void)$/;"	f
+getPostfixBuffer	calculator/buffer.c	/^_postfixT *getPostfixBuffer(void)$/;"	f
+infix	calculator/buffer.c	/^static char infix[MAX_STRING];$/;"	v	file:
+initStack	calculator/calculator.c	/^static void initStack(void)$/;"	f	file:
+initStack	calculator/convert.c	/^static void initStack(void)$/;"	f	file:
+initStack	stack/stack.c	/^static void initStack(void)$/;"	f	file:
+initializeBufffers	calculator/buffer.c	/^void initializeBufffers(void)$/;"	f
+isNum	calculator/calculator.c	41;"	d	file:
+isNumeric	calculator/convert.c	92;"	d	file:
+isOperator	calculator/convert.c	/^static int isOperator(char c)$/;"	f	file:
+isParenthesis	calculator/convert.c	/^static int isParenthesis(char c)$/;"	f	file:
+isTerminator	calculator/calculator.c	42;"	d	file:
+isTerminator	calculator/convert.c	94;"	d	file:
+isWhiteChar	calculator/convert.c	95;"	d	file:
+main	calculator/main.c	/^int main(void)$/;"	f
+main	stack/stack.c	/^int main(int argc, char *argv[])$/;"	f
+parseSymbol	calculator/convert.c	/^static char *parseSymbol(char *in, _postfixT *symbol)$/;"	f	file:
+playStackInt	stack/stackInt.c	/^int playStackInt(long n)$/;"	f
+playStackString	stack/stackString.c	/^int playStackString(long n)$/;"	f
+playStackStruct	stack/stackStruct.c	/^int playStackStruct(long n)$/;"	f
+pop	calculator/calculator.c	/^static void pop(_postfixT *p)$/;"	f	file:
+pop	calculator/convert.c	/^static void pop(_postfixT *p)$/;"	f	file:
+postfix	calculator/buffer.c	/^static _postfixT postfix[MAX_STRING];$/;"	v	file:
+precedence	calculator/convert.c	/^static int precedence(char c)$/;"	f	file:
+printFnc	stack/stackStruct.c	/^    void (*printFnc)(void *);$/;"	m	struct:__anon2	file:
+printInfixBuffer	calculator/buffer.c	/^void printInfixBuffer(void)$/;"	f
+printPostfixBuffer	calculator/buffer.c	/^void printPostfixBuffer(void)$/;"	f
+printPostfixSymbol	calculator/buffer.c	/^void printPostfixSymbol(_postfixT s)$/;"	f
+push	calculator/calculator.c	/^static void push(_postfixT c)$/;"	f	file:
+push	calculator/convert.c	/^static void push(_postfixT c)$/;"	f	file:
+sp	calculator/calculator.c	/^static int sp = -1;$/;"	v	file:
+sp	calculator/convert.c	/^static int sp = -1;$/;"	v	file:
+stack	calculator/calculator.c	/^static _postfixT stack[MAX_STRING];$/;"	v	file:
+stack	calculator/convert.c	/^static _postfixT stack[MAX_STRING];$/;"	v	file:
+stack	stack/stack.c	/^void **stack;$/;"	v
+stackSize	stack/stack.c	/^int stackSize = MAX_STACK_SIZE;$/;"	v
+str	stack/stackStruct.c	/^    char *str;$/;"	m	struct:__anon2	file:
+stringData	stack/stackString.c	/^static char stringData[] = "abcdefghijklmnopqrstuvwxyz";$/;"	v	file:
+stringData	stack/stackStruct.c	/^static char stringData[] = "abcdefghijklmnopqrstuvwxyz";$/;"	v	file:
+structType	stack/stackStruct.c	/^} structType;$/;"	t	typeref:struct:__anon2	file:
+toNumeric	calculator/convert.c	93;"	d	file:
+top	calculator/calculator.c	/^static _postfixT top(void)$/;"	f	file:
+top	calculator/convert.c	/^static _postfixT top(void)$/;"	f	file:
+top	stack/stack.c	/^int top = MAX_STACK_SIZE;$/;"	v
+val	calculator/buffer.h	/^    int val;$/;"	m	struct:__anon1
+val	stack/stackStruct.c	/^    int val;$/;"	m	struct:__anon2	file:
