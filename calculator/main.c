@@ -17,21 +17,23 @@
 
 int main(void)
 {
-        printf("Supported operators: + - * / \n");
-        printf("Enter infix expression (e.g> 1 + 2 * 3)\n");
+    printf("Supported operators: + - * / \n");
+    printf("Enter infix expression (e.g> 1 + 2 * 3)\n");
 
-        while(1) {
-                // Initialize infix & postfix buffers
-                initializeBufffers();
+    while (1) {
+        // Initialize infix & postfix buffers
+        initializeBufffers();
 
-                // Read infix expresssion
-                if (!getInfixExpression()) return -1;
+        // Read infix expresssion
+        if (!getInfixExpression())
+            return -1;
 
-                // Convert infix expression into postfix one
-                if (!convertToPostFix()) return -1;
+        // Convert infix expression into postfix one
+        if (!convertToPostFix())
+            return -1;
 
-                printf("%s = %d\n", getInfixBuffer(), calc());
-        }
+        printf("%s = %d\n", getInfixBuffer(), calc());
+    }
 
-        return 0;
+    return 0;
 }

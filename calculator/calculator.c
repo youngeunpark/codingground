@@ -14,67 +14,70 @@
 
 int calc(void)
 {
-        int i = 0;
-        _postfixT a, b, s, symbol, *post = getPostfixBuffer();
+    int i = 0;
+    _postfixT a, b, s, symbol, *post = getPostfixBuffer();
 
-        initStack();
+    initStack();
 
 #ifdef DEBUG
-        printInfixBuffer();
-        printPostfixBuffer();
+    printInfixBuffer();
+    printPostfixBuffer();
 #endif
-        while (1) {
-                symbol = post[i++];
+    while (1) {
+        symbol = post[i++];
 
-                if (IsTerminator(symbol) || IsNone(symbol)) {
-                        pop(&symbol);
-                        break;
-                }
-
-                if (IsOperand(symbol)) {
-#ifdef DEBUG
-                        printPostfixSymbol(symbol);
-#endif
-                        push(symbol);
-                } else if (IsOperator(symbol)) {
-#ifdef DEBUG
-                        printPostfixSymbol(symbol);
-#endif
-                        s._operator = _OPERAND_;
-                        pop(&a);
-                        pop(&b);
-
-                        switch ((char)symbol.val) {
-                        case '+':
-                                s.val = b.val + a.val;
-                        break;
-                        case '-':
-                                s.val = b.val - a.val;
-                        break;
-                        case '*':
-                                s.val = b.val * a.val;
-                        break;
-                        case '/':
-                                if(a.val == 0) {
-                                        printf("ERROR [%s:%d] divide by zero\n", __FILE__, __LINE__);
-                                        exit(0);
-                                }
-                                s.val = b.val / a.val;
-                        break;
-                        default:
-                                printf("ERROR [%s:%d] invalid operator(%c, %d)\n", __FILE__, __LINE__, (char)symbol.val, symbol.val);
-                                exit(0);
-                        break;
-	                    }
-
-                        push(s);
-                } else {
-                        printPostfixSymbol(symbol);
-                        printf("ERROR [%s:%d] invalid symbol(_operator: %c, %d)\n", __FILE__, __LINE__, (char)symbol._operator, symbol._operator);
-                        exit(0);
-                }
+        if (IsTerminator(symbol) || IsNone(symbol)) {
+            pop(&symbol);
+            break;
         }
 
-        return symbol.val;
-}
+        if (IsOperand(symbol)) {
+#ifdef DEBUG
+            printPostfixSymbol(symbol);
+#endif
+            push(symbol);
+        } else if (IsOperator(symbol)) {
+#ifdef DEBUG
+            printPostfixSymbol(symbol);
+#endif
+            s._operator = _OPERAND_;
+            pop(&a);
+            pop(&b);
 
+            switch ((char)symbol.val) {
+            case '+':
+                s.val = b.val + a.val;
+                break;
+            case '-':
+                s.val = b.val - a.val;
+                break;
+            case '*':
+                s.val = b.val * a.val;
+                break;
+            case '/':
+                if (a.val == 0) {
+                    printf("ERROR [%s:%d] divide by zero\n", __FILE__,
+                           __LINE__);
+                    exit(0);
+                }
+                s.val = b.val / a.val;
+                break;
+            default:
+                printf("ERROR [%s:%d] invalid operator(%c, %d)\n", __FILE__,
+                       __LINE__, (char)symbol.val, symbol.val);
+                exit(0);
+                break;
+            }
+
+            push(s);
+        } else {
+            printPostfixSymbol(symbol);
+            printf("ERROR [%s:%d] invalid symbol(_operator: %c, %d)\n",
+                   __FILE__, __LINE__, (char)symbol._operator,
+                   symbol._operator);
+            exit(0);
+        }
+    }
+
+    return symbol.val;
+}

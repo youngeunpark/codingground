@@ -33,50 +33,44 @@ static void initStack(void)
 int main(int argc, char *argv[])
 {
     long n;
-    
+
     // program starts
     printf("=== stack.c starts ===\n");
-    
+
     // program exits due to invalid # of argument
-    if(argc != 2) {
+    if (argc != 2) {
         printf("Usage: a.out number\n");
         return -1;
     }
-    
     // program exits due to invalid argument
     n = strtol(argv[1], NULL, 10);
-    if((n == LONG_MIN) || (n == LONG_MAX)) {
+    if ((n == LONG_MIN) || (n == LONG_MAX)) {
         printf("Wrong argument: %s\n", argv[1]);
         return -1;
     }
-    
     // program exits due to invalid argument
-    if((n > LIMIT_STACK_SIZE) || (n <= 0)) {
+    if ((n > LIMIT_STACK_SIZE) || (n <= 0)) {
         printf("Stack size is weird: %d\n", (int)n);
         return -1;
     }
- 
     // Initialize stack of type int and test with it
     initStack();
-    if(!playStackInt(n)) {
+    if (!playStackInt(n)) {
         printf("playStackInt failed\n");
         return -1;
     }
-    
     // Initialize stack of string type and test with it
     initStack();
-    if(!playStackString(n)) {
+    if (!playStackString(n)) {
         printf("playStackString failed\n");
         return -1;
     }
- 
     // Initialize stack of type struct type and test with it
     initStack();
-    if(!playStackStruct(n)) {
+    if (!playStackStruct(n)) {
         printf("playStackStruct failed\n");
         return -1;
     }
-    
     // program successfully exits
     printf("=== stack.c ends ===\n");
     return 0;

@@ -5,7 +5,7 @@
 static void PrintString(void)
 {
     int idx = top;
-    while(idx != stackSize) {
+    while (idx != stackSize) {
         printf("stack[%d] = %s\n", idx, (char *)stack[idx]);
         idx++;
     }
@@ -15,10 +15,11 @@ static void PrintString(void)
 // Return 1 if success, 0 otherwise
 static int PushString(char *val)
 {
-    if(IsFull()) return 0;
-    
+    if (IsFull())
+        return 0;
+
     stack[--top] = (void *)val;
-    
+
     return 1;
 }
 
@@ -26,10 +27,11 @@ static int PushString(char *val)
 // Return 1 if success, 0 otherwise
 static int PopString(char **val)
 {
-    if(IsEmpty()) return 0;
-    
+    if (IsEmpty())
+        return 0;
+
     *val = (char *)stack[top++];
-    
+
     return 1;
 }
 
@@ -37,10 +39,11 @@ static int PopString(char **val)
 // Return 1 if success, 0 otherwise
 static int PeekString(char **val)
 {
-    if(IsEmpty()) return 0;
-    
+    if (IsEmpty())
+        return 0;
+
     *val = (char *)stack[top];
-    
+
     return 1;
 }
 
@@ -56,28 +59,27 @@ int playStackString(long n)
 {
     int i = (int)n, ret = 1;
     char **buf;
-    
+
     // Alloc memory buffer for stack of string
-    buf = (char **)malloc(sizeof(char *) * (size_t)i);
-    if(!buf) {
+    buf = (char **)malloc(sizeof(char *) * (size_t) i);
+    if (!buf) {
         printf("Error: %s(%d)\n", __FILE__, __LINE__);
         return 0;
     }
-
     // Create stack for string
     stackSize = top = i;
-    stack = (void **)malloc(sizeof(void *) * (size_t)i);
-    if(!stack) {
+    stack = (void **)malloc(sizeof(void *) * (size_t) i);
+    if (!stack) {
         free(buf);
         printf("Error: %s(%d)\n", __FILE__, __LINE__);
         return 0;
     }
     do {
         stack[i] = (void *)(buf[--i]);
-    } while(i);
-    
+    } while (i);
+
     // Testing starts...
-    if(IsEmpty()) {
+    if (IsEmpty()) {
         printf("string stack is empty\n");
     } else {
         printf("Oops, stack should be empty\n");
@@ -85,14 +87,14 @@ int playStackString(long n)
         ret = 0;
         goto error;
     }
-    for(i = 1; i <= 5; i++) {
-        if(!PushString(&stringData[i])) {
+    for (i = 1; i <= 5; i++) {
+        if (!PushString(&stringData[i])) {
             char *val;
-            if(IsFull()) {
+            if (IsFull()) {
                 printf("Stack is full\n");
                 break;
             } else {
-                printf("Oops! PushString[%d] failed\n", i);    
+                printf("Oops! PushString[%d] failed\n", i);
                 ret = 0;
                 goto error;
             }
@@ -103,47 +105,47 @@ int playStackString(long n)
 
     PrintString();
 
-    for(i = 1; i <= 5; i++) {
+    for (i = 1; i <= 5; i++) {
         char *val;
-        if(!PopString(&val)) {
+        if (!PopString(&val)) {
             printf("PopString[%d] failed\n", i);
             break;
         } else {
             printf("%s is poped\n", val);
         }
-        if(PeekString(&val)) {
-            printf("Val of top is %s\n", val);    
+        if (PeekString(&val)) {
+            printf("Val of top is %s\n", val);
         } else {
             printf("Stack is empty\n");
         }
     }
-    
-    for(i = 0; i < n; i++) {
-        if(!PushString(&stringData[i % sizeof(stringData)])) {
+
+    for (i = 0; i < n; i++) {
+        if (!PushString(&stringData[i % sizeof(stringData)])) {
             printf("Oops, PushString failed\n");
             ret = 0;
             goto error;
         }
     }
-    
+
     PrintString();
-    
-    if(IsFull()) {
+
+    if (IsFull()) {
         printf("stack should be full\n");
     } else {
         printf("Oops, stack is not full\n");
         ret = 0;
         goto error;
     }
-    for(i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++) {
         char *val;
-        if(!PopString(&val)) {
+        if (!PopString(&val)) {
             printf("Oops, PopString failed\n");
             ret = 0;
             goto error;
         }
     }
-    if(IsEmpty()) {
+    if (IsEmpty()) {
         printf("stack should be empty\n");
     } else {
         printf("Oops, stack is not empty\n");
@@ -151,10 +153,10 @@ int playStackString(long n)
         goto error;
     }
 
-error:    
+  error:
     free(buf);
-    free(stack); 
+    free(stack);
     stack = NULL;
-    
+
     return ret;
 }

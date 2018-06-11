@@ -5,7 +5,7 @@
 static void PrintInt(void)
 {
     int idx = top;
-    while(idx != stackSize) {
+    while (idx != stackSize) {
         printf("stack[%d] = %d\n", idx, *((int *)stack[idx]));
         idx++;
     }
@@ -15,10 +15,11 @@ static void PrintInt(void)
 // Return 1 if success, 0 otherwise
 static int PushInt(int val)
 {
-    if(IsFull()) return 0;
-    
+    if (IsFull())
+        return 0;
+
     *((int *)stack[--top]) = val;
-    
+
     return 1;
 }
 
@@ -26,10 +27,11 @@ static int PushInt(int val)
 // Return 1 if success, 0 otherwise
 static int PopInt(int *val)
 {
-    if(IsEmpty()) return 0;
-    
+    if (IsEmpty())
+        return 0;
+
     *val = *((int *)stack[top++]);
-    
+
     return 1;
 }
 
@@ -37,10 +39,11 @@ static int PopInt(int *val)
 // Return 1 if success, 0 otherwise
 static int PeekInt(int *val)
 {
-    if(IsEmpty()) return 0;
-    
+    if (IsEmpty())
+        return 0;
+
     *val = *((int *)stack[top]);
-    
+
     return 1;
 }
 
@@ -52,28 +55,27 @@ static int PeekInt(int *val)
 int playStackInt(long n)
 {
     int i = (int)n, *buf, ret = 1;
-    
+
     // Alloc memory buffer for stack of int type
-    buf = (int *)malloc(sizeof(int) * (size_t)i);
-    if(!buf) {
+    buf = (int *)malloc(sizeof(int) * (size_t) i);
+    if (!buf) {
         printf("Error: %s(%d)\n", __FILE__, __LINE__);
         return 0;
     }
-
     // Create stack for int
     stackSize = top = i;
-    stack = (void **)malloc(sizeof(void *) * (size_t)i);
-    if(!stack) {
+    stack = (void **)malloc(sizeof(void *) * (size_t) i);
+    if (!stack) {
         free(buf);
         printf("Error: %s(%d)\n", __FILE__, __LINE__);
         return 0;
     }
     do {
         stack[i] = (void *)(&buf[--i]);
-    } while(i);
-    
+    } while (i);
+
     // Testing starts...
-    if(IsEmpty()) {
+    if (IsEmpty()) {
         printf("int stack is empty\n");
     } else {
         printf("Oops, stack should be empty\n");
@@ -81,14 +83,14 @@ int playStackInt(long n)
         ret = 0;
         goto error;
     }
-    for(i = 1; i <= 5; i++) {
-        if(!PushInt(i)) {
+    for (i = 1; i <= 5; i++) {
+        if (!PushInt(i)) {
             int val;
-            if(IsFull()) {
+            if (IsFull()) {
                 printf("Stack is full\n");
                 break;
             } else {
-                printf("Oops! PushInt[%d] failed\n", i);    
+                printf("Oops! PushInt[%d] failed\n", i);
                 ret = 0;
                 goto error;
             }
@@ -99,9 +101,9 @@ int playStackInt(long n)
 
     PrintInt();
 
-    for(i = 1; i <= 5; i++) {
+    for (i = 1; i <= 5; i++) {
         int val;
-        if(!PopInt(&val)) {
+        if (!PopInt(&val)) {
             printf("PopInt[%d] failed\n", i);
             break;
         } else {
@@ -110,30 +112,30 @@ int playStackInt(long n)
         (void)PeekInt(&val);
         printf("Val of top is %d\n", val);
     }
-    
-    for(i = 0; i < n; i++) {
-        if(!PushInt(i)) {
+
+    for (i = 0; i < n; i++) {
+        if (!PushInt(i)) {
             printf("Oops, PushInt failed\n");
             ret = 0;
             goto error;
         }
     }
-    if(IsFull()) {
+    if (IsFull()) {
         printf("stack should be full\n");
     } else {
         printf("Oops, stack is not full\n");
         ret = 0;
         goto error;
     }
-    for(i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++) {
         int val;
-        if(!PopInt(&val)) {
+        if (!PopInt(&val)) {
             printf("Oops, PopInt failed\n");
             ret = 0;
             goto error;
         }
     }
-    if(IsEmpty()) {
+    if (IsEmpty()) {
         printf("stack should be empty\n");
     } else {
         printf("Oops, stack is not empty\n");
@@ -141,10 +143,10 @@ int playStackInt(long n)
         goto error;
     }
 
-error:    
+  error:
     free(buf);
-    free(stack); 
+    free(stack);
     stack = NULL;
-    
+
     return ret;
 }
