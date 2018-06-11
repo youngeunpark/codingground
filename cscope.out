@@ -1,4 +1,4 @@
-cscope 15 $HOME/codingground               0000076126
+cscope 15 $HOME/codingground               0000076754
 	@calculator/buffer.c
 
 7 
@@ -1486,6 +1486,160 @@ c⁄vîtToPo°Fix
 37 
 	}
 }
+
+	@calculator/stack.c
+
+6 
+	~<°rög.h
+>
+
+7 
+	~<°ack.h
+>
+
+9 
+_po°fixT
+ 
+	g°ack
+[
+MAX_STRING
+];
+
+10 
+	g•
+ = -1;
+
+12 
+	$push
+(
+_po°fixT
+ 
+c
+)
+
+14 
+°ack
+[++
+•
+] = 
+c
+;
+
+15 
+	}
+}
+
+17 
+	$p›
+(
+_po°fixT
+ * 
+p
+)
+
+19 *
+p
+ = 
+°ack
+[
+•
+--];
+
+20 
+	}
+}
+
+22 
+_po°fixT
+ 
+	$t›
+()
+
+24  
+°ack
+[
+•
+];
+
+25 
+	}
+}
+
+27 
+	$em±y
+()
+
+29  (
+•
+ == -1);
+
+30 
+	}
+}
+
+32 
+	$öôSèck
+()
+
+34 
+•
+ = -1;
+
+35 
+	`mem£t
+(
+°ack
+, 0x0, (stack));
+
+36 
+	}
+}
+
+	@calculator/stack.h
+
+6 #i‚de‡
+__STACK_H__
+
+
+7 
+	#__STACK_H__
+
+
+	)
+
+9 
+	~<buf„r.h
+>
+
+11 
+push
+(
+_po°fixT
+ 
+c
+);
+
+12 
+p›
+(
+_po°fixT
+ * 
+p
+);
+
+13 
+_po°fixT
+ 
+t›
+();
+
+14 
+em±y
+();
+
+15 
+öôSèck
+();
 
 	@stack/stack.c
 
@@ -13638,8 +13792,8 @@ __GCC_IEC_559_COMPLEX
 .
 1
 /usr/include
-24
-494
+26
+532
 calculator/buffer.c
 calculator/buffer.h
 calculator/calculator.c
@@ -13647,6 +13801,8 @@ calculator/calculator.h
 calculator/convert.c
 calculator/convert.h
 calculator/main.c
+calculator/stack.c
+calculator/stack.h
 stack/stack.c
 stack/stack.h
 stack/stackInt.c

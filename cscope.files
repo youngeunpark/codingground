@@ -1,10 +1,12 @@
 ./calculator/main.c
 ./calculator/convert.h
 ./calculator/calculator.h
+./calculator/stack.c
 ./calculator/convert.c
 ./calculator/buffer.c
 ./calculator/calculator.c
 ./calculator/buffer.h
+./calculator/stack.h
 ./stack/stackString.h
 ./stack/stackInt.h
 ./stack/stackInt.c
