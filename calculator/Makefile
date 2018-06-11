@@ -7,6 +7,6 @@ all: calculator
 clean:
 	rm -rf calculator *.o
 
-calculator: main.c calculator.c buffer.c convert.c
+calculator: main.c calculator.c buffer.c convert.c stack.c
 	$(CC) $(CFLAGS) -o $@ $^
 

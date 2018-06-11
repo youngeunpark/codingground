@@ -6,34 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <buffer.h>
-
-static _postfixT stack[MAX_STRING];
-static int sp = -1;
-
-static void push(_postfixT c)
-{
-        stack[++sp] = c;
-}
-
-static void pop(_postfixT *p)
-{
-        *p = stack[sp--];
-}
-
-static _postfixT top(void)
-{
-        return stack[sp];
-}
-
-static int empty(void)
-{
-        return (sp == -1);
-}
-
-static void initStack(void)
-{
-        sp = -1;
-}
+#include <stack.h>
 
 static int precedence(char c)
 {

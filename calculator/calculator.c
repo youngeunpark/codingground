@@ -7,36 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <buffer.h>
-
-static _postfixT stack[MAX_STRING];
-static int sp = -1;
-
-static void push(_postfixT c)
-{
-        stack[++sp] = c;
-}
-
-static void pop(_postfixT *p)
-{
-        *p = stack[sp--];
-}
-
-static _postfixT top(void)
-{
-        return stack[sp];
-}
-
-static int empty(void)
-{
-        return (sp == -1);
-}
-
-static void initStack(void)
-{
-        memset(stack, 0x0, sizeof(stack));
-        sp = -1;
-}
-
+#include <stack.h>
 
 #define isNum(c) ((c >= '0') && (c <= '9'))
 #define isTerminator(c) ((c == '\n') || (c == 0))
