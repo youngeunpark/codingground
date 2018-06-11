@@ -1,4 +1,6 @@
 [user]
-        email = panzee0395@gmail.com
-        name = Youngeun Park
-        username = youngeunpark
+    email = panzee0395@gmail.com
+    name = Youngeun Park
+    username = youngeunpark
+[push]
+    default = simple
