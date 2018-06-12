@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initializebuffers',['initializeBuffers',['../buffer_8c.html#ad750ab66fe8e3301c160ad724023f536',1,'initializeBuffers(void):&#160;buffer.c'],['../buffer_8h.html#ad750ab66fe8e3301c160ad724023f536',1,'initializeBuffers(void):&#160;buffer.c']]]
+  ['main',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
+  ['main_2ec',['main.c',['../main_8c.html',1,'']]]
 ];

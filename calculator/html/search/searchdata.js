@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "_bcgimpstv",
-  1: "_",
+  0: "bcgimpstv",
+  1: "s",
   2: "bcms",
   3: "cgimp",
   4: "tv"

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['calc',['calc',['../calculator_8c.html#a35315bd505668ac8d4e3348a4dce7dfc',1,'calculator.c']]],
-  ['calculator_2ec',['calculator.c',['../calculator_8c.html',1,'']]],
-  ['convert_2ec',['convert.c',['../convert_8c.html',1,'']]],
-  ['convert_2eh',['convert.h',['../convert_8h.html',1,'']]],
-  ['converttopostfix',['convertToPostFix',['../convert_8c.html#a9eee13860c4c03eac3f53c3a1f3aba80',1,'convertToPostFix(void):&#160;convert.c'],['../convert_8h.html#a9eee13860c4c03eac3f53c3a1f3aba80',1,'convertToPostFix(void):&#160;convert.c']]]
+  ['getinfixbuffer',['getInfixBuffer',['../buffer_8c.html#ada7435ed756616a3d5b760b5d3886f99',1,'getInfixBuffer(void):&#160;buffer.c'],['../buffer_8h.html#ada7435ed756616a3d5b760b5d3886f99',1,'getInfixBuffer(void):&#160;buffer.c']]],
+  ['getinfixexpression',['getInfixExpression',['../buffer_8c.html#a03b6554bffedbd364eec1ad86bf98d41',1,'getInfixExpression(void):&#160;buffer.c'],['../buffer_8h.html#a03b6554bffedbd364eec1ad86bf98d41',1,'getInfixExpression(void):&#160;buffer.c']]],
+  ['getpostfixbuffer',['getPostfixBuffer',['../buffer_8c.html#a5a51b3f44ff9ca095330fca9f9797eac',1,'getPostfixBuffer(void):&#160;buffer.c'],['../buffer_8h.html#a5a51b3f44ff9ca095330fca9f9797eac',1,'getPostfixBuffer(void):&#160;buffer.c']]]
 ];
