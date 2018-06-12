@@ -11,9 +11,9 @@
 
 #include <buffer.h>
 
-void push(_postfixT c);
-void pop(_postfixT * p);
-_postfixT top(void);
+void push(symbolT c);
+void pop(symbolT * p);
+symbolT top(void);
 int empty(void);
 void initStack(void);
 

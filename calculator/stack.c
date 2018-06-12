@@ -9,20 +9,20 @@
 #include <string.h>
 #include <stack.h>
 
-static _postfixT stack[MAX_STRING];
+static symbolT stack[MAX_STRING];
 static int sp = -1;
 
-void push(_postfixT c)
+void push(symbolT c)
 {
     stack[++sp] = c;
 }
 
-void pop(_postfixT * p)
+void pop(symbolT * p)
 {
     *p = stack[sp--];
 }
 
-_postfixT top(void)
+symbolT top(void)
 {
     return stack[sp];
 }

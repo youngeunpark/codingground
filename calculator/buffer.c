@@ -15,7 +15,7 @@
 static char infix[MAX_STRING];
 
 // postfix buffer
-static _postfixT postfix[MAX_STRING];
+static symbolT postfix[MAX_STRING];
 
 /**
     @return
@@ -90,7 +90,7 @@ void printInfixBuffer(void)
     @param
     NONE
 */
-_postfixT *getPostfixBuffer(void)
+symbolT *getPostfixBuffer(void)
 {
     return postfix;
 }
@@ -125,7 +125,7 @@ void printPostfixBuffer(void)
     @param
     s : symbol to print out
 */
-void printPostfixSymbol(_postfixT s)
+void printPostfixSymbol(symbolT s)
 {
     if (IsOperator(s)) {
         printf("%c\n", (char)s.val);

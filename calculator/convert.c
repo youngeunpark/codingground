@@ -78,7 +78,7 @@ static int isParenthesis(char c)
 // Arguments:
 //   in (in) - the buffer location to be parsed
 //   symbol (out) - parsed value
-static char *parseSymbol(char *in, _postfixT * symbol)
+static char *parseSymbol(char *in, symbolT * symbol)
 {
     char *c = in;
 
@@ -144,7 +144,7 @@ static char *parseSymbol(char *in, _postfixT * symbol)
 int convertToPostFix(void)
 {
     char *in = getInfixBuffer();
-    _postfixT symbol, previousSymbol, *post = getPostfixBuffer();
+    symbolT symbol, previousSymbol, *post = getPostfixBuffer();
     int j = 0, nOps = 0;
 
     // stack is used to convert infix to postfix
@@ -184,7 +184,7 @@ int convertToPostFix(void)
                 push(symbol);
             } else if ((char)symbol.val == ')') {
                 while (1) {
-                    _postfixT s;
+                    symbolT s;
 
                     pop(&s);
                     if ((char)s.val != '(') {

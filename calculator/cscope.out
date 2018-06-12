@@ -1,4 +1,4 @@
-cscope 15 $HOME/codingground/calculator               0000065102
+cscope 15 $HOME/codingground/calculator               0000065075
 	@buffer.c
 
 9 
@@ -24,42 +24,42 @@ MAX_STRING
 ];
 
 18 
-_po°fixT
+symbﬁT
  
 	gpo°fix
 [
 MAX_STRING
 ];
 
-23 
+24 
 	$öôülizeBuf„rs
 ()
 
-25 
+26 
 	`mem£t
 (
 öfix
 , 0x0, (infix));
 
-26 
+27 
 	`mem£t
 (
 po°fix
 , 0x0, (postfix));
 
-27 
+28 
 	}
 }
 
-34 
+38 
 	$gëInfixEx¥essi⁄
 ()
 
-36 
+40 
 Àn
 ;
 
-38 i‡(
+42 i‡(
 	`fgës
 (
 öfix
@@ -69,11 +69,11 @@ po°fix
 NULL
 ) {
 
-39 i‡(
+43 i‡(
 î∫o
  == 0) {
 
-42 
+46 
 	`¥ötf
 ("ERROR [%s:%d]Éºno(%d)\n", 
 __FILE__
@@ -83,7 +83,7 @@ __LINE__
 î∫o
 );
 
-47 
+51 
 Àn
  = 
 	`°æí
@@ -91,83 +91,83 @@ __LINE__
 öfix
 );
 
-50 if(
+54 if(
 öfix
 [
 Àn
  - 1] == '\n') {
 
-51 
+55 
 öfix
 [
 Àn
  - 1] = 0;
 
-54  
+58  
 Àn
 ;
 
-55 
+59 
 	}
 }
 
-61 *
+68 *
 	$gëInfixBuf„r
 ()
 
-63  
+70  
 öfix
 ;
 
-64 
+71 
 	}
 }
 
-69 
+80 
 	$¥ötInfixBuf„r
 ()
 
-71 
+82 
 	`¥ötf
 ("infix: ");
 
-72 
+83 
 	`¥ötf
 ("%s\n", 
 öfix
 );
 
-73 
+84 
 	}
 }
 
-79 
-_po°fixT
+93 
+symbﬁT
  *
 	$gëPo°fixBuf„r
 ()
 
-81  
+95  
 po°fix
 ;
 
-82 
+96 
 	}
 }
 
-87 
+105 
 	$¥ötPo°fixBuf„r
 ()
 
-89 
+107 
 idx
  = 0;
 
-91 
+109 
 	`¥ötf
 ("postfix:\n");
 
-93 !(
+111 !(
 	`IsTîmö©‹
 (
 po°fix
@@ -177,7 +177,7 @@ idx
 	`IsN⁄e
 (postfix[idx]))) {
 
-94 i‡(
+112 i‡(
 	`IsO≥øt‹
 (
 po°fix
@@ -185,7 +185,7 @@ po°fix
 idx
 ])) {
 
-95 
+113 
 	`¥ötf
 ("[%d] %c\n", 
 idx
@@ -195,7 +195,7 @@ po°fix
 vÆ
 );
 
-96 } i‡(
+114 } i‡(
 	`IsO≥ønd
 (
 po°fix
@@ -203,7 +203,7 @@ po°fix
 idx
 ])) {
 
-97 
+115 
 	`¥ötf
 ("[%d] %d\n", 
 idx
@@ -213,29 +213,29 @@ po°fix
 vÆ
 );
 
-99 
+117 
 idx
 ++;
 
-101 
+119 
 	}
 }
 
-106 
+128 
 	$¥ötPo°fixSymbﬁ
 (
-_po°fixT
+symbﬁT
  
 s
 )
 
-108 i‡(
+130 i‡(
 	`IsO≥øt‹
 (
 s
 )) {
 
-109 
+131 
 	`¥ötf
 ("%c\n", ()
 s
@@ -243,13 +243,13 @@ s
 vÆ
 );
 
-110 } i‡(
+132 } i‡(
 	`IsO≥ønd
 (
 s
 )) {
 
-111 
+133 
 	`¥ötf
 ("%d\n", 
 s
@@ -257,7 +257,7 @@ s
 vÆ
 );
 
-113 
+135 
 	}
 }
 
@@ -318,7 +318,7 @@ __BUFFER_H__
 ;
 
 23 } 
-	t_po°fixT
+	tsymbﬁT
 ;
 
 25 
@@ -386,7 +386,7 @@ _TERMINATOR_
  ((
 po°fix
 Ë/ (
-_po°fixT
+symbﬁT
 ))
 
 	)
@@ -408,7 +408,7 @@ gëInfixBuf„r
 ();
 
 46 
-_po°fixT
+symbﬁT
  *
 gëPo°fixBuf„r
 ();
@@ -420,7 +420,7 @@ gëPo°fixBuf„r
 52 
 ¥ötPo°fixSymbﬁ
 (
-_po°fixT
+symbﬁT
  
 s
 );
@@ -472,7 +472,7 @@ i
  = 0;
 
 21 
-_po°fixT
+symbﬁT
  
 a
 , 
@@ -866,7 +866,7 @@ c
 (*
 ö
 , 
-_po°fixT
+symbﬁT
  * 
 symbﬁ
 )
@@ -1062,7 +1062,7 @@ c
 ();
 
 147 
-_po°fixT
+symbﬁT
  
 symbﬁ
 , 
@@ -1196,7 +1196,7 @@ vÆ
  == ')') {
 
 187 
-_po°fixT
+symbﬁT
  
 s
 ;
@@ -1329,7 +1329,7 @@ __CONVERT_H__
 
 	)
 
-13 
+16 
 c⁄vîtToPo°Fix
 ();
 
@@ -1418,7 +1418,7 @@ nOps
 >
 
 12 
-_po°fixT
+symbﬁT
  
 	g°ack
 [
@@ -1432,7 +1432,7 @@ MAX_STRING
 15 
 	$push
 (
-_po°fixT
+symbﬁT
  
 c
 )
@@ -1452,7 +1452,7 @@ c
 20 
 	$p›
 (
-_po°fixT
+symbﬁT
  * 
 p
 )
@@ -1470,7 +1470,7 @@ p
 }
 
 25 
-_po°fixT
+symbﬁT
  
 	$t›
 ()
@@ -1534,7 +1534,7 @@ __STACK_H__
 14 
 push
 (
-_po°fixT
+symbﬁT
  
 c
 );
@@ -1542,13 +1542,13 @@ c
 15 
 p›
 (
-_po°fixT
+symbﬁT
  * 
 p
 );
 
 16 
-_po°fixT
+symbﬁT
  
 t›
 ();

@@ -18,7 +18,7 @@
 int calc(void)
 {
     int i = 0;
-    _postfixT a, b, s, symbol, *post = getPostfixBuffer();
+    symbolT a, b, s, symbol, *post = getPostfixBuffer();
 
     initStack();
 
