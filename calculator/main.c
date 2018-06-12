@@ -1,9 +1,10 @@
 
-/*
- * Author: Youngeun Park
- * Creation Date: 2018-06-10
- *
- * Calculator program
+/**
+    @file main.c
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    Calculator program
         reads the string of numeric infix expression,
         converts it postfix expression,
         calculates the postfix expression
@@ -17,6 +18,8 @@
 
 int main(void)
 {
+    int nOps;
+
     printf("Supported operators: + - * / \n");
     printf("Enter infix expression (e.g> 1 + 2 * 3)\n");
 
@@ -29,10 +32,14 @@ int main(void)
             return -1;
 
         // Convert infix expression into postfix one
-        if (!convertToPostFix())
+        nOps = convertToPostFix();
+        if (nOps < 0) {
             return -1;
-
-        printf("%s = %d\n", getInfixBuffer(), calc());
+        } else if(nOps == 0) {
+            printf("%s = Valid infix expression, but no operator\n", getInfixBuffer());
+        } else {
+            printf("%s = %d\n", getInfixBuffer(), calc());
+        }
     }
 
     return 0;

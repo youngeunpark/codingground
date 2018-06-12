@@ -84,35 +84,39 @@ static char *parseSymbol(char *in, _postfixT * symbol)
         printf("ERROR [%s:%d] in is NULL\n", __FILE__, __LINE__);
         return NULL;
     }
+
+    // Strip out whitespaces
+    while (isWhiteChar(*c)) {
+        c++;
+    }
+
     // Reaching terminator char
     if (isTerminator(*c)) {
         symbol->_operator = _TERMINATOR_;
         symbol->val = (int)*c;
         return c;
     }
-    // Skip whitespaces
-    while (isWhiteChar(*c)) {
-        c++;
-    }
 
     // Parsing Operator
-    if (isOperator(*c)) {       // Known operator
+    if (isOperator(*c)) {
         symbol->_operator = _OPERATOR_;
         symbol->val = (int)*c;
         return ++c;
     }
+
     // Parsing Parenthesis
-    if (isParenthesis(*c)) {    // Known operator
+    if (isParenthesis(*c)) {
         symbol->_operator = _PARENTHESIS_;
         symbol->val = (int)*c;
         return ++c;
     }
+
     // Check invalid data
     if (!isNumeric(*c)) {
         printf("ERROR [%s:%d] invalid data(%d, %c)\n", __FILE__, __LINE__,
                (int)*c, *c);
         return NULL;
-    } else {                    // Numeric operand
+    } else { // Numeric operand
         int i = 0;
 
         // Make given operand as decimal number
@@ -131,13 +135,13 @@ static char *parseSymbol(char *in, _postfixT * symbol)
 
 // Convert infix expression into postpix one
 // Return:
-//   1 on success, 0 otherwise
+//   the number of operators on success
+//   -1 on failure
 int convertToPostFix(void)
 {
     char *in = getInfixBuffer();
     _postfixT symbol, previousSymbol, *post = getPostfixBuffer();
-    int i = 0, j = 0;
-    unsigned char previous_operator = _NONE_;
+    int j = 0, nOps = 0;
 
     // stack is used to convert infix to postfix
     initStack();
@@ -145,16 +149,18 @@ int convertToPostFix(void)
     memset(&previousSymbol, 0x0, sizeof(previousSymbol));
 
     while (1) {
+        // Take out one symbol from infix expression
         in = parseSymbol(in, &symbol);
 
         if (!in) {
-            printf("ERROR [%s:%d] failed\n", __FILE__, __LINE__);
-            return 0;
+            printf("ERROR [%s:%d] parseSymbol failed\n", __FILE__, __LINE__);
+            return -1;
         }
 
         if (symbol._operator == _TERMINATOR_) {
             break;
         }
+
         // Consecutive same type of symbols must be invalid
         if (symbol._operator == previousSymbol._operator) {
             printf("ERROR [%s:%d] invalid infix expression\n", __FILE__,
@@ -162,7 +168,7 @@ int convertToPostFix(void)
             printInfixBuffer();
             printf("previous symbol : "); printPostfixSymbol(previousSymbol);
             printf("current symbol : "); printPostfixSymbol(symbol);
-            return 0;
+            return -1;
         }
 
         previousSymbol = symbol;
@@ -184,6 +190,7 @@ int convertToPostFix(void)
                     }
                 }
             } else {
+                nOps++;
                 if (empty()) {
                     push(symbol);
                 } else if (precedence((char)symbol.val) >
@@ -211,5 +218,5 @@ int convertToPostFix(void)
         pop(&post[j++]);
     }
 
-    return 1;
+    return nOps;
 }
