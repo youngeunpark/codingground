@@ -7,6 +7,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <buffer.h>
@@ -29,8 +30,9 @@ void initializeBuffers(void)
 
 /**
     @return
-    On failure, 0\n
-    On success, the length of expression
+    On failure, -1 (actually, exits program)\n
+    On encounting comment, 0\n
+    On success, the length of expression ( greater than zero )
 
     @param
     NONE
@@ -39,12 +41,20 @@ int getInfixExpression(void)
 {
     int len;
 
-    if (fgets(infix, sizeof(infix), stdin) == NULL) {
-        if (errno == 0) {       // Encounter end of file
-            return 0;
+    if (fgets(infix, sizeof(infix) - 1, stdin) == NULL) {
+        if(errno == 0) {
+            // Seems to encounter EOF
+            exit(0);
         } else {
+            // Something wrong happens
             printf("ERROR [%s:%d] errno(%d)\n", __FILE__, __LINE__, errno);
         }
+        return -1;
+    }
+
+    // expression is comment starting with #
+    if(infix[0] == '#') {
+        printf("Skip comment, %s", infix);
         return 0;
     }
 

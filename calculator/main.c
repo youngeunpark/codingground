@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <buffer.h>
 #include <convert.h>
 #include <calculator.h>
@@ -30,15 +31,16 @@ int main(void)
         initializeBuffers();
 
         // Read infix expresssion
-        if (!getInfixExpression())
-            return -1;
+        if (!getInfixExpression()) {
+            continue;
+        }
 
         // Convert infix expression into postfix one
         nOps = convertToPostFix();
         if (nOps < 0) {
-            return -1;
+            printf("%s = Invalid expression\n", getInfixBuffer());
         } else if(nOps == 0) {
-            printf("%s = Valid infix expression, but no operator\n", getInfixBuffer());
+            printf("%s = Valid expression, but no operator\n", getInfixBuffer());
         } else {
             printf("%s = %d\n", getInfixBuffer(), calc());
         }
