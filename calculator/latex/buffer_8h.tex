@@ -1,0 +1,108 @@
+\hypertarget{buffer_8h}{}\section{buffer.\+h File Reference}
+\label{buffer_8h}\index{buffer.\+h@{buffer.\+h}}
+
+
+Struct and function for buffer management.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{buffer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__postfixT}{\+\_\+postfixT}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{buffer_8h_ab5187269936538ffb8ccbbe7115ffdbc}\label{buffer_8h_ab5187269936538ffb8ccbbe7115ffdbc}} 
+\#define {\bfseries M\+A\+X\+\_\+\+S\+T\+R\+I\+NG}~1001
+\item 
+\mbox{\Hypertarget{buffer_8h_a2ea310aceef1f14012a8a85ca3ee7692}\label{buffer_8h_a2ea310aceef1f14012a8a85ca3ee7692}} 
+\#define {\bfseries \+\_\+\+N\+O\+N\+E\+\_\+}~0
+\item 
+\mbox{\Hypertarget{buffer_8h_ab9e2c5e4b20e20e301f106ee346f1a70}\label{buffer_8h_ab9e2c5e4b20e20e301f106ee346f1a70}} 
+\#define {\bfseries \+\_\+\+O\+P\+E\+R\+A\+N\+D\+\_\+}~1
+\item 
+\mbox{\Hypertarget{buffer_8h_a459cf688a83964e55a237262fd9fde1a}\label{buffer_8h_a459cf688a83964e55a237262fd9fde1a}} 
+\#define {\bfseries \+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+}~2
+\item 
+\mbox{\Hypertarget{buffer_8h_a49f8deb02dd2c5590ce6e4094fb9c5de}\label{buffer_8h_a49f8deb02dd2c5590ce6e4094fb9c5de}} 
+\#define {\bfseries \+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+}~3
+\item 
+\mbox{\Hypertarget{buffer_8h_aa770c0aa5c81cfe98169f0128128e399}\label{buffer_8h_aa770c0aa5c81cfe98169f0128128e399}} 
+\#define {\bfseries \+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+O\+R\+\_\+}~4
+\item 
+\mbox{\Hypertarget{buffer_8h_a9da9a21c28893857fd6e8436da348c0b}\label{buffer_8h_a9da9a21c28893857fd6e8436da348c0b}} 
+\#define {\bfseries Is\+None}(a)~(a.\+\_\+operator == \+\_\+\+N\+O\+N\+E\+\_\+)
+\item 
+\mbox{\Hypertarget{buffer_8h_a4892cde70001679abd5005eb029a8a8b}\label{buffer_8h_a4892cde70001679abd5005eb029a8a8b}} 
+\#define {\bfseries Is\+Operand}(a)~(a.\+\_\+operator == \+\_\+\+O\+P\+E\+R\+A\+N\+D\+\_\+)
+\item 
+\mbox{\Hypertarget{buffer_8h_a2df20c9f40edb773d65f156744fbcce2}\label{buffer_8h_a2df20c9f40edb773d65f156744fbcce2}} 
+\#define {\bfseries Is\+Operator}(a)~(a.\+\_\+operator == \+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+)
+\item 
+\mbox{\Hypertarget{buffer_8h_af7fcc0a4a7bb4b46c50a72406e5bf106}\label{buffer_8h_af7fcc0a4a7bb4b46c50a72406e5bf106}} 
+\#define {\bfseries Is\+Parenthesis}(a)~(a.\+\_\+operator == \+\_\+\+P\+A\+R\+E\+N\+T\+H\+E\+S\+I\+S\+\_\+)
+\item 
+\mbox{\Hypertarget{buffer_8h_a1f600538736a3d312fa826cc3e51cd77}\label{buffer_8h_a1f600538736a3d312fa826cc3e51cd77}} 
+\#define {\bfseries Is\+Terminator}(a)~(a.\+\_\+operator == \+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+O\+R\+\_\+)
+\item 
+\mbox{\Hypertarget{buffer_8h_ae54365e424e0df26819e85d73c2b34d6}\label{buffer_8h_ae54365e424e0df26819e85d73c2b34d6}} 
+\#define {\bfseries S\+I\+Z\+E\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+B\+U\+F\+F\+ER}~(sizeof(postfix) / sizeof(\hyperlink{struct__postfixT}{\+\_\+postfixT}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{buffer_8h_a6efdf55f2c7801fd6dfc48baba20ef40}{initialize\+Bufffers} (void)
+\begin{DoxyCompactList}\small\item\em Initizize infix \& postfix buffers to fill 0x0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{buffer_8h_a03b6554bffedbd364eec1ad86bf98d41}\label{buffer_8h_a03b6554bffedbd364eec1ad86bf98d41}} 
+int {\bfseries get\+Infix\+Expression} (void)
+\item 
+\mbox{\Hypertarget{buffer_8h_ada7435ed756616a3d5b760b5d3886f99}\label{buffer_8h_ada7435ed756616a3d5b760b5d3886f99}} 
+char $\ast$ {\bfseries get\+Infix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8h_a618c1585861f39638b6d567ef85c5043}\label{buffer_8h_a618c1585861f39638b6d567ef85c5043}} 
+void {\bfseries print\+Infix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8h_ac8f8d9fa237944a62302a8b3b05b804e}\label{buffer_8h_ac8f8d9fa237944a62302a8b3b05b804e}} 
+\hyperlink{struct__postfixT}{\+\_\+postfixT} $\ast$ {\bfseries get\+Postfix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8h_afc4e7147ef3990e256a33ec719b7c9e0}\label{buffer_8h_afc4e7147ef3990e256a33ec719b7c9e0}} 
+void {\bfseries print\+Postfix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8h_a619156ec223c21bb6ba588113b6febd3}\label{buffer_8h_a619156ec223c21bb6ba588113b6febd3}} 
+void {\bfseries print\+Postfix\+Symbol} (\hyperlink{struct__postfixT}{\+\_\+postfixT} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct and function for buffer management. 
+
+\begin{DoxyDate}{Date}
+2018/06/10 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Youngeun Park 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{buffer_8h_a6efdf55f2c7801fd6dfc48baba20ef40}\label{buffer_8h_a6efdf55f2c7801fd6dfc48baba20ef40}} 
+\index{buffer.\+h@{buffer.\+h}!initialize\+Bufffers@{initialize\+Bufffers}}
+\index{initialize\+Bufffers@{initialize\+Bufffers}!buffer.\+h@{buffer.\+h}}
+\subsubsection{\texorpdfstring{initialize\+Bufffers()}{initializeBufffers()}}
+{\footnotesize\ttfamily void initialize\+Bufffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initizize infix \& postfix buffers to fill 0x0. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE  N\+O\+NE 
+\end{DoxyReturn}

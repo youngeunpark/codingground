@@ -1,0 +1,68 @@
+\hypertarget{buffer_8c}{}\section{buffer.\+c File Reference}
+\label{buffer_8c}\index{buffer.\+c@{buffer.\+c}}
+
+
+Struct and function for buffer management.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$buffer.\+h$>$}\newline
+Include dependency graph for buffer.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{buffer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}{initialize\+Bufffers} (void)
+\begin{DoxyCompactList}\small\item\em Initizize infix \& postfix buffers to fill 0x0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}\label{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}} 
+int {\bfseries get\+Infix\+Expression} (void)
+\item 
+\mbox{\Hypertarget{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}\label{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}} 
+char $\ast$ {\bfseries get\+Infix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8c_a618c1585861f39638b6d567ef85c5043}\label{buffer_8c_a618c1585861f39638b6d567ef85c5043}} 
+void {\bfseries print\+Infix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}\label{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}} 
+\hyperlink{struct__postfixT}{\+\_\+postfixT} $\ast$ {\bfseries get\+Postfix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}\label{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}} 
+void {\bfseries print\+Postfix\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{buffer_8c_a619156ec223c21bb6ba588113b6febd3}\label{buffer_8c_a619156ec223c21bb6ba588113b6febd3}} 
+void {\bfseries print\+Postfix\+Symbol} (\hyperlink{struct__postfixT}{\+\_\+postfixT} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct and function for buffer management. 
+
+\begin{DoxyDate}{Date}
+2018/06/10 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Youngeun Park 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}\label{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}} 
+\index{buffer.\+c@{buffer.\+c}!initialize\+Bufffers@{initialize\+Bufffers}}
+\index{initialize\+Bufffers@{initialize\+Bufffers}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{initialize\+Bufffers()}{initializeBufffers()}}
+{\footnotesize\ttfamily void initialize\+Bufffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initizize infix \& postfix buffers to fill 0x0. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE  N\+O\+NE 
+\end{DoxyReturn}
