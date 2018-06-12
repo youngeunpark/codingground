@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['val',['val',['../structsymbolT.html#a8bcd4f48b8906ca6bf79d5dc4b2814b7',1,'symbolT']]]
+  ['stack_2ec',['stack.c',['../stack_8c.html',1,'']]],
+  ['stack_2eh',['stack.h',['../stack_8h.html',1,'']]],
+  ['symbolt',['symbolT',['../structsymbolT.html',1,'']]]
 ];

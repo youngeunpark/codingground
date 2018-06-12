@@ -2,7 +2,7 @@
 \label{stack_8c}\index{stack.\+c@{stack.\+c}}
 
 
-\hyperlink{stack_8c}{stack.\+c}  
+Stack implementation for symbols.  
 
 
 {\ttfamily \#include $<$string.\+h$>$}\newline
@@ -14,28 +14,31 @@ Include dependency graph for stack.\+c\+:\nopagebreak
 \includegraphics[width=197pt]{stack_8c__incl}
 \end{center}
 \end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stack_8c_accbb358028675c83675d8b34c386268d}\label{stack_8c_accbb358028675c83675d8b34c386268d}} 
+\#define {\bfseries M\+A\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~M\+A\+X\+\_\+\+S\+T\+R\+I\+NG
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{stack_8c_a28fa2e71ac1a03e48f6393e614e9700d}\label{stack_8c_a28fa2e71ac1a03e48f6393e614e9700d}} 
-void {\bfseries push} (\hyperlink{structsymbolT}{symbolT} c)
-\item 
-\mbox{\Hypertarget{stack_8c_ad2c9ad0bb34ef89958ab15329fb47222}\label{stack_8c_ad2c9ad0bb34ef89958ab15329fb47222}} 
-void {\bfseries pop} (\hyperlink{structsymbolT}{symbolT} $\ast$p)
-\item 
-\mbox{\Hypertarget{stack_8c_adc8484c9203490f40d71ecf61d47a8aa}\label{stack_8c_adc8484c9203490f40d71ecf61d47a8aa}} 
-\hyperlink{structsymbolT}{symbolT} {\bfseries top} (void)
-\item 
-\mbox{\Hypertarget{stack_8c_a4667371cc1652ec25dfec478a952c717}\label{stack_8c_a4667371cc1652ec25dfec478a952c717}} 
-int {\bfseries empty} (void)
-\item 
-\mbox{\Hypertarget{stack_8c_a524d97c94164a24e4d4a8e09622788a5}\label{stack_8c_a524d97c94164a24e4d4a8e09622788a5}} 
-void {\bfseries init\+Stack} (void)
-\end{DoxyCompactItemize}
+void \hyperlink{stack_8c_a28fa2e71ac1a03e48f6393e614e9700d}{push} (\hyperlink{structsymbolT}{symbolT} c)
+\begin{DoxyCompactList}\small\item\em Push symbol onto stack. \end{DoxyCompactList}\item 
+void \hyperlink{stack_8c_ad2c9ad0bb34ef89958ab15329fb47222}{pop} (\hyperlink{structsymbolT}{symbolT} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Pop symbol from stack. \end{DoxyCompactList}\item 
+\hyperlink{structsymbolT}{symbolT} \hyperlink{stack_8c_adc8484c9203490f40d71ecf61d47a8aa}{top} (void)
+\begin{DoxyCompactList}\small\item\em Peek symbol on stack top. \end{DoxyCompactList}\item 
+int \hyperlink{stack_8c_a4667371cc1652ec25dfec478a952c717}{empty} (void)
+\begin{DoxyCompactList}\small\item\em Check if stack is empty. \end{DoxyCompactList}\item 
+int \hyperlink{stack_8c_afe4b1c4ca08318016497caf30ad9e0f3}{full} (void)
+\begin{DoxyCompactList}\small\item\em Check if stack is full. \end{DoxyCompactList}\item 
+void \hyperlink{stack_8c_a524d97c94164a24e4d4a8e09622788a5}{init\+Stack} (void)
+\begin{DoxyCompactList}\small\item\em Initialize stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\hyperlink{stack_8c}{stack.\+c} 
+Stack implementation for symbols. 
 
 \begin{DoxyDate}{Date}
 2018/06/10 
@@ -43,3 +46,116 @@ void {\bfseries init\+Stack} (void)
 \begin{DoxyAuthor}{Author}
 Youngeun Park 
 \end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{stack_8c_a4667371cc1652ec25dfec478a952c717}\label{stack_8c_a4667371cc1652ec25dfec478a952c717}} 
+\index{stack.\+c@{stack.\+c}!empty@{empty}}
+\index{empty@{empty}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily int empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+1, if stack is empty~\newline
+0, otherwise
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8c_afe4b1c4ca08318016497caf30ad9e0f3}\label{stack_8c_afe4b1c4ca08318016497caf30ad9e0f3}} 
+\index{stack.\+c@{stack.\+c}!full@{full}}
+\index{full@{full}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily int full (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if stack is full. 
+
+\begin{DoxyReturn}{Returns}
+1, if stack is empty~\newline
+0, otherwise
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8c_a524d97c94164a24e4d4a8e09622788a5}\label{stack_8c_a524d97c94164a24e4d4a8e09622788a5}} 
+\index{stack.\+c@{stack.\+c}!init\+Stack@{init\+Stack}}
+\index{init\+Stack@{init\+Stack}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{init\+Stack()}{initStack()}}
+{\footnotesize\ttfamily void init\+Stack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize stack. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8c_ad2c9ad0bb34ef89958ab15329fb47222}\label{stack_8c_ad2c9ad0bb34ef89958ab15329fb47222}} 
+\index{stack.\+c@{stack.\+c}!pop@{pop}}
+\index{pop@{pop}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{\hyperlink{structsymbolT}{symbolT} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Pop symbol from stack. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \+: pointer of symbol to return the symbol on stack top \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8c_a28fa2e71ac1a03e48f6393e614e9700d}\label{stack_8c_a28fa2e71ac1a03e48f6393e614e9700d}} 
+\index{stack.\+c@{stack.\+c}!push@{push}}
+\index{push@{push}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\hyperlink{structsymbolT}{symbolT}}]{c }\end{DoxyParamCaption})}
+
+
+
+Push symbol onto stack. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \+: symbol to push onto stack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{stack_8c_adc8484c9203490f40d71ecf61d47a8aa}\label{stack_8c_adc8484c9203490f40d71ecf61d47a8aa}} 
+\index{stack.\+c@{stack.\+c}!top@{top}}
+\index{top@{top}!stack.\+c@{stack.\+c}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily \hyperlink{structsymbolT}{symbolT} top (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Peek symbol on stack top. 
+
+\begin{DoxyReturn}{Returns}
+symbol on stack top
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}

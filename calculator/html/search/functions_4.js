@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['printinfixbuffer',['printInfixBuffer',['../buffer_8c.html#a618c1585861f39638b6d567ef85c5043',1,'printInfixBuffer(void):&#160;buffer.c'],['../buffer_8h.html#a618c1585861f39638b6d567ef85c5043',1,'printInfixBuffer(void):&#160;buffer.c']]],
-  ['printpostfixbuffer',['printPostfixBuffer',['../buffer_8c.html#afc4e7147ef3990e256a33ec719b7c9e0',1,'printPostfixBuffer(void):&#160;buffer.c'],['../buffer_8h.html#afc4e7147ef3990e256a33ec719b7c9e0',1,'printPostfixBuffer(void):&#160;buffer.c']]],
-  ['printpostfixsymbol',['printPostfixSymbol',['../buffer_8c.html#a480e702aad3b1bbbda9560444013a473',1,'printPostfixSymbol(symbolT s):&#160;buffer.c'],['../buffer_8h.html#a480e702aad3b1bbbda9560444013a473',1,'printPostfixSymbol(symbolT s):&#160;buffer.c']]]
+  ['initializebuffers',['initializeBuffers',['../buffer_8c.html#ad750ab66fe8e3301c160ad724023f536',1,'initializeBuffers(void):&#160;buffer.c'],['../buffer_8h.html#ad750ab66fe8e3301c160ad724023f536',1,'initializeBuffers(void):&#160;buffer.c']]],
+  ['initstack',['initStack',['../stack_8c.html#a524d97c94164a24e4d4a8e09622788a5',1,'initStack(void):&#160;stack.c'],['../stack_8h.html#a524d97c94164a24e4d4a8e09622788a5',1,'initStack(void):&#160;stack.c']]]
 ];
