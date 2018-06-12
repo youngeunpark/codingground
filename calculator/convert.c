@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <buffer.h>
 #include <stack.h>
 
@@ -134,12 +135,14 @@ static char *parseSymbol(char *in, _postfixT * symbol)
 int convertToPostFix(void)
 {
     char *in = getInfixBuffer();
-    _postfixT symbol, *post = getPostfixBuffer();
+    _postfixT symbol, previousSymbol, *post = getPostfixBuffer();
     int i = 0, j = 0;
     unsigned char previous_operator = _NONE_;
 
     // stack is used to convert infix to postfix
     initStack();
+
+    memset(&previousSymbol, 0x0, sizeof(previousSymbol));
 
     while (1) {
         in = parseSymbol(in, &symbol);
@@ -153,11 +156,16 @@ int convertToPostFix(void)
             break;
         }
         // Consecutive same type of symbols must be invalid
-        if (symbol._operator == previous_operator) {
+        if (symbol._operator == previousSymbol._operator) {
             printf("ERROR [%s:%d] invalid infix expression\n", __FILE__,
                    __LINE__);
+            printInfixBuffer();
+            printf("previous symbol : "); printPostfixSymbol(previousSymbol);
+            printf("current symbol : "); printPostfixSymbol(symbol);
             return 0;
         }
+
+        previousSymbol = symbol;
 
         if (symbol._operator == _OPERAND_) {
             post[j++] = symbol;
@@ -197,8 +205,6 @@ int convertToPostFix(void)
                 }
             }
         }
-
-        previous_operator = symbol._operator;
     }
 
     while (!empty()) {

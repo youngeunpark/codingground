@@ -58,7 +58,7 @@ char *getInfixBuffer(void)
 // Print the contents of infix buffer
 void printInfixBuffer(void)
 {
-    printf("infix:\n");
+    printf("infix: ");
     printf("%s\n", infix);
 }
 
