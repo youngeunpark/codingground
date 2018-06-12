@@ -43,7 +43,7 @@ int calc(void)
 #ifdef DEBUG
             printPostfixSymbol(symbol);
 #endif
-            s._operator = _OPERAND_;
+            s.type = _OPERAND_;
             pop(&a);
             pop(&b);
 
@@ -75,9 +75,9 @@ int calc(void)
             push(s);
         } else {
             printPostfixSymbol(symbol);
-            printf("ERROR [%s:%d] invalid symbol(_operator: %c, %d)\n",
-                   __FILE__, __LINE__, (char)symbol._operator,
-                   symbol._operator);
+            printf("ERROR [%s:%d] invalid symbol(type: %c, %d)\n",
+                   __FILE__, __LINE__, (char)symbol.type,
+                   symbol.type);
             exit(0);
         }
     }

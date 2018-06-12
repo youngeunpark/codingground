@@ -19,25 +19,19 @@ Include dependency graph for buffer.\+c\+:\nopagebreak
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}{initialize\+Bufffers} (void)
-\begin{DoxyCompactList}\small\item\em Initizize infix \& postfix buffers to fill 0x0. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}\label{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}} 
-int {\bfseries get\+Infix\+Expression} (void)
-\item 
-\mbox{\Hypertarget{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}\label{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}} 
-char $\ast$ {\bfseries get\+Infix\+Buffer} (void)
-\item 
-\mbox{\Hypertarget{buffer_8c_a618c1585861f39638b6d567ef85c5043}\label{buffer_8c_a618c1585861f39638b6d567ef85c5043}} 
-void {\bfseries print\+Infix\+Buffer} (void)
-\item 
-\mbox{\Hypertarget{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}\label{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}} 
-\hyperlink{struct__postfixT}{\+\_\+postfixT} $\ast$ {\bfseries get\+Postfix\+Buffer} (void)
-\item 
-\mbox{\Hypertarget{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}\label{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}} 
-void {\bfseries print\+Postfix\+Buffer} (void)
-\item 
-\mbox{\Hypertarget{buffer_8c_a619156ec223c21bb6ba588113b6febd3}\label{buffer_8c_a619156ec223c21bb6ba588113b6febd3}} 
-void {\bfseries print\+Postfix\+Symbol} (\hyperlink{struct__postfixT}{\+\_\+postfixT} s)
+void \hyperlink{buffer_8c_ad750ab66fe8e3301c160ad724023f536}{initialize\+Buffers} (void)
+\begin{DoxyCompactList}\small\item\em Initialize infix \& postfix buffers by filling 0x0. \end{DoxyCompactList}\item 
+int \hyperlink{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}{get\+Infix\+Expression} (void)
+\begin{DoxyCompactList}\small\item\em Read infix expression via standard input. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}{get\+Infix\+Buffer} (void)
+\begin{DoxyCompactList}\small\item\em Return infix buffer. \end{DoxyCompactList}\item 
+void \hyperlink{buffer_8c_a618c1585861f39638b6d567ef85c5043}{print\+Infix\+Buffer} (void)
+\begin{DoxyCompactList}\small\item\em Print infix buffer. \end{DoxyCompactList}\item 
+\hyperlink{struct__postfixT}{\+\_\+postfixT} $\ast$ \hyperlink{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}{get\+Postfix\+Buffer} (void)
+\begin{DoxyCompactList}\small\item\em Return postfix buffer. \end{DoxyCompactList}\item 
+void \hyperlink{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}{print\+Postfix\+Buffer} (void)
+\begin{DoxyCompactList}\small\item\em Print postfix buffer. \end{DoxyCompactList}\item 
+void \hyperlink{buffer_8c_a619156ec223c21bb6ba588113b6febd3}{print\+Postfix\+Symbol} (\hyperlink{struct__postfixT}{\+\_\+postfixT} s)
 \end{DoxyCompactItemize}
 
 
@@ -53,16 +47,121 @@ Youngeun Park
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}\label{buffer_8c_a6efdf55f2c7801fd6dfc48baba20ef40}} 
-\index{buffer.\+c@{buffer.\+c}!initialize\+Bufffers@{initialize\+Bufffers}}
-\index{initialize\+Bufffers@{initialize\+Bufffers}!buffer.\+c@{buffer.\+c}}
-\subsubsection{\texorpdfstring{initialize\+Bufffers()}{initializeBufffers()}}
-{\footnotesize\ttfamily void initialize\+Bufffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}\label{buffer_8c_ada7435ed756616a3d5b760b5d3886f99}} 
+\index{buffer.\+c@{buffer.\+c}!get\+Infix\+Buffer@{get\+Infix\+Buffer}}
+\index{get\+Infix\+Buffer@{get\+Infix\+Buffer}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{get\+Infix\+Buffer()}{getInfixBuffer()}}
+{\footnotesize\ttfamily char$\ast$ get\+Infix\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Initizize infix \& postfix buffers to fill 0x0. 
+Return infix buffer. 
 
 \begin{DoxyReturn}{Returns}
-N\+O\+NE  N\+O\+NE 
+Pointer to infix buffer
 \end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}\label{buffer_8c_a03b6554bffedbd364eec1ad86bf98d41}} 
+\index{buffer.\+c@{buffer.\+c}!get\+Infix\+Expression@{get\+Infix\+Expression}}
+\index{get\+Infix\+Expression@{get\+Infix\+Expression}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{get\+Infix\+Expression()}{getInfixExpression()}}
+{\footnotesize\ttfamily int get\+Infix\+Expression (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read infix expression via standard input. 
+
+\begin{DoxyReturn}{Returns}
+On failure, 0~\newline
+On success, the length of expression
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}\label{buffer_8c_ac8f8d9fa237944a62302a8b3b05b804e}} 
+\index{buffer.\+c@{buffer.\+c}!get\+Postfix\+Buffer@{get\+Postfix\+Buffer}}
+\index{get\+Postfix\+Buffer@{get\+Postfix\+Buffer}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{get\+Postfix\+Buffer()}{getPostfixBuffer()}}
+{\footnotesize\ttfamily \hyperlink{struct__postfixT}{\+\_\+postfixT}$\ast$ get\+Postfix\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return postfix buffer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to postfix buffer
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{buffer_8c_ad750ab66fe8e3301c160ad724023f536}\label{buffer_8c_ad750ab66fe8e3301c160ad724023f536}} 
+\index{buffer.\+c@{buffer.\+c}!initialize\+Buffers@{initialize\+Buffers}}
+\index{initialize\+Buffers@{initialize\+Buffers}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{initialize\+Buffers()}{initializeBuffers()}}
+{\footnotesize\ttfamily void initialize\+Buffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize infix \& postfix buffers by filling 0x0. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{buffer_8c_a618c1585861f39638b6d567ef85c5043}\label{buffer_8c_a618c1585861f39638b6d567ef85c5043}} 
+\index{buffer.\+c@{buffer.\+c}!print\+Infix\+Buffer@{print\+Infix\+Buffer}}
+\index{print\+Infix\+Buffer@{print\+Infix\+Buffer}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{print\+Infix\+Buffer()}{printInfixBuffer()}}
+{\footnotesize\ttfamily void print\+Infix\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Print infix buffer. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}\label{buffer_8c_afc4e7147ef3990e256a33ec719b7c9e0}} 
+\index{buffer.\+c@{buffer.\+c}!print\+Postfix\+Buffer@{print\+Postfix\+Buffer}}
+\index{print\+Postfix\+Buffer@{print\+Postfix\+Buffer}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{print\+Postfix\+Buffer()}{printPostfixBuffer()}}
+{\footnotesize\ttfamily void print\+Postfix\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Print postfix buffer. 
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+NE} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{buffer_8c_a619156ec223c21bb6ba588113b6febd3}\label{buffer_8c_a619156ec223c21bb6ba588113b6febd3}} 
+\index{buffer.\+c@{buffer.\+c}!print\+Postfix\+Symbol@{print\+Postfix\+Symbol}}
+\index{print\+Postfix\+Symbol@{print\+Postfix\+Symbol}!buffer.\+c@{buffer.\+c}}
+\subsubsection{\texorpdfstring{print\+Postfix\+Symbol()}{printPostfixSymbol()}}
+{\footnotesize\ttfamily void print\+Postfix\+Symbol (\begin{DoxyParamCaption}\item[{\hyperlink{struct__postfixT}{\+\_\+postfixT}}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+N\+O\+NE
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \+: symbol to print out \\
+\hline
+\end{DoxyParams}

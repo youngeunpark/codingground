@@ -18,19 +18,23 @@ static char infix[MAX_STRING];
 static _postfixT postfix[MAX_STRING];
 
 /**
-    @return NONE
-    @argument NONE
+    @return
+    NONE
 */
-void initializeBufffers(void)
+void initializeBuffers(void)
 {
     memset(infix, 0x0, sizeof(infix));
     memset(postfix, 0x0, sizeof(postfix));
 }
 
-// Read infix expression via stdin.
-// Return
-//   0 on failure.
-//   The length of expression on success.
+/**
+    @return
+    On failure, 0\n
+    On success, the length of expression
+
+    @param
+    NONE
+*/
 int getInfixExpression(void)
 {
     int len;
@@ -54,26 +58,50 @@ int getInfixExpression(void)
     return len;
 }
 
-// Return the address to point to infix buffer
+/**
+    @return
+    Pointer to infix buffer
+
+    @param
+    NONE
+*/
 char *getInfixBuffer(void)
 {
     return infix;
 }
 
-// Print the contents of infix buffer
+/**
+    @return
+    NONE
+
+    @param
+    NONE
+*/
 void printInfixBuffer(void)
 {
     printf("infix: ");
     printf("%s\n", infix);
 }
 
-// Return the address to point to postfix buffer
+/**
+    @return
+    Pointer to postfix buffer
+
+    @param
+    NONE
+*/
 _postfixT *getPostfixBuffer(void)
 {
     return postfix;
 }
 
-// Print the contents of postfix buffer
+/**
+    @return
+    NONE
+
+    @param
+    NONE
+*/
 void printPostfixBuffer(void)
 {
     int idx = 0;
@@ -90,7 +118,13 @@ void printPostfixBuffer(void)
     }
 }
 
-// Print symbol in postfix
+/**
+    @return
+    NONE
+
+    @param
+    s : symbol to print out
+*/
 void printPostfixSymbol(_postfixT s)
 {
     if (IsOperator(s)) {
@@ -99,3 +133,4 @@ void printPostfixSymbol(_postfixT s)
         printf("%d\n", s.val);
     }
 }
+

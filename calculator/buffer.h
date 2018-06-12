@@ -18,37 +18,38 @@
 #define _TERMINATOR_ 4
 
 typedef struct {
-    unsigned char _operator; ///< indicator of val (operand or operator)
+    unsigned char type; ///< indicator of val (operand or operator)
     int val; ///< parsed value. can be operand or operator
 } _postfixT;
 
-#define IsNone(a) (a._operator == _NONE_)
-#define IsOperand(a) (a._operator == _OPERAND_)
-#define IsOperator(a) (a._operator == _OPERATOR_)
-#define IsParenthesis(a) (a._operator == _PARENTHESIS_)
-#define IsTerminator(a) (a._operator == _TERMINATOR_)
+#define IsNone(a) (a.type == _NONE_)
+#define IsOperand(a) (a.type == _OPERAND_)
+#define IsOperator(a) (a.type == _OPERATOR_)
+#define IsParenthesis(a) (a.type == _PARENTHESIS_)
+#define IsTerminator(a) (a.type == _TERMINATOR_)
 
 #define SIZE_POSTFIX_BUFFER (sizeof(postfix) / sizeof(_postfixT))
 
-/// Initizize infix & postfix buffers to fill 0x0
-void initializeBufffers(void);
+/// Initialize infix & postfix buffers by filling 0x0
+void initializeBuffers(void);
 
-// Read infix expression via stdin
+/// Read infix expression via standard input
 int getInfixExpression(void);
 
-// Return the address to point to infix buffer
+/// Return infix buffer
 char *getInfixBuffer(void);
 
-// Print the contents of infix buffer
+/// Print infix buffer
 void printInfixBuffer(void);
 
-// Return the address to point to postfix buffer
+/// Return postfix buffer
 _postfixT *getPostfixBuffer(void);
 
-// Print the contents of postfix buffer
+/// Print postfix buffer
 void printPostfixBuffer(void);
 
-// Print symbol in postfix
+// Print a symbol of _postfixT
 void printPostfixSymbol(_postfixT s);
 
 #endif
+

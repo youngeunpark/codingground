@@ -111,19 +111,19 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>_TERMINATOR_</b>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:aa770c0aa5c81cfe98169f0128128e399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da9a21c28893857fd6e8436da348c0b"><td class="memItemLeft" align="right" valign="top"><a id="a9da9a21c28893857fd6e8436da348c0b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsNone</b>(a)&#160;&#160;&#160;(a._operator == _NONE_)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsNone</b>(a)&#160;&#160;&#160;(a.type == _NONE_)</td></tr>
 <tr class="separator:a9da9a21c28893857fd6e8436da348c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4892cde70001679abd5005eb029a8a8b"><td class="memItemLeft" align="right" valign="top"><a id="a4892cde70001679abd5005eb029a8a8b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsOperand</b>(a)&#160;&#160;&#160;(a._operator == _OPERAND_)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsOperand</b>(a)&#160;&#160;&#160;(a.type == _OPERAND_)</td></tr>
 <tr class="separator:a4892cde70001679abd5005eb029a8a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df20c9f40edb773d65f156744fbcce2"><td class="memItemLeft" align="right" valign="top"><a id="a2df20c9f40edb773d65f156744fbcce2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsOperator</b>(a)&#160;&#160;&#160;(a._operator == _OPERATOR_)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsOperator</b>(a)&#160;&#160;&#160;(a.type == _OPERATOR_)</td></tr>
 <tr class="separator:a2df20c9f40edb773d65f156744fbcce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7fcc0a4a7bb4b46c50a72406e5bf106"><td class="memItemLeft" align="right" valign="top"><a id="af7fcc0a4a7bb4b46c50a72406e5bf106"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsParenthesis</b>(a)&#160;&#160;&#160;(a._operator == _PARENTHESIS_)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsParenthesis</b>(a)&#160;&#160;&#160;(a.type == _PARENTHESIS_)</td></tr>
 <tr class="separator:af7fcc0a4a7bb4b46c50a72406e5bf106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f600538736a3d312fa826cc3e51cd77"><td class="memItemLeft" align="right" valign="top"><a id="a1f600538736a3d312fa826cc3e51cd77"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsTerminator</b>(a)&#160;&#160;&#160;(a._operator == _TERMINATOR_)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>IsTerminator</b>(a)&#160;&#160;&#160;(a.type == _TERMINATOR_)</td></tr>
 <tr class="separator:a1f600538736a3d312fa826cc3e51cd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae54365e424e0df26819e85d73c2b34d6"><td class="memItemLeft" align="right" valign="top"><a id="ae54365e424e0df26819e85d73c2b34d6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_POSTFIX_BUFFER</b>&#160;&#160;&#160;(sizeof(postfix) / sizeof(<a class="el" href="struct__postfixT.html">_postfixT</a>))</td></tr>
@@ -131,26 +131,25 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6efdf55f2c7801fd6dfc48baba20ef40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#a6efdf55f2c7801fd6dfc48baba20ef40">initializeBufffers</a> (void)</td></tr>
-<tr class="memdesc:a6efdf55f2c7801fd6dfc48baba20ef40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initizize infix &amp; postfix buffers to fill 0x0.  <a href="#a6efdf55f2c7801fd6dfc48baba20ef40">More...</a><br /></td></tr>
-<tr class="separator:a6efdf55f2c7801fd6dfc48baba20ef40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b6554bffedbd364eec1ad86bf98d41"><td class="memItemLeft" align="right" valign="top"><a id="a03b6554bffedbd364eec1ad86bf98d41"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getInfixExpression</b> (void)</td></tr>
+<tr class="memitem:ad750ab66fe8e3301c160ad724023f536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#ad750ab66fe8e3301c160ad724023f536">initializeBuffers</a> (void)</td></tr>
+<tr class="memdesc:ad750ab66fe8e3301c160ad724023f536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize infix &amp; postfix buffers by filling 0x0.  <a href="#ad750ab66fe8e3301c160ad724023f536">More...</a><br /></td></tr>
+<tr class="separator:ad750ab66fe8e3301c160ad724023f536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b6554bffedbd364eec1ad86bf98d41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#a03b6554bffedbd364eec1ad86bf98d41">getInfixExpression</a> (void)</td></tr>
+<tr class="memdesc:a03b6554bffedbd364eec1ad86bf98d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read infix expression via standard input.  <a href="#a03b6554bffedbd364eec1ad86bf98d41">More...</a><br /></td></tr>
 <tr class="separator:a03b6554bffedbd364eec1ad86bf98d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7435ed756616a3d5b760b5d3886f99"><td class="memItemLeft" align="right" valign="top"><a id="ada7435ed756616a3d5b760b5d3886f99"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>getInfixBuffer</b> (void)</td></tr>
+<tr class="memitem:ada7435ed756616a3d5b760b5d3886f99"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#ada7435ed756616a3d5b760b5d3886f99">getInfixBuffer</a> (void)</td></tr>
+<tr class="memdesc:ada7435ed756616a3d5b760b5d3886f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return infix buffer.  <a href="#ada7435ed756616a3d5b760b5d3886f99">More...</a><br /></td></tr>
 <tr class="separator:ada7435ed756616a3d5b760b5d3886f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618c1585861f39638b6d567ef85c5043"><td class="memItemLeft" align="right" valign="top"><a id="a618c1585861f39638b6d567ef85c5043"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printInfixBuffer</b> (void)</td></tr>
+<tr class="memitem:a618c1585861f39638b6d567ef85c5043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#a618c1585861f39638b6d567ef85c5043">printInfixBuffer</a> (void)</td></tr>
+<tr class="memdesc:a618c1585861f39638b6d567ef85c5043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print infix buffer.  <a href="#a618c1585861f39638b6d567ef85c5043">More...</a><br /></td></tr>
 <tr class="separator:a618c1585861f39638b6d567ef85c5043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8f8d9fa237944a62302a8b3b05b804e"><td class="memItemLeft" align="right" valign="top"><a id="ac8f8d9fa237944a62302a8b3b05b804e"></a>
-<a class="el" href="struct__postfixT.html">_postfixT</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPostfixBuffer</b> (void)</td></tr>
+<tr class="memitem:ac8f8d9fa237944a62302a8b3b05b804e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__postfixT.html">_postfixT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#ac8f8d9fa237944a62302a8b3b05b804e">getPostfixBuffer</a> (void)</td></tr>
+<tr class="memdesc:ac8f8d9fa237944a62302a8b3b05b804e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return postfix buffer.  <a href="#ac8f8d9fa237944a62302a8b3b05b804e">More...</a><br /></td></tr>
 <tr class="separator:ac8f8d9fa237944a62302a8b3b05b804e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc4e7147ef3990e256a33ec719b7c9e0"><td class="memItemLeft" align="right" valign="top"><a id="afc4e7147ef3990e256a33ec719b7c9e0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printPostfixBuffer</b> (void)</td></tr>
+<tr class="memitem:afc4e7147ef3990e256a33ec719b7c9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#afc4e7147ef3990e256a33ec719b7c9e0">printPostfixBuffer</a> (void)</td></tr>
+<tr class="memdesc:afc4e7147ef3990e256a33ec719b7c9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print postfix buffer.  <a href="#afc4e7147ef3990e256a33ec719b7c9e0">More...</a><br /></td></tr>
 <tr class="separator:afc4e7147ef3990e256a33ec719b7c9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619156ec223c21bb6ba588113b6febd3"><td class="memItemLeft" align="right" valign="top"><a id="a619156ec223c21bb6ba588113b6febd3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printPostfixSymbol</b> (<a class="el" href="struct__postfixT.html">_postfixT</a> s)</td></tr>
+<tr class="memitem:a619156ec223c21bb6ba588113b6febd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="buffer_8h.html#a619156ec223c21bb6ba588113b6febd3">printPostfixSymbol</a> (<a class="el" href="struct__postfixT.html">_postfixT</a> s)</td></tr>
 <tr class="separator:a619156ec223c21bb6ba588113b6febd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,14 +157,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printPostfixSymbol</b
 <dl class="section date"><dt>Date</dt><dd>2018/06/10 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Youngeun Park </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a6efdf55f2c7801fd6dfc48baba20ef40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6efdf55f2c7801fd6dfc48baba20ef40">&#9670;&nbsp;</a></span>initializeBufffers()</h2>
+<a id="ada7435ed756616a3d5b760b5d3886f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7435ed756616a3d5b760b5d3886f99">&#9670;&nbsp;</a></span>getInfixBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void initializeBufffers </td>
+          <td class="memname">char* getInfixBuffer </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -174,8 +173,169 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printPostfixSymbol</b
       </table>
 </div><div class="memdoc">
 
-<p>Initizize infix &amp; postfix buffers to fill 0x0. </p>
-<dl class="section return"><dt>Returns</dt><dd>NONE  NONE </dd></dl>
+<p>Return infix buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to infix buffer</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NONE</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03b6554bffedbd364eec1ad86bf98d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b6554bffedbd364eec1ad86bf98d41">&#9670;&nbsp;</a></span>getInfixExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getInfixExpression </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read infix expression via standard input. </p>
+<dl class="section return"><dt>Returns</dt><dd>On failure, 0<br />
+On success, the length of expression</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NONE</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac8f8d9fa237944a62302a8b3b05b804e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f8d9fa237944a62302a8b3b05b804e">&#9670;&nbsp;</a></span>getPostfixBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct__postfixT.html">_postfixT</a>* getPostfixBuffer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return postfix buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to postfix buffer</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NONE</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad750ab66fe8e3301c160ad724023f536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad750ab66fe8e3301c160ad724023f536">&#9670;&nbsp;</a></span>initializeBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initializeBuffers </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize infix &amp; postfix buffers by filling 0x0. </p>
+<dl class="section return"><dt>Returns</dt><dd>NONE </dd></dl>
+
+</div>
+</div>
+<a id="a618c1585861f39638b6d567ef85c5043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618c1585861f39638b6d567ef85c5043">&#9670;&nbsp;</a></span>printInfixBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printInfixBuffer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print infix buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>NONE</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NONE</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc4e7147ef3990e256a33ec719b7c9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4e7147ef3990e256a33ec719b7c9e0">&#9670;&nbsp;</a></span>printPostfixBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPostfixBuffer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print postfix buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>NONE</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NONE</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a619156ec223c21bb6ba588113b6febd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619156ec223c21bb6ba588113b6febd3">&#9670;&nbsp;</a></span>printPostfixSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printPostfixSymbol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__postfixT.html">_postfixT</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>NONE</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>: symbol to print out </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

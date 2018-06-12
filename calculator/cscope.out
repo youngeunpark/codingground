@@ -1,29 +1,29 @@
-cscope 15 $HOME/codingground/calculator               0000064974
+cscope 15 $HOME/codingground/calculator               0000065102
 	@buffer.c
 
-7 
+9 
 	~<°dio.h
 >
 
-8 
+10 
 	~<°rög.h
 >
 
-9 
+11 
 	~<î∫o.h
 >
 
-10 
+12 
 	~<buf„r.h
 >
 
-13 
+15 
 	göfix
 [
 MAX_STRING
 ];
 
-16 
+18 
 _po°fixT
  
 	gpo°fix
@@ -31,35 +31,35 @@ _po°fixT
 MAX_STRING
 ];
 
-19 
-	$öôülizeBuff„rs
+23 
+	$öôülizeBuf„rs
 ()
 
-21 
+25 
 	`mem£t
 (
 öfix
 , 0x0, (infix));
 
-22 
+26 
 	`mem£t
 (
 po°fix
 , 0x0, (postfix));
 
-23 
+27 
 	}
 }
 
-29 
+34 
 	$gëInfixEx¥essi⁄
 ()
 
-31 
+36 
 Àn
 ;
 
-33 i‡(
+38 i‡(
 	`fgës
 (
 öfix
@@ -69,11 +69,11 @@ po°fix
 NULL
 ) {
 
-34 i‡(
+39 i‡(
 î∫o
  == 0) {
 
-37 
+42 
 	`¥ötf
 ("ERROR [%s:%d]Éºno(%d)\n", 
 __FILE__
@@ -83,7 +83,7 @@ __LINE__
 î∫o
 );
 
-42 
+47 
 Àn
  = 
 	`°æí
@@ -91,83 +91,83 @@ __LINE__
 öfix
 );
 
-45 if(
+50 if(
 öfix
 [
 Àn
  - 1] == '\n') {
 
-46 
+51 
 öfix
 [
 Àn
  - 1] = 0;
 
-49  
+54  
 Àn
 ;
 
-50 
+55 
 	}
 }
 
-53 *
+61 *
 	$gëInfixBuf„r
 ()
 
-55  
+63  
 öfix
 ;
 
-56 
+64 
 	}
 }
 
-59 
+69 
 	$¥ötInfixBuf„r
 ()
 
-61 
+71 
 	`¥ötf
 ("infix: ");
 
-62 
+72 
 	`¥ötf
 ("%s\n", 
 öfix
 );
 
-63 
+73 
 	}
 }
 
-66 
+79 
 _po°fixT
  *
 	$gëPo°fixBuf„r
 ()
 
-68  
+81  
 po°fix
 ;
 
-69 
+82 
 	}
 }
 
-72 
+87 
 	$¥ötPo°fixBuf„r
 ()
 
-74 
+89 
 idx
  = 0;
 
-76 
+91 
 	`¥ötf
 ("postfix:\n");
 
-78 !(
+93 !(
 	`IsTîmö©‹
 (
 po°fix
@@ -177,7 +177,7 @@ idx
 	`IsN⁄e
 (postfix[idx]))) {
 
-79 i‡(
+94 i‡(
 	`IsO≥øt‹
 (
 po°fix
@@ -185,7 +185,7 @@ po°fix
 idx
 ])) {
 
-80 
+95 
 	`¥ötf
 ("[%d] %c\n", 
 idx
@@ -195,7 +195,7 @@ po°fix
 vÆ
 );
 
-81 } i‡(
+96 } i‡(
 	`IsO≥ønd
 (
 po°fix
@@ -203,7 +203,7 @@ po°fix
 idx
 ])) {
 
-82 
+97 
 	`¥ötf
 ("[%d] %d\n", 
 idx
@@ -213,15 +213,15 @@ po°fix
 vÆ
 );
 
-84 
+99 
 idx
 ++;
 
-86 
+101 
 	}
 }
 
-89 
+106 
 	$¥ötPo°fixSymbﬁ
 (
 _po°fixT
@@ -229,13 +229,13 @@ _po°fixT
 s
 )
 
-91 i‡(
+108 i‡(
 	`IsO≥øt‹
 (
 s
 )) {
 
-92 
+109 
 	`¥ötf
 ("%c\n", ()
 s
@@ -243,13 +243,13 @@ s
 vÆ
 );
 
-93 } i‡(
+110 } i‡(
 	`IsO≥ønd
 (
 s
 )) {
 
-94 
+111 
 	`¥ötf
 ("%d\n", 
 s
@@ -257,131 +257,131 @@ s
 vÆ
 );
 
-96 
+113 
 	}
 }
 
 	@buffer.h
 
-2 #i‚de‡
+9 #i‚de‡
 __BUFFER_H__
 
 
-3 
+10 
 	#__BUFFER_H__
 
 
 	)
 
-5 
+12 
 	#MAX_STRING
  1001
 
 	)
 
-7 
+14 
 	#_NONE_
  0
 
 	)
 
-8 
+15 
 	#_OPERAND_
  1
 
 	)
 
-9 
+16 
 	#_OPERATOR_
  2
 
 	)
 
-10 
+17 
 	#_PARENTHESIS_
  3
 
 	)
 
-11 
+18 
 	#_TERMINATOR_
  4
 
 	)
 
-14 
-	m_›î©‹
+21 
+	mty≥
 ;
 
-15 
+22 
 	mvÆ
 ;
 
-16 } 
+23 } 
 	t_po°fixT
 ;
 
-18 
+25 
 	#IsN⁄e
 (
 a
 Ë◊.
-_›î©‹
+ty≥
  =
 _NONE_
 )
 
 	)
 
-19 
+26 
 	#IsO≥ønd
 (
 a
 Ë◊.
-_›î©‹
+ty≥
  =
 _OPERAND_
 )
 
 	)
 
-20 
+27 
 	#IsO≥øt‹
 (
 a
 Ë◊.
-_›î©‹
+ty≥
  =
 _OPERATOR_
 )
 
 	)
 
-21 
+28 
 	#IsP¨íthesis
 (
 a
 Ë◊.
-_›î©‹
+ty≥
  =
 _PARENTHESIS_
 )
 
 	)
 
-22 
+29 
 	#IsTîmö©‹
 (
 a
 Ë◊.
-_›î©‹
+ty≥
  =
 _TERMINATOR_
 )
 
 	)
 
-24 
+31 
 	#SIZE_POSTFIX_BUFFER
  ((
 po°fix
@@ -391,33 +391,33 @@ _po°fixT
 
 	)
 
-27 
-öôülizeBuff„rs
+34 
+öôülizeBuf„rs
 ();
 
-30 
+37 
 gëInfixEx¥essi⁄
 ();
 
-33 *
+40 *
 gëInfixBuf„r
 ();
 
-36 
+43 
 ¥ötInfixBuf„r
 ();
 
-39 
+46 
 _po°fixT
  *
 gëPo°fixBuf„r
 ();
 
-42 
+49 
 ¥ötPo°fixBuf„r
 ();
 
-45 
+52 
 ¥ötPo°fixSymbﬁ
 (
 _po°fixT
@@ -427,27 +427,27 @@ s
 
 	@calculator.c
 
-6 
+9 
 	~<°dio.h
 >
 
-7 
+10 
 	~<°dlib.h
 >
 
-8 
+11 
 	~<°rög.h
 >
 
-9 
+12 
 	~<buf„r.h
 >
 
-10 
+13 
 	~<°ack.h
 >
 
-12 
+15 
 	#isNum
 (
 c
@@ -455,7 +455,7 @@ c
 
 	)
 
-13 
+16 
 	#isTîmö©‹
 (
 c
@@ -463,15 +463,15 @@ c
 
 	)
 
-15 
+18 
 	$ˇlc
 ()
 
-17 
+20 
 i
  = 0;
 
-18 
+21 
 _po°fixT
  
 a
@@ -487,23 +487,23 @@ po°
 	`gëPo°fixBuf„r
 ();
 
-20 
+23 
 	`öôSèck
 ();
 
-22 #ifde‡
+25 #ifde‡
 DEBUG
 
 
-23 
+26 
 	`¥ötInfixBuf„r
 ();
 
-24 
+27 
 	`¥ötPo°fixBuf„r
 ();
 
-27 
+30 
 symbﬁ
  = 
 po°
@@ -511,7 +511,7 @@ po°
 i
 ++];
 
-29 i‡(
+32 i‡(
 	`IsTîmö©‹
 (
 symbﬁ
@@ -519,77 +519,77 @@ symbﬁ
 	`IsN⁄e
 (symbol)) {
 
-30 
+33 
 	`p›
 (&
 symbﬁ
 );
 
-34 i‡(
+37 i‡(
 	`IsO≥ønd
 (
 symbﬁ
 )) {
 
-35 #ifde‡
+38 #ifde‡
 DEBUG
 
 
-36 
+39 
 	`¥ötPo°fixSymbﬁ
 (
 symbﬁ
 );
 
-38 
+41 
 	`push
 (
 symbﬁ
 );
 
-39 } i‡(
+42 } i‡(
 	`IsO≥øt‹
 (
 symbﬁ
 )) {
 
-40 #ifde‡
+43 #ifde‡
 DEBUG
 
 
-41 
+44 
 	`¥ötPo°fixSymbﬁ
 (
 symbﬁ
 );
 
-43 
+46 
 s
 .
-_›î©‹
+ty≥
  = 
 _OPERAND_
 ;
 
-44 
+47 
 	`p›
 (&
 a
 );
 
-45 
+48 
 	`p›
 (&
 b
 );
 
-47 ()
+50 ()
 symbﬁ
 .
 vÆ
 ) {
 
-49 
+52 
 s
 .
 vÆ
@@ -599,7 +599,7 @@ b
 a
 .val;
 
-52 
+55 
 s
 .
 vÆ
@@ -609,7 +609,7 @@ b
 a
 .val;
 
-55 
+58 
 s
 .
 vÆ
@@ -619,27 +619,27 @@ b
 a
 .val;
 
-58 i‡(
+61 i‡(
 a
 .
 vÆ
  == 0) {
 
-59 
+62 
 	`¥ötf
 ("ERROR [%s:%d] dividêby zîo\n", 
 __FILE__
 ,
 
-60 
+63 
 __LINE__
 );
 
-61 
+64 
 	`exô
 (0);
 
-63 
+66 
 s
 .
 vÆ
@@ -649,13 +649,13 @@ b
 a
 .val;
 
-66 
+69 
 	`¥ötf
 ("ERROR [%s:%d] invÆid o≥øt‹(%c, %d)\n", 
 __FILE__
 ,
 
-67 
+70 
 __LINE__
 , ()
 symbﬁ
@@ -663,173 +663,173 @@ symbﬁ
 vÆ
 , symbol.val);
 
-68 
+71 
 	`exô
 (0);
 
-72 
+75 
 	`push
 (
 s
 );
 
-74 
+77 
 	`¥ötPo°fixSymbﬁ
 (
 symbﬁ
 );
 
-75 
+78 
 	`¥ötf
-("ERROR [%s:%d] invalid symbol(_operator: %c, %d)\n",
+("ERROR [%s:%d] invalid symbol(type: %c, %d)\n",
 
-76 
+79 
 __FILE__
 , 
 __LINE__
 , ()
 symbﬁ
 .
-_›î©‹
+ty≥
 ,
 
-77 
+80 
 symbﬁ
 .
-_›î©‹
+ty≥
 );
 
-78 
+81 
 	`exô
 (0);
 
-82  
+85  
 symbﬁ
 .
 vÆ
 ;
 
-83 
+86 
 	}
 }
 
 	@calculator.h
 
-2 #i‚de‡
+9 #i‚de‡
 __CALC_H__
 
 
-3 
+10 
 	#__CALC_H__
 
 
 	)
 
-5 
+13 
 ˇlc
 ();
 
 	@convert.c
 
-6 
+9 
 	~<°dio.h
 >
 
-7 
+10 
 	~<°dlib.h
 >
 
-8 
+11 
 	~<°rög.h
 >
 
-9 
+12 
 	~<buf„r.h
 >
 
-10 
+13 
 	~<°ack.h
 >
 
-12 
+15 
 	$¥e˚dí˚
 (
 c
 )
 
-14 
+17 
 p
  = 2;
 
-16 
+19 
 c
 ) {
 
-19 
+22 
 p
  = 2;
 
-23 
+26 
 p
  = 3;
 
-27 
+30 
 p
  = 1;
 
-30 
+33 
 p
  = 0;
 
-34  
+37  
 p
 ;
 
-35 
+38 
 	}
 }
 
-38 
+41 
 	$isO≥øt‹
 (
 c
 )
 
-40 
+43 
 c
 ) {
 
-50 
+53 
 	}
 }
 
-53 
+56 
 	$isP¨íthesis
 (
 c
 )
 
-55 
+58 
 ªsu…
  = 0;
 
-57 
+60 
 c
 ) {
 
-60 
+63 
 ªsu…
  = 1;
 
-64  
+67  
 ªsu…
 ;
 
-65 
+68 
 	}
 }
 
-67 
+70 
 	#isNumîic
 (
 c
@@ -837,7 +837,7 @@ c
 
 	)
 
-68 
+71 
 	#toNumîic
 (
 c
@@ -845,7 +845,7 @@ c
 
 	)
 
-69 
+72 
 	#isTîmö©‹
 (
 c
@@ -853,7 +853,7 @@ c
 
 	)
 
-70 
+73 
 	#isWhôeCh¨
 (
 c
@@ -861,7 +861,7 @@ c
 
 	)
 
-78 *
+81 *
 	$∑r£Symbﬁ
 (*
 ö
@@ -871,17 +871,17 @@ _po°fixT
 symbﬁ
 )
 
-80 *
+83 *
 c
  = 
 ö
 ;
 
-83 i‡(!
+86 i‡(!
 c
 ) {
 
-84 
+87 
 	`¥ötf
 ("ERROR [%s:%d] i¿i†NULL\n", 
 __FILE__
@@ -889,61 +889,61 @@ __FILE__
 __LINE__
 );
 
-85  
+88  
 NULL
 ;
 
-88 i‡(
-	`isTîmö©‹
-(*
-c
-)) {
-
-89 
-symbﬁ
-->
-_›î©‹
- = 
-_TERMINATOR_
-;
-
-90 
-symbﬁ
-->
-vÆ
- = ()*
-c
-;
-
-91  
-c
-;
-
-94 
+92 
 	`isWhôeCh¨
 (*
 c
 )) {
 
-95 
+93 
 c
 ++;
 
-99 i‡(
+97 i‡(
+	`isTîmö©‹
+(*
+c
+)) {
+
+98 
+symbﬁ
+->
+ty≥
+ = 
+_TERMINATOR_
+;
+
+99 
+symbﬁ
+->
+vÆ
+ = ()*
+c
+;
+
+100  
+c
+;
+
+104 i‡(
 	`isO≥øt‹
 (*
 c
 )) {
 
-100 
+105 
 symbﬁ
 ->
-_›î©‹
+ty≥
  = 
 _OPERATOR_
 ;
 
-101 
+106 
 symbﬁ
 ->
 vÆ
@@ -951,25 +951,25 @@ vÆ
 c
 ;
 
-102  ++
+107  ++
 c
 ;
 
-105 i‡(
+111 i‡(
 	`isP¨íthesis
 (*
 c
 )) {
 
-106 
+112 
 symbﬁ
 ->
-_›î©‹
+ty≥
  = 
 _PARENTHESIS_
 ;
 
-107 
+113 
 symbﬁ
 ->
 vÆ
@@ -977,17 +977,17 @@ vÆ
 c
 ;
 
-108  ++
+114  ++
 c
 ;
 
-111 i‡(!
+118 i‡(!
 	`isNumîic
 (*
 c
 )) {
 
-112 
+119 
 	`¥ötf
 ("ERROR [%s:%d] invÆid d©a(%d, %c)\n", 
 __FILE__
@@ -995,25 +995,25 @@ __FILE__
 __LINE__
 ,
 
-113 ()*
+120 ()*
 c
 , *c);
 
-114  
+121  
 NULL
 ;
 
-116 
+123 
 i
  = 0;
 
-119 
+126 
 	`isNumîic
 (*
 c
 )) {
 
-120 
+127 
 v
  = 
 	`toNumîic
@@ -1021,21 +1021,21 @@ v
 c
 ++);
 
-122 
+129 
 i
  = i * 10 + 
 v
 ;
 
-125 
+132 
 symbﬁ
 ->
-_›î©‹
+ty≥
  = 
 _OPERAND_
 ;
 
-126 
+133 
 symbﬁ
 ->
 vÆ
@@ -1043,25 +1043,25 @@ vÆ
 i
 ;
 
-129  
+136  
 c
 ;
 
-130 
+137 
 	}
 }
 
-135 
+144 
 	$c⁄vîtToPo°Fix
 ()
 
-137 *
+146 *
 ö
  = 
 	`gëInfixBuf„r
 ();
 
-138 
+147 
 _po°fixT
  
 symbﬁ
@@ -1073,29 +1073,23 @@ po°
 	`gëPo°fixBuf„r
 ();
 
-139 
-i
- = 0, 
+148 
 j
+ = 0, 
+nOps
  = 0;
 
-140 
-¥evious_›î©‹
- = 
-_NONE_
-;
-
-143 
+151 
 	`öôSèck
 ();
 
-145 
+153 
 	`mem£t
 (&
 ¥eviousSymbﬁ
 , 0x0, (previousSymbol));
 
-148 
+157 
 ö
  = 
 	`∑r£Symbﬁ
@@ -1103,49 +1097,49 @@ _NONE_
 symbﬁ
 );
 
-150 i‡(!
+159 i‡(!
 ö
 ) {
 
-151 
+160 
 	`¥ötf
-("ERROR [%s:%d] faûed\n", 
+("ERROR [%s:%d]Ö¨£Symbﬁ faûed\n", 
 __FILE__
 , 
 __LINE__
 );
 
-155 i‡(
+164 i‡(
 symbﬁ
 .
-_›î©‹
+ty≥
  =
 _TERMINATOR_
 ) {
 
-159 i‡(
+169 i‡(
 symbﬁ
 .
-_›î©‹
+ty≥
  =
 ¥eviousSymbﬁ
-._operator) {
+.type) {
 
-160 
+170 
 	`¥ötf
 ("ERROR [%s:%d] invÆid infixÉx¥essi⁄\n", 
 __FILE__
 ,
 
-161 
+171 
 __LINE__
 );
 
-162 
+172 
 	`¥ötInfixBuf„r
 ();
 
-163 
+173 
 	`¥ötf
 ("¥eviou†symbﬁ : "); 
 	`¥ötPo°fixSymbﬁ
@@ -1153,7 +1147,7 @@ __LINE__
 ¥eviousSymbﬁ
 );
 
-164 
+174 
 	`¥ötf
 ("cuºíàsymbﬁ : "); 
 	`¥ötPo°fixSymbﬁ
@@ -1161,83 +1155,87 @@ __LINE__
 symbﬁ
 );
 
-168 
+178 
 ¥eviousSymbﬁ
  = 
 symbﬁ
 ;
 
-170 i‡(
+180 i‡(
 symbﬁ
 .
-_›î©‹
+ty≥
  =
 _OPERAND_
 ) {
-
-171 
-po°
-[
-j
-++] = 
-symbﬁ
-;
-
-173 i‡(()
-symbﬁ
-.
-vÆ
- == '(') {
-
-174 
-	`push
-(
-symbﬁ
-);
-
-175 } i‡(()
-symbﬁ
-.
-vÆ
- == ')') {
-
-177 
-_po°fixT
- 
-s
-;
-
-179 
-	`p›
-(&
-s
-);
-
-180 i‡(()
-s
-.
-vÆ
- != '(') {
 
 181 
 po°
 [
 j
 ++] = 
-s
+symbﬁ
 ;
 
-187 i‡(
-	`em±y
-()) {
+183 i‡(()
+symbﬁ
+.
+vÆ
+ == '(') {
 
-188 
+184 
 	`push
 (
 symbﬁ
 );
 
-189 } i‡(
+185 } i‡(()
+symbﬁ
+.
+vÆ
+ == ')') {
+
+187 
+_po°fixT
+ 
+s
+;
+
+189 
+	`p›
+(&
+s
+);
+
+190 i‡(()
+s
+.
+vÆ
+ != '(') {
+
+191 
+po°
+[
+j
+++] = 
+s
+;
+
+197 
+nOps
+++;
+
+198 i‡(
+	`em±y
+()) {
+
+199 
+	`push
+(
+symbﬁ
+);
+
+200 } i‡(
 	`¥e˚dí˚
 (()
 symbﬁ
@@ -1245,7 +1243,7 @@ symbﬁ
 vÆ
 ) >
 
-190 
+201 
 	`¥e˚dí˚
 (()(
 	`t›
@@ -1253,23 +1251,23 @@ vÆ
 vÆ
 ))) {
 
-191 
+202 
 	`push
 (
 symbﬁ
 );
 
-194 i‡(
+205 i‡(
 	`em±y
 ()) {
 
-195 
+206 
 	`push
 (
 symbﬁ
 );
 
-197 } i‡(
+208 } i‡(
 	`¥e˚dí˚
 (()
 symbﬁ
@@ -1277,7 +1275,7 @@ symbﬁ
 vÆ
 ) <=
 
-198 
+209 
 	`¥e˚dí˚
 (()(
 	`t›
@@ -1285,7 +1283,7 @@ vÆ
 vÆ
 ))) {
 
-199 
+210 
 	`p›
 (&
 po°
@@ -1293,17 +1291,17 @@ po°
 j
 ++]);
 
-201 
+212 
 	`push
 (
 symbﬁ
 );
 
-210 !
+221 !
 	`em±y
 ()) {
 
-211 
+222 
 	`p›
 (&
 po°
@@ -1311,23 +1309,27 @@ po°
 j
 ++]);
 
-215 
+225  
+nOps
+;
+
+226 
 	}
 }
 
 	@convert.h
 
-2 #i‚de‡
+9 #i‚de‡
 __CONVERT_H__
 
 
-3 
+10 
 	#__CONVERT_H__
 
 
 	)
 
-7 
+13 
 c⁄vîtToPo°Fix
 ();
 
@@ -1349,31 +1351,51 @@ c⁄vîtToPo°Fix
 	~<ˇlcuœt‹.h
 >
 
-18 
+21 
 	$maö
 ()
 
-20 
+23 
+nOps
+;
+
+25 
 	`¥ötf
 ("Supported operators: + - * / \n");
 
-21 
+26 
 	`¥ötf
 ("Enter infixÉxpression (e.g> 1 + 2 * 3)\n");
 
-25 
-	`öôülizeBuff„rs
+30 
+	`öôülizeBuf„rs
 ();
 
-28 i‡(!
+33 i‡(!
 	`gëInfixEx¥essi⁄
 ())
 
-32 i‡(!
+37 
+nOps
+ = 
 	`c⁄vîtToPo°Fix
-())
+();
 
-35 
+38 i‡(
+nOps
+ < 0) {
+
+40 } if(
+nOps
+ == 0) {
+
+41 
+	`¥ötf
+("%†VÆid infixÉx¥essi⁄, buànÿ›î©‹\n", 
+	`gëInfixBuf„r
+());
+
+43 
 	`¥ötf
 ("%†%d\n", 
 	`gëInfixBuf„r
@@ -1381,21 +1403,21 @@ c⁄vîtToPo°Fix
 	`ˇlc
 ());
 
-39 
+48 
 	}
 }
 
 	@stack.c
 
-6 
+9 
 	~<°rög.h
 >
 
-7 
+10 
 	~<°ack.h
 >
 
-9 
+12 
 _po°fixT
  
 	g°ack
@@ -1403,11 +1425,11 @@ _po°fixT
 MAX_STRING
 ];
 
-10 
+13 
 	g•
  = -1;
 
-12 
+15 
 	$push
 (
 _po°fixT
@@ -1415,7 +1437,7 @@ _po°fixT
 c
 )
 
-14 
+17 
 °ack
 [++
 •
@@ -1423,11 +1445,11 @@ c
 c
 ;
 
-15 
+18 
 	}
 }
 
-17 
+20 
 	$p›
 (
 _po°fixT
@@ -1435,7 +1457,7 @@ _po°fixT
 p
 )
 
-19 *
+22 *
 p
  = 
 °ack
@@ -1443,73 +1465,73 @@ p
 •
 --];
 
-20 
+23 
 	}
 }
 
-22 
+25 
 _po°fixT
  
 	$t›
 ()
 
-24  
+27  
 °ack
 [
 •
 ];
 
-25 
+28 
 	}
 }
 
-27 
+30 
 	$em±y
 ()
 
-29  (
+32  (
 •
  == -1);
 
-30 
+33 
 	}
 }
 
-32 
+35 
 	$öôSèck
 ()
 
-34 
+37 
 •
  = -1;
 
-35 
+38 
 	`mem£t
 (
 °ack
 , 0x0, (stack));
 
-36 
+39 
 	}
 }
 
 	@stack.h
 
-6 #i‚de‡
+9 #i‚de‡
 __STACK_H__
 
 
-7 
+10 
 	#__STACK_H__
 
 
 	)
 
-9 
+12 
 	~<buf„r.h
 >
 
-11 
+14 
 push
 (
 _po°fixT
@@ -1517,7 +1539,7 @@ _po°fixT
 c
 );
 
-12 
+15 
 p›
 (
 _po°fixT
@@ -1525,17 +1547,17 @@ _po°fixT
 p
 );
 
-13 
+16 
 _po°fixT
  
 t›
 ();
 
-14 
+17 
 em±y
 ();
 
-15 
+18 
 öôSèck
 ();
 

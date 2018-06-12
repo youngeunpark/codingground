@@ -36,7 +36,7 @@ Include dependency graph for convert.\+c\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{convert_8c_a9eee13860c4c03eac3f53c3a1f3aba80}{convert\+To\+Post\+Fix} (void)
-\begin{DoxyCompactList}\small\item\em Convert infix expression into postpix one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -57,8 +57,7 @@ Youngeun Park
 \subsubsection{\texorpdfstring{convert\+To\+Post\+Fix()}{convertToPostFix()}}
 {\footnotesize\ttfamily int convert\+To\+Post\+Fix (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-
-
-Convert infix expression into postpix one. 
-
-\+: the number of operators on success -\/1 on failure 
+\begin{DoxyReturn}{Returns}
+On success, the number of operators to be parsed~\newline
+On failutre, -\/1 
+\end{DoxyReturn}

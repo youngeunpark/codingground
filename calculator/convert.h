@@ -9,7 +9,10 @@
 #ifndef __CONVERT_H__
 #define __CONVERT_H__
 
-/// Convert infix expression into postpix one
+/**
+    Convert infix expression into postpix\n
+    ( Reference: https://www.tutorialspoint.com/data_structures_algorithms/expression_parsing.htm )
+*/
 int convertToPostFix(void);
 
 #endif

@@ -95,21 +95,21 @@ static char *parseSymbol(char *in, _postfixT * symbol)
 
     // Reaching terminator char
     if (isTerminator(*c)) {
-        symbol->_operator = _TERMINATOR_;
+        symbol->type = _TERMINATOR_;
         symbol->val = (int)*c;
         return c;
     }
 
     // Parsing Operator
     if (isOperator(*c)) {
-        symbol->_operator = _OPERATOR_;
+        symbol->type = _OPERATOR_;
         symbol->val = (int)*c;
         return ++c;
     }
 
     // Parsing Parenthesis
     if (isParenthesis(*c)) {
-        symbol->_operator = _PARENTHESIS_;
+        symbol->type = _PARENTHESIS_;
         symbol->val = (int)*c;
         return ++c;
     }
@@ -129,7 +129,7 @@ static char *parseSymbol(char *in, _postfixT * symbol)
             i = i * 10 + v;
         }
 
-        symbol->_operator = _OPERAND_;
+        symbol->type = _OPERAND_;
         symbol->val = i;
     }
 
@@ -137,9 +137,9 @@ static char *parseSymbol(char *in, _postfixT * symbol)
 }
 
 /**
-    @Return:
-    the number of operators on success
-    -1 on failure
+    @return
+    On success, the number of operators to be parsed\n
+    On failutre, -1
 */
 int convertToPostFix(void)
 {
@@ -161,12 +161,12 @@ int convertToPostFix(void)
             return -1;
         }
 
-        if (symbol._operator == _TERMINATOR_) {
+        if (symbol.type == _TERMINATOR_) {
             break;
         }
 
         // Consecutive same type of symbols must be invalid
-        if (symbol._operator == previousSymbol._operator) {
+        if (symbol.type == previousSymbol.type) {
             printf("ERROR [%s:%d] invalid infix expression\n", __FILE__,
                    __LINE__);
             printInfixBuffer();
@@ -177,9 +177,9 @@ int convertToPostFix(void)
 
         previousSymbol = symbol;
 
-        if (symbol._operator == _OPERAND_) {
+        if (symbol.type == _OPERAND_) {
             post[j++] = symbol;
-        } else {                // _OPERATOR_
+        } else {
             if ((char)symbol.val == '(') {
                 push(symbol);
             } else if ((char)symbol.val == ')') {

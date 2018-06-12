@@ -1,4 +1,3 @@
-
 /**
     @file main.c
     @date 2018/06/10
@@ -16,6 +15,9 @@
 #include <convert.h>
 #include <calculator.h>
 
+/**
+    @return
+*/
 int main(void)
 {
     int nOps;
@@ -24,8 +26,8 @@ int main(void)
     printf("Enter infix expression (e.g> 1 + 2 * 3)\n");
 
     while (1) {
-        // Initialize infix & postfix buffers
-        initializeBufffers();
+        // Initialize buffers
+        initializeBuffers();
 
         // Read infix expresssion
         if (!getInfixExpression())
