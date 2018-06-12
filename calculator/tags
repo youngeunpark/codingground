@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -I. -g #-DDEBUG$/;"	m
+IsNone	buffer.h	18;"	d
+IsOperand	buffer.h	19;"	d
+IsOperator	buffer.h	20;"	d
+IsParenthesis	buffer.h	21;"	d
+IsTerminator	buffer.h	22;"	d
+MAX_STRING	buffer.h	5;"	d
+SIZE_POSTFIX_BUFFER	buffer.h	24;"	d
+_NONE_	buffer.h	7;"	d
+_OPERAND_	buffer.h	8;"	d
+_OPERATOR_	buffer.h	9;"	d
+_PARENTHESIS_	buffer.h	10;"	d
+_TERMINATOR_	buffer.h	11;"	d
+__BUFFER_H__	buffer.h	3;"	d
+__CALC_H__	calculator.h	3;"	d
+__CONVERT_H__	convert.h	3;"	d
+__STACK_H__	stack.h	7;"	d
+_operator	buffer.h	/^    unsigned char _operator;$/;"	m	struct:__anon1
+_postfixT	buffer.h	/^} _postfixT;$/;"	t	typeref:struct:__anon1
+calc	calculator.c	/^int calc(void)$/;"	f
+convertToPostFix	convert.c	/^int convertToPostFix(void)$/;"	f
+empty	stack.c	/^int empty(void)$/;"	f
+getInfixBuffer	buffer.c	/^char *getInfixBuffer(void)$/;"	f
+getInfixExpression	buffer.c	/^int getInfixExpression(void)$/;"	f
+getPostfixBuffer	buffer.c	/^_postfixT *getPostfixBuffer(void)$/;"	f
+infix	buffer.c	/^static char infix[MAX_STRING];$/;"	v	file:
+initStack	stack.c	/^void initStack(void)$/;"	f
+initializeBufffers	buffer.c	/^void initializeBufffers(void)$/;"	f
+isNum	calculator.c	12;"	d	file:
+isNumeric	convert.c	67;"	d	file:
+isOperator	convert.c	/^static int isOperator(char c)$/;"	f	file:
+isParenthesis	convert.c	/^static int isParenthesis(char c)$/;"	f	file:
+isTerminator	calculator.c	13;"	d	file:
+isTerminator	convert.c	69;"	d	file:
+isWhiteChar	convert.c	70;"	d	file:
+main	main.c	/^int main(void)$/;"	f
+parseSymbol	convert.c	/^static char *parseSymbol(char *in, _postfixT * symbol)$/;"	f	file:
+pop	stack.c	/^void pop(_postfixT * p)$/;"	f
+postfix	buffer.c	/^static _postfixT postfix[MAX_STRING];$/;"	v	file:
+precedence	convert.c	/^static int precedence(char c)$/;"	f	file:
+printInfixBuffer	buffer.c	/^void printInfixBuffer(void)$/;"	f
+printPostfixBuffer	buffer.c	/^void printPostfixBuffer(void)$/;"	f
+printPostfixSymbol	buffer.c	/^void printPostfixSymbol(_postfixT s)$/;"	f
+push	stack.c	/^void push(_postfixT c)$/;"	f
+sp	stack.c	/^static int sp = -1;$/;"	v	file:
+stack	stack.c	/^static _postfixT stack[MAX_STRING];$/;"	v	file:
+toNumeric	convert.c	68;"	d	file:
+top	stack.c	/^_postfixT top(void)$/;"	f
+val	buffer.h	/^    int val;$/;"	m	struct:__anon1

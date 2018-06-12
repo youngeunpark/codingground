@@ -1,0 +1,9 @@
+./main.c
+./convert.h
+./calculator.h
+./stack.c
+./convert.c
+./buffer.c
+./calculator.c
+./buffer.h
+./stack.h
