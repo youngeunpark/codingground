@@ -54,7 +54,9 @@ int getInfixExpression(void)
 
     // expression is comment starting with #
     if(infix[0] == '#') {
+#ifdef DEBUG
         printf("Skip comment, %s", infix);
+#endif
         return 0;
     }
 

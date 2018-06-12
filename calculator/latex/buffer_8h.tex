@@ -2,7 +2,7 @@
 \label{buffer_8h}\index{buffer.\+h@{buffer.\+h}}
 
 
-Struct and function for buffer management.  
+Header file for buffer management.  
 
 
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -52,9 +52,6 @@ struct \hyperlink{structsymbolT}{symbolT}
 \item 
 \mbox{\Hypertarget{buffer_8h_a1f600538736a3d312fa826cc3e51cd77}\label{buffer_8h_a1f600538736a3d312fa826cc3e51cd77}} 
 \#define {\bfseries Is\+Terminator}(a)~(a.\+type == \+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+O\+R\+\_\+)
-\item 
-\mbox{\Hypertarget{buffer_8h_ae54365e424e0df26819e85d73c2b34d6}\label{buffer_8h_ae54365e424e0df26819e85d73c2b34d6}} 
-\#define {\bfseries S\+I\+Z\+E\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+B\+U\+F\+F\+ER}~(sizeof(postfix) / sizeof(\hyperlink{structsymbolT}{symbolT}))
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -76,7 +73,7 @@ void \hyperlink{buffer_8h_a480e702aad3b1bbbda9560444013a473}{print\+Postfix\+Sym
 
 
 \subsection{Detailed Description}
-Struct and function for buffer management. 
+Header file for buffer management. 
 
 \begin{DoxyDate}{Date}
 2018/06/10 
@@ -116,8 +113,9 @@ Pointer to infix buffer
 Read infix expression via standard input. 
 
 \begin{DoxyReturn}{Returns}
-On failure, 0~\newline
-On success, the length of expression
+On failure, -\/1 (actually, exits program)~\newline
+On encounting comment, 0~\newline
+On success, the length of expression ( greater than zero )
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}

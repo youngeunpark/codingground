@@ -2,7 +2,7 @@
 \label{calculator_8c}\index{calculator.\+c@{calculator.\+c}}
 
 
-Calculator.  
+Calculator implementation.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -10,6 +10,7 @@ Calculator.
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$buffer.\+h$>$}\newline
 {\ttfamily \#include $<$stack.\+h$>$}\newline
+{\ttfamily \#include $<$utility.\+h$>$}\newline
 Include dependency graph for calculator.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -17,25 +18,15 @@ Include dependency graph for calculator.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{calculator_8c__incl}
 \end{center}
 \end{figure}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{calculator_8c_af01b43bbb0e04b9b0e9fd509f941deb8}\label{calculator_8c_af01b43bbb0e04b9b0e9fd509f941deb8}} 
-\#define {\bfseries is\+Num}(c)~((c $>$= \textquotesingle{}0\textquotesingle{}) \&\& (c $<$= \textquotesingle{}9\textquotesingle{}))
-\item 
-\mbox{\Hypertarget{calculator_8c_a5fd3acbdba0ff2963d05d6af8bcff181}\label{calculator_8c_a5fd3acbdba0ff2963d05d6af8bcff181}} 
-\#define {\bfseries is\+Terminator}(c)~((c == \textquotesingle{}\textbackslash{}n\textquotesingle{}) $\vert$$\vert$ (c == 0))
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{calculator_8c_a35315bd505668ac8d4e3348a4dce7dfc}\label{calculator_8c_a35315bd505668ac8d4e3348a4dce7dfc}} 
-int \hyperlink{calculator_8c_a35315bd505668ac8d4e3348a4dce7dfc}{calc} (void)
-\begin{DoxyCompactList}\small\item\em calc function \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{calculator_8c_a267908546719af12ada386fa341bfaf8}{calc} (int $\ast$result)
+\begin{DoxyCompactList}\small\item\em calculator function to evaluate postifx expression \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Calculator. 
+Calculator implementation. 
 
 \begin{DoxyDate}{Date}
 2018/06/10 
@@ -43,3 +34,25 @@ Calculator.
 \begin{DoxyAuthor}{Author}
 Youngeun Park 
 \end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{calculator_8c_a267908546719af12ada386fa341bfaf8}\label{calculator_8c_a267908546719af12ada386fa341bfaf8}} 
+\index{calculator.\+c@{calculator.\+c}!calc@{calc}}
+\index{calc@{calc}!calculator.\+c@{calculator.\+c}}
+\subsubsection{\texorpdfstring{calc()}{calc()}}
+{\footnotesize\ttfamily int calc (\begin{DoxyParamCaption}\item[{int $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+calculator function to evaluate postifx expression 
+
+\begin{DoxyReturn}{Returns}
+On success, 1~\newline
+On failure, 0
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em result} & (O\+UT) \+: integer pointer to return calculated result \\
+\hline
+\end{DoxyParams}

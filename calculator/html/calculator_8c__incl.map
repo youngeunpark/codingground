@@ -1,4 +1,5 @@
 <map id="calculator.c" name="calculator.c">
-<area shape="rect" id="node5" href="$buffer_8h.html" title="Struct and function for buffer management. " alt="" coords="284,155,351,181"/>
-<area shape="rect" id="node6" href="$stack_8h.html" title="stack.h " alt="" coords="321,80,386,107"/>
+<area shape="rect" id="node5" href="$buffer_8h.html" title="Header file for buffer management. " alt="" coords="284,155,351,181"/>
+<area shape="rect" id="node6" href="$stack_8h.html" title="header file for stack implementation " alt="" coords="321,80,386,107"/>
+<area shape="rect" id="node7" href="$utility_8h.html" title="Utility macros. " alt="" coords="411,80,475,107"/>
 </map>

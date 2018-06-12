@@ -3,7 +3,7 @@
     @date 2018/06/10
     @author Youngeun Park
     @brief
-    convert.c
+    Infix-to-postfix convertor
 */
 
 #include <stdio.h>
@@ -11,7 +11,15 @@
 #include <string.h>
 #include <buffer.h>
 #include <stack.h>
+#include <utility.h>
 
+/**
+    @return
+    precedence of given c
+
+    @param
+    c : operator (+, -, * or /)
+*/
 static int precedence(char c)
 {
     int p = 2;
@@ -67,17 +75,15 @@ static int isParenthesis(char c)
     return result;
 }
 
-#define isNumeric(c) ((c >= '0') && (c <= '9'))
-#define toNumeric(c) (c - '0')
-#define isTerminator(c) ((c == '\n') || (c == 0))
-#define isWhiteChar(c) ((c == ' ') || (c == '\t'))
+/**
+    @return:
+    On success, pointer of the buffer to be parsed next time\n
+    On fauilure, NULL
 
-// Return:
-//   On success, the address of the buffer to be parsed next time
-//   On fauilure, NULL
-// Arguments:
-//   in (in) - the buffer location to be parsed
-//   symbol (out) - parsed value
+    @param:
+    in (IN) : pointer of infix buffer\n
+    symbol (OUT) - parsed symbol
+*/
 static char *parseSymbol(char *in, symbolT * symbol)
 {
     char *c = in;
@@ -89,7 +95,7 @@ static char *parseSymbol(char *in, symbolT * symbol)
     }
 
     // Strip out whitespaces
-    while (isWhiteChar(*c)) {
+    while (isWhitespace(*c)) {
         c++;
     }
 
@@ -115,7 +121,7 @@ static char *parseSymbol(char *in, symbolT * symbol)
     }
 
     // Check invalid data
-    if (!isNumeric(*c)) {
+    if (!isNum(*c)) {
         printf("ERROR [%s:%d] invalid data(%d, %c)\n", __FILE__, __LINE__,
                (int)*c, *c);
         return NULL;
@@ -123,7 +129,7 @@ static char *parseSymbol(char *in, symbolT * symbol)
         int i = 0;
 
         // Make given operand as decimal number
-        while (isNumeric(*c)) {
+        while (isNum(*c)) {
             char v = toNumeric(*c++);
 
             i = i * 10 + v;
@@ -220,6 +226,12 @@ int convertToPostFix(void)
 
     while (!empty()) {
         pop(&post[j++]);
+    }
+
+    if(nOps == 0) {
+#ifdef DEBUG
+        printf("%s = Valid expression, but no operator\n", getInfixBuffer());
+#endif
     }
 
     return nOps;

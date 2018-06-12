@@ -3,7 +3,7 @@
     @date 2018/06/10
     @author Youngeun Park
     @brief
-    Struct and function for buffer management
+    Header file for buffer management
 */
 
 #ifndef __BUFFER_H__
@@ -18,8 +18,8 @@
 #define _TERMINATOR_ 4
 
 typedef struct {
-    unsigned char type; ///< indicator of val (operand or operator)
-    int val; ///< parsed value. can be operand or operator
+    unsigned char type; ///< indicator (operand or operator)
+    int val; ///< parsed integer value or operator
 } symbolT;
 
 #define IsNone(a) (a.type == _NONE_)
@@ -27,8 +27,6 @@ typedef struct {
 #define IsOperator(a) (a.type == _OPERATOR_)
 #define IsParenthesis(a) (a.type == _PARENTHESIS_)
 #define IsTerminator(a) (a.type == _TERMINATOR_)
-
-#define SIZE_POSTFIX_BUFFER (sizeof(postfix) / sizeof(symbolT))
 
 /// Initialize infix & postfix buffers by filling 0x0
 void initializeBuffers(void);

@@ -67,7 +67,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Struct and function for buffer management.  
+<p>Header file for buffer management.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -75,9 +75,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="buffer_8h__dep__incl.png" border="0" usemap="#buffer_8hdep" alt=""/></div>
 <map name="buffer_8hdep" id="buffer_8hdep">
 <area shape="rect" id="node2" href="buffer_8c.html" title="Struct and function for buffer management. " alt="" coords="5,80,72,107"/>
-<area shape="rect" id="node3" href="calculator_8c.html" title="Calculator. " alt="" coords="34,155,123,181"/>
-<area shape="rect" id="node4" href="stack_8h.html" title="stack.h " alt="" coords="147,80,213,107"/>
-<area shape="rect" id="node5" href="convert_8c.html" title="convert.c " alt="" coords="237,155,313,181"/>
+<area shape="rect" id="node3" href="calculator_8c.html" title="Calculator implementation. " alt="" coords="34,155,123,181"/>
+<area shape="rect" id="node4" href="stack_8h.html" title="header file for stack implementation " alt="" coords="147,80,213,107"/>
+<area shape="rect" id="node5" href="convert_8c.html" title="Infix&#45;to&#45;postfix convertor. " alt="" coords="237,155,313,181"/>
 <area shape="rect" id="node7" href="main_8c.html" title="Calculator program reads the string of numeric infix expression, converts it postfix expression..." alt="" coords="288,80,349,107"/>
 <area shape="rect" id="node6" href="stack_8c.html" title="Stack implementation for symbols. " alt="" coords="147,155,213,181"/>
 </map>
@@ -125,9 +125,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a1f600538736a3d312fa826cc3e51cd77"><td class="memItemLeft" align="right" valign="top"><a id="a1f600538736a3d312fa826cc3e51cd77"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>IsTerminator</b>(a)&#160;&#160;&#160;(a.type == _TERMINATOR_)</td></tr>
 <tr class="separator:a1f600538736a3d312fa826cc3e51cd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae54365e424e0df26819e85d73c2b34d6"><td class="memItemLeft" align="right" valign="top"><a id="ae54365e424e0df26819e85d73c2b34d6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_POSTFIX_BUFFER</b>&#160;&#160;&#160;(sizeof(postfix) / sizeof(<a class="el" href="structsymbolT.html">symbolT</a>))</td></tr>
-<tr class="separator:ae54365e424e0df26819e85d73c2b34d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -153,7 +150,7 @@ Functions</h2></td></tr>
 <tr class="separator:a480e702aad3b1bbbda9560444013a473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Struct and function for buffer management. </p>
+<div class="textblock"><p>Header file for buffer management. </p>
 <dl class="section date"><dt>Date</dt><dd>2018/06/10 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Youngeun Park </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -201,8 +198,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read infix expression via standard input. </p>
-<dl class="section return"><dt>Returns</dt><dd>On failure, 0<br />
-On success, the length of expression</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>On failure, -1 (actually, exits program)<br />
+On encounting comment, 0<br />
+On success, the length of expression ( greater than zero )</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">NONE</td><td></td></tr>

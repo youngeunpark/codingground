@@ -3,7 +3,7 @@
     @date 2018/06/10
     @author Youngeun Park
     @brief
-    Convert.h
+    Header file for infix to postfix convertor
 */
 
 #ifndef __CONVERT_H__

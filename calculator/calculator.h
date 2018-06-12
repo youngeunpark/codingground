@@ -1,15 +1,16 @@
 /**
-    @file calculator.c
+    @file calculator.h
     @date 2018/06/10
     @author Youngeun Park
     @brief
-    Calculator
+    Header file for Calculator
 */
 
 #ifndef __CALC_H__
 #define __CALC_H__
 
-/// calc function
-int calc(void);
+/// calculator function to evaluate postifx expression
+int calc(int *);
 
 #endif
+

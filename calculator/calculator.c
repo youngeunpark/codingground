@@ -3,7 +3,7 @@
     @date 2018/06/10
     @author Youngeun Park
     @brief
-    Calculator
+    Calculator implementation
 */
 
 #include <stdio.h>
@@ -11,16 +11,27 @@
 #include <string.h>
 #include <buffer.h>
 #include <stack.h>
+#include <utility.h>
 
-#define isNum(c) ((c >= '0') && (c <= '9'))
-#define isTerminator(c) ((c == '\n') || (c == 0))
+/**
+    @return
+    On success, 1\n
+    On failure, 0
 
-int calc(void)
+    @param
+    result (OUT) : integer pointer to return calculated result
+*/
+int calc(int *result)
 {
     int i = 0;
     symbolT a, b, s, symbol, *post = getPostfixBuffer();
 
     initStack();
+
+    if(!result) {
+        printf("ERROR [%s:%d] result is NULL\n", __FILE__, __LINE__);
+        return 0;
+    }
 
 #ifdef DEBUG
     printInfixBuffer();
@@ -59,16 +70,16 @@ int calc(void)
                 break;
             case '/':
                 if (a.val == 0) {
-                    printf("ERROR [%s:%d] divide by zero\n", __FILE__,
-                           __LINE__);
-                    exit(0);
+                    printf("ERROR [%s:%d] divide by zero (%d/%d)\n", __FILE__,
+                           __LINE__, b.val, a.val);
+                    return 0;
                 }
                 s.val = b.val / a.val;
                 break;
             default:
                 printf("ERROR [%s:%d] invalid operator(%c, %d)\n", __FILE__,
                        __LINE__, (char)symbol.val, symbol.val);
-                exit(0);
+                return 0;
                 break;
             }
 
@@ -78,9 +89,11 @@ int calc(void)
             printf("ERROR [%s:%d] invalid symbol(type: %c, %d)\n",
                    __FILE__, __LINE__, (char)symbol.type,
                    symbol.type);
-            exit(0);
+            return 0;
         }
     }
 
-    return symbol.val;
+    *result = symbol.val;
+    return 1;
 }
+

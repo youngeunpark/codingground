@@ -21,10 +21,9 @@
 */
 int main(void)
 {
-    int nOps;
-
-    printf("Supported operators: + - * / \n");
+    // Brief help on how to run this calculator
     printf("Enter infix expression (e.g> 1 + 2 * 3)\n");
+    printf("Supported operators: + - * / \n");
 
     while (1) {
         // Initialize buffers
@@ -35,16 +34,18 @@ int main(void)
             continue;
         }
 
-        // Convert infix expression into postfix one
-        nOps = convertToPostFix();
-        if (nOps < 0) {
-            printf("%s = Invalid expression\n", getInfixBuffer());
-        } else if(nOps == 0) {
-            printf("%s = Valid expression, but no operator\n", getInfixBuffer());
-        } else {
-            printf("%s = %d\n", getInfixBuffer(), calc());
+        // Convert infix into postfix
+        if (convertToPostFix() > 0) {
+            int result;
+
+            // Calcualte postfix expression
+            if(calc(&result)) {
+                // Print result
+                printf("%s = %d\n", getInfixBuffer(), result);
+            }
         }
     }
 
     return 0;
 }
+
