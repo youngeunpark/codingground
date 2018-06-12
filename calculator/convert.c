@@ -1,6 +1,9 @@
-
-/*
-  Convert infix to postfix
+/**
+    @file convert.c
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    convert.c
 */
 
 #include <stdio.h>
@@ -133,10 +136,11 @@ static char *parseSymbol(char *in, _postfixT * symbol)
     return c;
 }
 
-// Convert infix expression into postpix one
-// Return:
-//   the number of operators on success
-//   -1 on failure
+/**
+    @Return:
+    the number of operators on success
+    -1 on failure
+*/
 int convertToPostFix(void)
 {
     char *in = getInfixBuffer();

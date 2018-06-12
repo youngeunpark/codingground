@@ -1,6 +1,9 @@
-
-/*
-  Stack
+/**
+    @file stack.c
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    stack.c
 */
 
 #include <string.h>

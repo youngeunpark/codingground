@@ -1,7 +1,9 @@
-
-/*
-  'infix' as input buffer to read infix expression
-  'postfix' as intermediate buffer to contain converted postfix expression
+/**
+    @file buffer.c
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    Struct and function for buffer management
 */
 
 #include <stdio.h>
@@ -15,7 +17,10 @@ static char infix[MAX_STRING];
 // postfix buffer
 static _postfixT postfix[MAX_STRING];
 
-// Fill 0x0 to initizize buffers
+/**
+    @return NONE
+    @argument NONE
+*/
 void initializeBufffers(void)
 {
     memset(infix, 0x0, sizeof(infix));

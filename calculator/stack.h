@@ -1,6 +1,9 @@
-
-/*
-  Stack
+/**
+    @file stack.h
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    stack.h
 */
 
 #ifndef __STACK_H__

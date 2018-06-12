@@ -1,3 +1,10 @@
+/**
+    @file buffer.h
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    Struct and function for buffer management
+*/
 
 #ifndef __BUFFER_H__
 #define __BUFFER_H__
@@ -11,8 +18,8 @@
 #define _TERMINATOR_ 4
 
 typedef struct {
-    unsigned char _operator;
-    int val;
+    unsigned char _operator; ///< indicator of val (operand or operator)
+    int val; ///< parsed value. can be operand or operator
 } _postfixT;
 
 #define IsNone(a) (a._operator == _NONE_)
@@ -23,7 +30,7 @@ typedef struct {
 
 #define SIZE_POSTFIX_BUFFER (sizeof(postfix) / sizeof(_postfixT))
 
-// Fill 0x0 to initizize buffers
+/// Initizize infix & postfix buffers to fill 0x0
 void initializeBufffers(void);
 
 // Read infix expression via stdin

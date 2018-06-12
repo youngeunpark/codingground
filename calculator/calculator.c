@@ -1,6 +1,9 @@
-
-/*
-  Calculate postfix buffer to get numeric result
+/**
+    @file calculator.c
+    @date 2018/06/10
+    @author Youngeun Park
+    @brief
+    Calculator
 */
 
 #include <stdio.h>
