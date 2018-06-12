@@ -1,6 +1,6 @@
 
 CC = gcc
-CFLAGS = -I. -g #-DDEBUG
+CFLAGS = -I. -g -Werror #-DDEBUG
 
 all: calculator
 
