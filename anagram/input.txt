@@ -1,0 +1,5 @@
+tar
+rat
+hello
+e0llh
+exit
