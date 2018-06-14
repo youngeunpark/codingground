@@ -1,6 +1,6 @@
 /**
-    @file stack.hpp
-    @date 2018/06/10
+    @file stack.H
+    @date 2018/06/14
     @author Youngeun Park
     @brief
     C++ header file for stack implementation
@@ -9,7 +9,7 @@
 #ifndef __STACK_H_CPP__
 #define __STACK_H_CPP__
 
-#include <buffer.h>
+#include <buffer.H>
 
 class Stack {
     private:

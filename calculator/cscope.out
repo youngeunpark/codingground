@@ -1,4 +1,610 @@
-cscope 15 $HOME/codingground/calculator               0000065442
+cscope 15 $HOME/codingground/calculator               0000075625
+	@buffer.C
+
+9 
+	~<io°ªam
+>
+
+10 
+	~<°dlib.h
+>
+
+11 
+	~<°rög.h
+>
+
+12 
+	~<î∫o.h
+>
+
+13 
+	~<buf„r.H
+>
+
+15 
+usög
+ 
+«me•a˚
+ 
+	g°d
+;
+
+24 
+	gBuf„r
+::
+	$Buf„r
+()
+
+26 
+	`öôülizeBuf„rs
+(
+MAX_STRING
+);
+
+27 
+	}
+}
+
+36 
+	gBuf„r
+::
+	$Buf„r
+(
+size
+)
+
+38 if(
+size
+ <= 0) {
+
+39 
+cout
+ << "O›s, invÆid sizê" << 
+size
+ << 
+ídl
+;
+
+42 
+	`öôülizeBuf„rs
+(
+size
+);
+
+43 
+	}
+}
+
+52 
+	gBuf„r
+::~
+	$Buf„r
+()
+
+54 
+	`‰ì
+(
+öfix
+);
+
+55 
+	`‰ì
+(
+po°fix
+);
+
+56 
+	}
+}
+
+65 
+	gBuf„r
+::
+	$öôülizeBuf„rs
+(
+size
+)
+
+67 
+öfix
+ = (*)
+	`mÆloc
+((
+size_t
+)
+size
+);
+
+68 if(!
+öfix
+) {
+
+69 
+cout
+ << "O›s, infix mÆlo¯Áûed" << 
+ídl
+;
+
+72 
+po°fix
+ = (
+symbﬁT
+ *)
+	`mÆloc
+((symbﬁTË* 
+size
+);
+
+73 if(!
+po°fix
+) {
+
+74 
+cout
+ << "O›s,Öo°fix mÆlo¯Áûed" << 
+ídl
+;
+
+78 
+this
+->
+size
+ = size;
+
+79 
+	`mem£t
+(
+öfix
+, 0x0, (infix));
+
+80 
+	`mem£t
+(
+po°fix
+, 0x0, (postfix));
+
+81 
+	}
+}
+
+92 
+	gBuf„r
+::
+	$gëInfixEx¥essi⁄
+()
+
+94 
+Àn
+;
+
+96 i‡(
+	`fgës
+(
+öfix
+, 
+size
+ - 1, 
+°dö
+Ë=
+NULL
+) {
+
+97 if(
+î∫o
+ == 0) {
+
+99 
+	`exô
+(0);
+
+102 
+	`¥ötf
+("ERROR [%s:%d]Éºno(%d)\n", 
+__FILE__
+, 
+__LINE__
+, 
+î∫o
+);
+
+108 if(
+öfix
+[0] == '#') {
+
+109 #ifde‡
+DEBUG
+
+
+110 
+	`¥ötf
+("Skù commít, %s", 
+öfix
+);
+
+115 
+Àn
+ = 
+	`°æí
+(
+öfix
+);
+
+118 if(
+öfix
+[
+Àn
+ - 1] == '\n') {
+
+119 
+öfix
+[
+Àn
+ - 1] = 0;
+
+122  
+Àn
+;
+
+123 
+	}
+}
+
+132 *
+	gBuf„r
+::
+	$gëInfixBuf„r
+()
+
+134  
+öfix
+;
+
+135 
+	}
+}
+
+144 
+	gBuf„r
+::
+	$¥ötInfixBuf„r
+()
+
+146 
+	`¥ötf
+("infix: ");
+
+147 
+	`¥ötf
+("%s\n", 
+öfix
+);
+
+148 
+	}
+}
+
+157 
+symbﬁT
+ *
+	gBuf„r
+::
+	$gëPo°fixBuf„r
+()
+
+159  
+po°fix
+;
+
+160 
+	}
+}
+
+169 
+	gBuf„r
+::
+	$¥ötPo°fixBuf„r
+()
+
+171 
+idx
+ = 0;
+
+173 
+	`¥ötf
+("postfix:\n");
+
+175 !(
+	`IsTîmö©‹
+(
+po°fix
+[
+idx
+]Ë|| 
+	`IsN⁄e
+(postfix[idx]))) {
+
+176 i‡(
+	`IsO≥øt‹
+(
+po°fix
+[
+idx
+])) {
+
+177 
+	`¥ötf
+("[%d] %c\n", 
+idx
+, ()
+po°fix
+[idx].
+vÆ
+);
+
+178 } i‡(
+	`IsO≥ønd
+(
+po°fix
+[
+idx
+])) {
+
+179 
+	`¥ötf
+("[%d] %d\n", 
+idx
+, 
+po°fix
+[idx].
+vÆ
+);
+
+181 
+idx
+++;
+
+183 
+	}
+}
+
+192 
+	gBuf„r
+::
+	$¥ötPo°fixSymbﬁ
+(
+symbﬁT
+ 
+s
+)
+
+194 i‡(
+	`IsO≥øt‹
+(
+s
+)) {
+
+195 
+	`¥ötf
+("%c\n", ()
+s
+.
+vÆ
+);
+
+196 } i‡(
+	`IsO≥ønd
+(
+s
+)) {
+
+197 
+	`¥ötf
+("%d\n", 
+s
+.
+vÆ
+);
+
+199 
+	}
+}
+
+	@buffer.H
+
+9 #i‚de‡
+__BUFFER_CPP_H__
+
+
+10 
+	#__BUFFER_CPP_H__
+
+
+	)
+
+12 
+	#MAX_STRING
+ 1001
+
+	)
+
+14 
+	#_NONE_
+ 0
+
+	)
+
+15 
+	#_OPERAND_
+ 1
+
+	)
+
+16 
+	#_OPERATOR_
+ 2
+
+	)
+
+17 
+	#_PARENTHESIS_
+ 3
+
+	)
+
+18 
+	#_TERMINATOR_
+ 4
+
+	)
+
+22 
+	mty≥
+;
+
+23 
+	mvÆ
+;
+
+24 } 
+	tsymbﬁT
+;
+
+26 
+	#IsN⁄e
+(
+a
+Ë◊.
+ty≥
+ =
+_NONE_
+)
+
+	)
+
+27 
+	#IsO≥ønd
+(
+a
+Ë◊.
+ty≥
+ =
+_OPERAND_
+)
+
+	)
+
+28 
+	#IsO≥øt‹
+(
+a
+Ë◊.
+ty≥
+ =
+_OPERATOR_
+)
+
+	)
+
+29 
+	#IsP¨íthesis
+(
+a
+Ë◊.
+ty≥
+ =
+_PARENTHESIS_
+)
+
+	)
+
+30 
+	#IsTîmö©‹
+(
+a
+Ë◊.
+ty≥
+ =
+_TERMINATOR_
+)
+
+	)
+
+33 ˛as†
+	cBuf„r
+ {
+
+34 
+	m¥iv©e
+:
+
+37 *
+öfix
+;
+
+40 
+	msize
+;
+
+43 
+symbﬁT
+ *
+	mpo°fix
+;
+
+45 
+	mpublic
+:
+
+48 
+Buf„r
+();
+
+51 
+Buf„r
+(
+size
+);
+
+54 ~
+Buf„r
+();
+
+57 
+öôülizeBuf„rs
+(
+size
+);
+
+60 
+gëInfixEx¥essi⁄
+();
+
+63 *
+gëInfixBuf„r
+();
+
+66 
+¥ötInfixBuf„r
+();
+
+69 
+symbﬁT
+ *
+gëPo°fixBuf„r
+();
+
+72 
+¥ötPo°fixBuf„r
+();
+
+75 
+¥ötPo°fixSymbﬁ
+(
+symbﬁT
+ 
+s
+);
+
 	@buffer.c
 
 9 
@@ -437,6 +1043,392 @@ symbﬁT
 s
 );
 
+	@calculator.C
+
+9 
+	~<°dio.h
+>
+
+10 
+	~<°dlib.h
+>
+
+11 
+	~<°rög.h
+>
+
+12 
+	~<buf„r.H
+>
+
+13 
+	~<°ack.H
+>
+
+14 
+	~<utûôy.h
+>
+
+15 
+	~<ˇlcuœt‹.H
+>
+
+25 
+	gCÆcuœt‹
+::
+	$ˇlc
+(
+Buf„r
+ *
+buf
+, *
+ªsu…
+)
+
+27 
+i
+ = 0;
+
+28 
+symbﬁT
+ 
+a
+, 
+b
+, 
+s
+, 
+symbﬁ
+, *
+po°
+ = 
+buf
+->
+	`gëPo°fixBuf„r
+();
+
+29 
+Sèck
+ *
+°ack
+;
+
+31 if(!
+ªsu…
+ || !
+buf
+) {
+
+32 
+	`¥ötf
+("ERROR [%s:%d]Ö¨amëî i†NULL\n", 
+__FILE__
+, 
+__LINE__
+);
+
+36 
+°ack
+ = 
+√w
+ 
+	`Sèck
+();
+
+38 #ifde‡
+DEBUG
+
+
+39 
+buf
+->
+	`¥ötInfixBuf„r
+();
+
+40 
+buf
+->
+	`¥ötPo°fixBuf„r
+();
+
+43 
+symbﬁ
+ = 
+po°
+[
+i
+++];
+
+45 i‡(
+	`IsTîmö©‹
+(
+symbﬁ
+Ë|| 
+	`IsN⁄e
+(symbol)) {
+
+46 
+°ack
+->
+	`p›
+(&
+symbﬁ
+);
+
+50 i‡(
+	`IsO≥ønd
+(
+symbﬁ
+)) {
+
+51 #ifde‡
+DEBUG
+
+
+52 
+buf
+->
+	`¥ötPo°fixSymbﬁ
+(
+symbﬁ
+);
+
+54 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+55 } i‡(
+	`IsO≥øt‹
+(
+symbﬁ
+)) {
+
+56 #ifde‡
+DEBUG
+
+
+57 
+buf
+->
+	`¥ötPo°fixSymbﬁ
+(
+symbﬁ
+);
+
+59 
+s
+.
+ty≥
+ = 
+_OPERAND_
+;
+
+60 
+°ack
+->
+	`p›
+(&
+a
+);
+
+61 
+°ack
+->
+	`p›
+(&
+b
+);
+
+63 ()
+symbﬁ
+.
+vÆ
+) {
+
+65 
+s
+.
+vÆ
+ = 
+b
+.vÆ + 
+a
+.val;
+
+68 
+s
+.
+vÆ
+ = 
+b
+.vÆ - 
+a
+.val;
+
+71 
+s
+.
+vÆ
+ = 
+b
+.vÆ * 
+a
+.val;
+
+74 i‡(
+a
+.
+vÆ
+ == 0) {
+
+75 
+	`¥ötf
+("ERROR [%s:%d] dividêby zîÿ(%d/%d)\n", 
+__FILE__
+,
+
+76 
+__LINE__
+, 
+b
+.
+vÆ
+, 
+a
+.val);
+
+77 
+dñëe
+ 
+°ack
+;
+
+80 
+s
+.
+vÆ
+ = 
+b
+.vÆ / 
+a
+.val;
+
+83 
+	`¥ötf
+("ERROR [%s:%d] invÆid o≥øt‹(%c, %d)\n", 
+__FILE__
+,
+
+84 
+__LINE__
+, ()
+symbﬁ
+.
+vÆ
+, symbol.val);
+
+85 
+dñëe
+ 
+°ack
+;
+
+90 
+°ack
+->
+	`push
+(
+s
+);
+
+92 
+buf
+->
+	`¥ötPo°fixSymbﬁ
+(
+symbﬁ
+);
+
+93 
+	`¥ötf
+("ERROR [%s:%d] invalid symbol(type: %c, %d)\n",
+
+94 
+__FILE__
+, 
+__LINE__
+, ()
+symbﬁ
+.
+ty≥
+,
+
+95 
+symbﬁ
+.
+ty≥
+);
+
+96 
+dñëe
+ 
+°ack
+;
+
+101 *
+ªsu…
+ = 
+symbﬁ
+.
+vÆ
+;
+
+102 
+dñëe
+ 
+°ack
+;
+
+104 
+	}
+}
+
+	@calculator.H
+
+9 #i‚de‡
+__CALC_CPP_H__
+
+
+10 
+	#__CALC_CPP_H__
+
+
+	)
+
+12 
+	~<buf„r.H
+>
+
+15 ˛as†
+	cCÆcuœt‹
+ {
+
+17 
+	mpublic
+:
+
+20 
+ˇlc
+(
+Buf„r
+ *
+buf
+, *);
+
 	@calculator.c
 
 9 
@@ -738,6 +1730,724 @@ __CALC_H__
 13 
 ˇlc
 (*);
+
+	@convert.C
+
+9 
+	~<io°ªam
+>
+
+10 
+	~<°dlib.h
+>
+
+11 
+	~<°rög.h
+>
+
+12 
+	~<buf„r.H
+>
+
+13 
+	~<°ack.H
+>
+
+14 
+	~<utûôy.h
+>
+
+15 
+	~<c⁄vît.H
+>
+
+17 
+usög
+ 
+«me•a˚
+ 
+	g°d
+;
+
+26 
+	gC⁄vît‹
+::
+	$¥e˚dí˚
+(
+c
+)
+
+28 
+p
+ = 2;
+
+30 
+c
+) {
+
+33 
+p
+ = 2;
+
+37 
+p
+ = 3;
+
+41 
+p
+ = 1;
+
+44 
+p
+ = 0;
+
+48  
+p
+;
+
+49 
+	}
+}
+
+59 
+	gC⁄vît‹
+::
+	$isO≥øt‹
+(
+c
+)
+
+61 
+c
+) {
+
+71 
+	}
+}
+
+81 
+	gC⁄vît‹
+::
+	$isP¨íthesis
+(
+c
+)
+
+83 
+c
+) {
+
+91 
+	}
+}
+
+102 *
+	gC⁄vît‹
+::
+	$∑r£Symbﬁ
+(*
+ö
+, 
+symbﬁT
+ * 
+symbﬁ
+)
+
+104 *
+c
+ = 
+ö
+;
+
+107 i‡(!
+c
+) {
+
+108 
+	`¥ötf
+("ERROR [%s:%d] i¿i†NULL\n", 
+__FILE__
+, 
+__LINE__
+);
+
+109  
+NULL
+;
+
+113 
+	`isWhôe•a˚
+(*
+c
+)) {
+
+114 
+c
+++;
+
+118 i‡(
+	`isTîmö©‹
+(*
+c
+)) {
+
+119 
+symbﬁ
+->
+ty≥
+ = 
+_TERMINATOR_
+;
+
+120 
+symbﬁ
+->
+vÆ
+ = ()*
+c
+;
+
+121  
+c
+;
+
+125 i‡(
+	`isO≥øt‹
+(*
+c
+)) {
+
+126 
+symbﬁ
+->
+ty≥
+ = 
+_OPERATOR_
+;
+
+127 
+symbﬁ
+->
+vÆ
+ = ()*
+c
+;
+
+128  ++
+c
+;
+
+132 i‡(
+	`isP¨íthesis
+(*
+c
+)) {
+
+133 
+symbﬁ
+->
+ty≥
+ = 
+_PARENTHESIS_
+;
+
+134 
+symbﬁ
+->
+vÆ
+ = ()*
+c
+;
+
+135  ++
+c
+;
+
+139 i‡(!
+	`isNum
+(*
+c
+)) {
+
+140 
+	`¥ötf
+("ERROR [%s:%d] invÆid d©a(%d, %c)\n", 
+__FILE__
+, 
+__LINE__
+,
+
+141 ()*
+c
+, *c);
+
+142  
+NULL
+;
+
+144 
+i
+ = 0;
+
+147 
+	`isNum
+(*
+c
+)) {
+
+148 
+v
+ = 
+	`toNumîic
+(*
+c
+++);
+
+150 
+i
+ = i * 10 + 
+v
+;
+
+153 
+symbﬁ
+->
+ty≥
+ = 
+_OPERAND_
+;
+
+154 
+symbﬁ
+->
+vÆ
+ = 
+i
+;
+
+157  
+c
+;
+
+158 
+	}
+}
+
+165 
+	gC⁄vît‹
+::
+	$c⁄vîtToPo°Fix
+(
+Buf„r
+ *
+buf„r
+)
+
+167 *
+ö
+ = 
+buf„r
+->
+	`gëInfixBuf„r
+();
+
+168 
+symbﬁT
+ 
+symbﬁ
+, 
+¥eviousSymbﬁ
+, *
+po°
+ = 
+buf„r
+->
+	`gëPo°fixBuf„r
+();
+
+169 
+j
+ = 0, 
+nOps
+ = 0;
+
+170 
+Sèck
+ *
+°ack
+ = 
+√w
+ 
+	`Sèck
+();
+
+172 
+	`mem£t
+(&
+¥eviousSymbﬁ
+, 0x0, (previousSymbol));
+
+176 
+ö
+ = 
+	`∑r£Symbﬁ
+(ö, &
+symbﬁ
+);
+
+178 i‡(!
+ö
+) {
+
+179 
+cout
+ << "ERROR [" << 
+__FILE__
+ << ":" << 
+__LINE__
+ << "]" << "∑r£Symbﬁ faûed" << 
+ídl
+;
+
+180 
+dñëe
+ 
+°ack
+;
+
+184 i‡(
+symbﬁ
+.
+ty≥
+ =
+_TERMINATOR_
+) {
+
+189 i‡(
+symbﬁ
+.
+ty≥
+ =
+¥eviousSymbﬁ
+.type) {
+
+190 
+	`¥ötf
+("ERROR [%s:%d] invÆid infixÉx¥essi⁄\n", 
+__FILE__
+,
+
+191 
+__LINE__
+);
+
+192 
+buf„r
+->
+	`¥ötInfixBuf„r
+();
+
+193 
+	`¥ötf
+("¥eviou†symbﬁ : "); 
+buf„r
+->
+	`¥ötPo°fixSymbﬁ
+(
+¥eviousSymbﬁ
+);
+
+194 
+	`¥ötf
+("cuºíàsymbﬁ : "); 
+buf„r
+->
+	`¥ötPo°fixSymbﬁ
+(
+symbﬁ
+);
+
+195 
+dñëe
+ 
+°ack
+;
+
+199 
+¥eviousSymbﬁ
+ = 
+symbﬁ
+;
+
+201 i‡(
+symbﬁ
+.
+ty≥
+ =
+_OPERAND_
+) {
+
+202 
+po°
+[
+j
+++] = 
+symbﬁ
+;
+
+204 i‡(()
+symbﬁ
+.
+vÆ
+ == '(') {
+
+205 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+206 } i‡(()
+symbﬁ
+.
+vÆ
+ == ')') {
+
+208 
+symbﬁT
+ 
+s
+;
+
+210 
+°ack
+->
+	`p›
+(&
+s
+);
+
+211 i‡(()
+s
+.
+vÆ
+ != '(') {
+
+212 
+po°
+[
+j
+++] = 
+s
+;
+
+218 
+nOps
+++;
+
+219 i‡(
+°ack
+->
+	`em±y
+()) {
+
+220 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+221 } i‡(
+	`¥e˚dí˚
+(()
+symbﬁ
+.
+vÆ
+) >
+
+222 
+	`¥e˚dí˚
+(()(
+°ack
+->
+	`t›
+().
+vÆ
+))) {
+
+223 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+226 i‡(
+°ack
+->
+	`em±y
+()) {
+
+227 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+229 } i‡(
+	`¥e˚dí˚
+(()
+symbﬁ
+.
+vÆ
+) <=
+
+230 
+	`¥e˚dí˚
+(()(
+°ack
+->
+	`t›
+().
+vÆ
+))) {
+
+231 
+°ack
+->
+	`p›
+(&
+po°
+[
+j
+++]);
+
+233 
+°ack
+->
+	`push
+(
+symbﬁ
+);
+
+242 !
+°ack
+->
+	`em±y
+()) {
+
+243 
+°ack
+->
+	`p›
+(&
+po°
+[
+j
+++]);
+
+246 if(
+nOps
+ == 0) {
+
+247 #ifde‡
+DEBUG
+
+
+248 
+cout
+ << 
+buf„r
+->
+	`gëInfixBuf„r
+(Ë<< " = VÆidÉx¥essi⁄, buànÿ›î©‹" << 
+ídl
+;
+
+252 
+dñëe
+ 
+°ack
+;
+
+253  
+nOps
+;
+
+254 
+	}
+}
+
+	@convert.H
+
+9 #i‚de‡
+__CONVERT_CPP_H__
+
+
+10 
+	#__CONVERT_CPP_H__
+
+
+	)
+
+12 
+	~<buf„r.H
+>
+
+14 ˛as†
+	cC⁄vît‹
+ {
+
+15 
+	m¥iv©e
+:
+
+18 
+¥e˚dí˚
+(
+c
+);
+
+21 
+isO≥øt‹
+(
+c
+);
+
+24 
+isP¨íthesis
+(
+c
+);
+
+27 *
+∑r£Symbﬁ
+(*
+ö
+, 
+symbﬁT
+ * 
+symbﬁ
+);
+
+29 
+	mpublic
+:
+
+34 
+c⁄vîtToPo°Fix
+(
+Buf„r
+ *
+buf„r
+);
 
 	@convert.c
 
@@ -1329,6 +3039,110 @@ __CONVERT_H__
 c⁄vîtToPo°Fix
 ();
 
+	@main.C
+
+9 
+	~<io°ªam
+>
+
+10 
+	~<buf„r.H
+>
+
+11 
+	~<c⁄vît.H
+>
+
+12 
+	~<ˇlcuœt‹.H
+>
+
+14 
+usög
+ 
+«me•a˚
+ 
+	g°d
+;
+
+16 
+	$maö
+()
+
+18 
+Buf„r
+ *
+buf„r
+ = 
+√w
+ 
+	`Buf„r
+();
+
+19 
+C⁄vît‹
+ *
+c⁄vît‹
+ = 
+√w
+ 
+	`C⁄vît‹
+();
+
+20 
+CÆcuœt‹
+ *
+ˇlc
+ = 
+√w
+ 
+	`CÆcuœt‹
+();
+
+25 i‡(!
+buf„r
+->
+	`gëInfixEx¥essi⁄
+()) {
+
+30 i‡(
+c⁄vît‹
+->
+	`c⁄vîtToPo°Fix
+(
+buf„r
+) > 0) {
+
+31 
+ªsu…
+;
+
+34 if(
+ˇlc
+->
+	`ˇlc
+(
+buf„r
+, &
+ªsu…
+)) {
+
+36 
+cout
+ << 
+buf„r
+->
+	`gëInfixBuf„r
+(Ë<< " = " << 
+ªsu…
+ << 
+ídl
+;
+
+42 
+	}
+}
+
 	@main.c
 
 13 
@@ -1396,6 +3210,366 @@ c⁄vîtToPo°Fix
 50 
 	}
 }
+
+	@stack.C
+
+9 
+	~<io°ªam
+>
+
+10 
+	~<°rög.h
+>
+
+11 
+	~<°dlib.h
+>
+
+12 
+	~<°ack.H
+>
+
+14 
+usög
+ 
+«me•a˚
+ 
+	g°d
+;
+
+23 
+	gSèck
+::
+	$öôSèck
+(
+size
+)
+
+25 if(
+size
+ <= 0) {
+
+26 
+cout
+ << "ERROR [" << 
+__FILE__
+ << ":" << 
+__LINE__
+ << "]" ;
+
+27 
+cout
+ << " invÆid size(" << 
+size
+ << ")" << 
+ídl
+;
+
+30 
+°ack
+ = (
+symbﬁT
+ *)
+	`mÆloc
+((symbﬁTË* 
+size
+);
+
+31 if(!
+°ack
+) {
+
+32 
+cout
+ << "ERROR [" << 
+__FILE__
+ << ":" << 
+__LINE__
+ << "]" ;
+
+33 
+cout
+ << " mÆlo¯Áûed" << 
+ídl
+;
+
+37 
+•
+ = -1;
+
+38 
+this
+->
+size
+ = size;
+
+39 
+	`mem£t
+(
+°ack
+, 0x0, (
+symbﬁT
+Ë* 
+size
+);
+
+40 
+	}
+}
+
+49 
+	gSèck
+::
+	$Sèck
+()
+
+51 
+	`öôSèck
+(
+MAX_STACK_SIZE
+);
+
+56 
+	}
+}
+
+65 
+	gSèck
+::
+	$Sèck
+(
+size
+)
+
+67 
+	`öôSèck
+(
+size
+);
+
+68 
+	}
+}
+
+77 
+	gSèck
+::~
+	$Sèck
+()
+
+79 
+	`‰ì
+(
+°ack
+);
+
+80 
+	}
+}
+
+89 
+	gSèck
+::
+	$push
+(
+symbﬁT
+ 
+c
+)
+
+91 i‡(!
+	`fuŒ
+())
+
+92 
+°ack
+[++
+•
+] = 
+c
+;
+
+93 
+	}
+}
+
+102 
+	gSèck
+::
+	$p›
+(
+symbﬁT
+ * 
+p
+)
+
+104 i‡(!
+	`em±y
+())
+
+105 *
+p
+ = 
+°ack
+[
+•
+--];
+
+106 
+	}
+}
+
+115 
+symbﬁT
+ 
+	gSèck
+::
+	$t›
+()
+
+117 i‡(!
+	`em±y
+())
+
+118  
+°ack
+[
+•
+];
+
+119 
+	}
+}
+
+129 
+	gSèck
+::
+	$em±y
+()
+
+131  (
+•
+ == -1);
+
+132 
+	}
+}
+
+142 
+	gSèck
+::
+	$fuŒ
+()
+
+144  (
+•
+ =(
+MAX_STRING
+ - 1));
+
+145 
+	}
+}
+
+	@stack.H
+
+9 #i‚de‡
+__STACK_H_CPP__
+
+
+10 
+	#__STACK_H_CPP__
+
+
+	)
+
+12 
+	~<buf„r.H
+>
+
+14 ˛as†
+	cSèck
+ {
+
+15 
+	m¥iv©e
+:
+
+17 
+	#MAX_STACK_SIZE
+ 
+MAX_STRING
+
+
+	)
+
+20 
+symbﬁT
+ *
+°ack
+;
+
+23 
+	m•
+;
+
+26 
+	msize
+;
+
+29 
+öôSèck
+(
+size
+);
+
+31 
+	mpublic
+:
+
+34 
+Sèck
+();
+
+37 
+Sèck
+(
+size
+);
+
+40 ~
+Sèck
+();
+
+43 
+push
+(
+symbﬁT
+ 
+c
+);
+
+46 
+p›
+(
+symbﬁT
+ * 
+p
+);
+
+49 
+symbﬁT
+ 
+t›
+();
+
+52 
+em±y
+();
+
+55 
+fuŒ
+();
 
 	@stack.c
 
@@ -11616,15 +13790,24 @@ __GCC_IEC_559_COMPLEX
 .
 1
 /usr/include
-18
-279
+27
+366
+buffer.C
+buffer.H
 buffer.c
 buffer.h
+calculator.C
+calculator.H
 calculator.c
 calculator.h
+convert.C
+convert.H
 convert.c
 convert.h
+main.C
 main.c
+stack.C
+stack.H
 stack.c
 stack.h
 utility.h

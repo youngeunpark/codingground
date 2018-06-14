@@ -1,6 +1,6 @@
 /**
-    @file stack.cpp
-    @date 2018/06/10
+    @file stack.C
+    @date 2018/06/14
     @author Youngeun Park
     @brief
     C++ Stack implementation for symbols
@@ -9,9 +9,9 @@
 #include <iostream>
 #include <string.h>
 #include <stdlib.h>
-#include <stack.hpp>
+#include <stack.H>
 
-//using namespace std;
+using namespace std;
 
 /**
     @return
@@ -23,14 +23,14 @@
 void Stack::initStack(int size)
 {
     if(size <= 0) {
-        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-        std::cout << " invalid size(" << size << ")" << std::endl;
+        cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+        cout << " invalid size(" << size << ")" << endl;
         return;
     }
     stack = (symbolT *)malloc(sizeof(symbolT) * size);
     if(!stack) {
-        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-        std::cout << " malloc failed" << std::endl;
+        cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+        cout << " malloc failed" << endl;
         return;
     }
 

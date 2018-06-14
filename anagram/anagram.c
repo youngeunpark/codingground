@@ -6,11 +6,12 @@
 #define isUpperAlphabet(c) ((c >= 'A') && (c <= 'Z'))
 #define toUpperToLower(c) ((c - 'A') + 'a')
 #define isAlphabet(c) (isLowerAlphabet(c) || isUpperAlphabet(c))
+
 /**
     @return
-    1, on success\n
-    0, on failure
-    
+    1, Two strings are anagram\n
+    0, Not anagram or internal error
+
     @param
     s1, the first string as an input\n
     s2, the second string
@@ -27,6 +28,7 @@ int anagram(char *s1, char *s2)
     }
     // Different length is not anagram
     if (strlen(s1) != strlen(s2)) {
+        printf("Oops, different length\n");
         return 0;
     }
     // Initialize the number alphabet
@@ -65,3 +67,4 @@ int anagram(char *s1, char *s2)
     // Strings are anagram
     return 1;
 }
+

@@ -1,4 +1,12 @@
+./main.C
+./buffer.H
 ./main.c
+./calculator.C
+./calculator.H
+./convert.C
+./convert.H
+./stack.H
+./buffer.C
 ./convert.h
 ./calculator.h
 ./stack.c
@@ -6,5 +14,6 @@
 ./buffer.c
 ./calculator.c
 ./utility.h
+./stack.C
 ./buffer.h
 ./stack.h

@@ -9,7 +9,7 @@
 0	html/search/searchdata.js	/^{$/;"	p	class:indexSectionsWithContent
 1	html/search/searchdata.js	/^  0: "All",$/;"	p	class:indexSectionLabels
 1	html/search/searchdata.js	/^  0: "all",$/;"	p	class:indexSectionNames
-1	html/search/searchdata.js	/^  0: "bcefgimpstuv",$/;"	p	class:indexSectionsWithContent
+1	html/search/searchdata.js	/^  0: "bcefgimpstuv~",$/;"	p	class:indexSectionsWithContent
 2	html/search/searchdata.js	/^  1: "Classes",$/;"	p	class:indexSectionLabels
 2	html/search/searchdata.js	/^  1: "classes",$/;"	p	class:indexSectionNames
 2	html/search/searchdata.js	/^  1: "s",$/;"	p	class:indexSectionsWithContent
@@ -17,20 +17,28 @@
 3	html/search/searchdata.js	/^  2: "bcmsu",$/;"	p	class:indexSectionsWithContent
 3	html/search/searchdata.js	/^  2: "files",$/;"	p	class:indexSectionNames
 4	html/search/searchdata.js	/^  3: "Functions",$/;"	p	class:indexSectionLabels
-4	html/search/searchdata.js	/^  3: "cefgimpt",$/;"	p	class:indexSectionsWithContent
+4	html/search/searchdata.js	/^  3: "cefgimpst~",$/;"	p	class:indexSectionsWithContent
 4	html/search/searchdata.js	/^  3: "functions",$/;"	p	class:indexSectionNames
 5	html/search/searchdata.js	/^  4: "Variables",$/;"	p	class:indexSectionLabels
 5	html/search/searchdata.js	/^  4: "tv",$/;"	p	class:indexSectionsWithContent
 5	html/search/searchdata.js	/^  4: "variables",$/;"	p	class:indexSectionNames
 Activate	html/search/search.js	/^  this.Activate = function(isActive)$/;"	m	class:SearchBox
+Buffer	buffer.C	/^Buffer::Buffer()$/;"	f	class:Buffer
+Buffer	buffer.C	/^Buffer::Buffer(int size)$/;"	f	class:Buffer
+Buffer	buffer.H	/^class Buffer {$/;"	c
 CC	Makefile	/^CC = gcc$/;"	m
-CFLAGS	Makefile	/^CFLAGS = -I. -g -Werror #-DDEBUG$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -I. -g -Werror # -DDEBUG$/;"	m
+CPP	Makefile	/^CPP = g++$/;"	m
+Calculator	calculator.H	/^class Calculator {$/;"	c
 Class Documentation	latex/refman.tex	/^\\input{files}$/;"	c
 Class Index	latex/refman.tex	/^\\hypersetup{pageanchor=true}$/;"	c
 Class List	latex/annotated.tex	/^\\section{Class List}$/;"	s
 Classes	latex/buffer_8h.tex	/^\\end{figure}$/;"	u
+Classes	latex/stack_8hpp.tex	/^\\end{figure}$/;"	u
 CloseResultsWindow	html/search/search.js	/^  this.CloseResultsWindow = function()$/;"	m	class:SearchBox
 CloseSelectionWindow	html/search/search.js	/^  this.CloseSelectionWindow = function()$/;"	m	class:SearchBox
+Constructor   Destructor Documentation	latex/classStack.tex	/^\\begin{DoxyCompactList}\\small\\item\\em Check if stack is full. \\end{DoxyCompactList}\\end{DoxyCompactItemize}$/;"	u
+Convertor	convert.H	/^class Convertor {$/;"	c
 DOMPopupSearchResults	html/search/search.js	/^  this.DOMPopupSearchResults = function()$/;"	m	class:SearchBox
 DOMPopupSearchResultsWindow	html/search/search.js	/^  this.DOMPopupSearchResultsWindow = function()$/;"	m	class:SearchBox
 DOMSearchBox	html/search/search.js	/^  this.DOMSearchBox = function()$/;"	m	class:SearchBox
@@ -46,7 +54,9 @@ Detailed Description	latex/convert_8c.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Detailed Description	latex/convert_8h.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Detailed Description	latex/main_8c.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Detailed Description	latex/stack_8c.tex	/^\\begin{DoxyCompactList}\\small\\item\\em Initialize stack. \\end{DoxyCompactList}\\end{DoxyCompactItemize}$/;"	u
+Detailed Description	latex/stack_8cpp.tex	/^\\end{figure}$/;"	u
 Detailed Description	latex/stack_8h.tex	/^\\begin{DoxyCompactList}\\small\\item\\em Initialize stack. \\end{DoxyCompactList}\\end{DoxyCompactItemize}$/;"	u
+Detailed Description	latex/stack_8hpp.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Detailed Description	latex/utility_8h.tex	/^\\begin{DoxyCompactList}\\small\\item\\em Translate character c into integer value. \\end{DoxyCompactList}\\end{DoxyCompactItemize}$/;"	u
 File Documentation	latex/refman.tex	/^\\input{structsymbolT}$/;"	c
 File Index	latex/refman.tex	/^\\input{annotated}$/;"	c
@@ -70,16 +80,25 @@ Functions	latex/convert_8h.tex	/^\\end{figure}$/;"	u
 Functions	latex/main_8c.tex	/^\\end{figure}$/;"	u
 Functions	latex/stack_8c.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Functions	latex/stack_8h.tex	/^\\end{figure}$/;"	u
+IsNone	buffer.H	26;"	d
 IsNone	buffer.h	25;"	d
+IsOperand	buffer.H	27;"	d
 IsOperand	buffer.h	26;"	d
+IsOperator	buffer.H	28;"	d
 IsOperator	buffer.h	27;"	d
+IsParenthesis	buffer.H	29;"	d
 IsParenthesis	buffer.h	28;"	d
+IsTerminator	buffer.H	30;"	d
 IsTerminator	buffer.h	29;"	d
+MAX_STACK_SIZE	stack.H	17;"	d
 MAX_STACK_SIZE	stack.c	12;"	d	file:
+MAX_STRING	buffer.H	12;"	d
 MAX_STRING	buffer.h	12;"	d
 Macros	latex/buffer_8h.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Macros	latex/stack_8c.tex	/^\\end{figure}$/;"	u
+Macros	latex/stack_8hpp.tex	/^\\end{DoxyCompactItemize}$/;"	u
 Macros	latex/utility_8h.tex	/^\\end{figure}$/;"	u
+Member Function Documentation	latex/classStack.tex	/^\\end{DoxyParams}$/;"	u
 Nav	html/search/search.js	/^    this.Nav = function(evt,itemIndex)$/;"	m	class:SearchResults
 NavChild	html/search/search.js	/^    this.NavChild = function(evt,itemIndex,childIndex)$/;"	m	class:SearchResults
 NavNext	html/search/search.js	/^    this.NavNext = function(index)$/;"	m	class:SearchResults
@@ -93,26 +112,41 @@ OnSelectItem	html/search/search.js	/^  this.OnSelectItem = function(id)$/;"	m	cl
 ProcessKeys	html/search/search.js	/^    this.ProcessKeys = function(e)$/;"	m	class:SearchResults
 Public Attributes	latex/struct__postfixT.tex	/^\\label{struct__postfixT}\\index{\\+\\_\\+postfixT@{\\+\\_\\+postfixT}}$/;"	u
 Public Attributes	latex/structsymbolT.tex	/^\\label{structsymbolT}\\index{symbolT@{symbolT}}$/;"	u
+Public Member Functions	latex/classStack.tex	/^\\label{classStack}\\index{Stack@{Stack}}$/;"	u
 Search	html/search/search.js	/^    this.Search = function(search)$/;"	m	class:SearchResults
 Search	html/search/search.js	/^  this.Search = function()$/;"	m	class:SearchBox
 SearchBox	html/search/search.js	/^function SearchBox(name, resultsPath, inFrame, label)$/;"	c
 SearchResults	html/search/search.js	/^function SearchResults(name)$/;"	c
 SelectItemCount	html/search/search.js	/^  this.SelectItemCount = function(id)$/;"	m	class:SearchBox
 SelectItemSet	html/search/search.js	/^  this.SelectItemSet = function(id)$/;"	m	class:SearchBox
+Stack	stack.C	/^Stack::Stack(int size)$/;"	f	class:Stack
+Stack	stack.C	/^Stack::Stack(void)$/;"	f	class:Stack
+Stack	stack.H	/^class Stack {$/;"	c
+Stack Class Reference	latex/classStack.tex	/^\\hypertarget{classStack}{}\\section{Stack Class Reference}$/;"	s
 Toggle	html/search/search.js	/^    this.Toggle = function(id)$/;"	m	class:SearchResults
 _   postfixT Struct Reference	latex/struct__postfixT.tex	/^\\hypertarget{struct__postfixT}{}\\section{\\+\\_\\+postfixT Struct Reference}$/;"	s
+_NONE_	buffer.H	14;"	d
 _NONE_	buffer.h	14;"	d
+_OPERAND_	buffer.H	15;"	d
 _OPERAND_	buffer.h	15;"	d
+_OPERATOR_	buffer.H	16;"	d
 _OPERATOR_	buffer.h	16;"	d
+_PARENTHESIS_	buffer.H	17;"	d
 _PARENTHESIS_	buffer.h	17;"	d
+_TERMINATOR_	buffer.H	18;"	d
 _TERMINATOR_	buffer.h	18;"	d
+__BUFFER_CPP_H__	buffer.H	10;"	d
 __BUFFER_H__	buffer.h	10;"	d
+__CALC_CPP_H__	calculator.H	10;"	d
 __CALC_H__	calculator.h	10;"	d
+__CONVERT_CPP_H__	convert.H	10;"	d
 __CONVERT_H__	convert.h	10;"	d
+__STACK_H_CPP__	stack.H	10;"	d
 __STACK_H__	stack.h	10;"	d
 __UTILITY_H__	utility.h	10;"	d
 buffer.   c File Reference	latex/buffer_8c.tex	/^\\hypertarget{buffer_8c}{}\\section{buffer.\\+c File Reference}$/;"	s
 buffer.   h File Reference	latex/buffer_8h.tex	/^\\hypertarget{buffer_8h}{}\\section{buffer.\\+h File Reference}$/;"	s
+calc	calculator.C	/^int Calculator::calc(Buffer *buf, int *result)$/;"	f	class:Calculator
 calc	calculator.c	/^int calc(int *result)$/;"	f
 calculator.   c File Reference	latex/calculator_8c.tex	/^\\hypertarget{calculator_8c}{}\\section{calculator.\\+c File Reference}$/;"	s
 calculator.   h File Reference	latex/calculator_8h.tex	/^\\hypertarget{calculator_8h}{}\\section{calculator.\\+h File Reference}$/;"	s
@@ -120,10 +154,12 @@ children	html/menudata.js	/^var menudata={children:[$/;"	p	class:menudata
 convert.   c File Reference	latex/convert_8c.tex	/^\\hypertarget{convert_8c}{}\\section{convert.\\+c File Reference}$/;"	s
 convert.   h File Reference	latex/convert_8h.tex	/^\\hypertarget{convert_8h}{}\\section{convert.\\+h File Reference}$/;"	s
 convertToId	html/search/search.js	/^function convertToId(search)$/;"	f
+convertToPostFix	convert.C	/^int Convertor::convertToPostFix(Buffer *buffer)$/;"	f	class:Convertor
 convertToPostFix	convert.c	/^int convertToPostFix(void)$/;"	f
 createResults	html/search/search.js	/^function createResults()$/;"	f
 define-members	html/buffer_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"><\/a>$/;"	a
 define-members	html/stack_8c.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"><\/a>$/;"	a
+define-members	html/stack_8hpp.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"><\/a>$/;"	a
 define-members	html/utility_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"><\/a>$/;"	a
 details	html/buffer_8c.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
 details	html/buffer_8h.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
@@ -133,9 +169,13 @@ details	html/convert_8c.html	/^<a name="details" id="details"><\/a><h2 class="gr
 details	html/convert_8h.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
 details	html/main_8c.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
 details	html/stack_8c.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
+details	html/stack_8cpp.html	/^<\/div><a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
 details	html/stack_8h.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
+details	html/stack_8hpp.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
 details	html/utility_8h.html	/^<a name="details" id="details"><\/a><h2 class="groupheader">Detailed Description<\/h2>$/;"	a
+empty	stack.C	/^int Stack::empty(void)$/;"	f	class:Stack
 empty	stack.c	/^int empty(void)$/;"	f
+full	stack.C	/^int Stack::full(void)$/;"	f	class:Stack
 full	stack.c	/^int full(void)$/;"	f
 func-members	html/buffer_8c.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
 func-members	html/buffer_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
@@ -146,18 +186,26 @@ func-members	html/convert_8h.html	/^<tr class="heading"><td colspan="2"><h2 clas
 func-members	html/main_8c.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
 func-members	html/stack_8c.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
 func-members	html/stack_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
+getInfixBuffer	buffer.C	/^char *Buffer::getInfixBuffer(void)$/;"	f	class:Buffer
 getInfixBuffer	buffer.c	/^char *getInfixBuffer(void)$/;"	f
+getInfixExpression	buffer.C	/^int Buffer::getInfixExpression(void)$/;"	f	class:Buffer
 getInfixExpression	buffer.c	/^int getInfixExpression(void)$/;"	f
+getPostfixBuffer	buffer.C	/^symbolT *Buffer::getPostfixBuffer(void)$/;"	f	class:Buffer
 getPostfixBuffer	buffer.c	/^symbolT *getPostfixBuffer(void)$/;"	f
 getXPos	html/search/search.js	/^function getXPos(item)$/;"	f
 getYPos	html/search/search.js	/^function getYPos(item)$/;"	f
+infix	buffer.H	/^    char *infix;$/;"	m	class:Buffer
 infix	buffer.c	/^static char infix[MAX_STRING];$/;"	v	file:
 initMenu	html/menu.js	/^function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {$/;"	f
+initStack	stack.C	/^void Stack::initStack(int size)$/;"	f	class:Stack
 initStack	stack.c	/^void initStack(void)$/;"	f
 init_search	html/search/search.js	/^function init_search()$/;"	f
+initializeBuffers	buffer.C	/^void Buffer::initializeBuffers(int size)$/;"	f	class:Buffer
 initializeBuffers	buffer.c	/^void initializeBuffers(void)$/;"	f
 isNum	utility.h	13;"	d
+isOperator	convert.C	/^int Convertor::isOperator(char c)$/;"	f	class:Convertor
 isOperator	convert.c	/^static int isOperator(char c)$/;"	f	file:
+isParenthesis	convert.C	/^int Convertor::isParenthesis(char c)$/;"	f	class:Convertor
 isParenthesis	convert.c	/^static int isParenthesis(char c)$/;"	f	file:
 isTerminator	utility.h	16;"	d
 isWhitespace	utility.h	19;"	d
@@ -165,22 +213,34 @@ l00001	html/buffer_8h_source.html	/^<a href="buffer_8h.html">Go to the documenta
 l00001	html/calculator_8h_source.html	/^<a href="calculator_8h.html">Go to the documentation of this file.<\/a><div class="fragment"><div class="line"><a name="l00001"><\/a><span class="lineno">    1<\/span>&#160;<\/div><div class="line"><a name="l00009"><\/a><span class="lineno">    9<\/span>&#160;<span class="preprocessor">#ifndef __CALC_H__<\/span><\/div><div class="line"><a name="l00010"><\/a><span class="lineno">   10<\/span>&#160;<span class="preprocessor">#define __CALC_H__<\/span><\/div><div class="line"><a name="l00011"><\/a><span class="lineno">   11<\/span>&#160;<\/div><div class="line"><a name="l00013"><\/a><span class="lineno">   13<\/span>&#160;<span class="keywordtype">int<\/span> <a class="code" href="calculator_8h.html#a276d9db46d4c5b241b5b75e50646daf4">calc<\/a>(<span class="keywordtype">int<\/span> *);<\/div><div class="line"><a name="l00014"><\/a><span class="lineno">   14<\/span>&#160;<\/div><div class="line"><a name="l00015"><\/a><span class="lineno">   15<\/span>&#160;<span class="preprocessor">#endif<\/span><\/div><div class="line"><a name="l00016"><\/a><span class="lineno">   16<\/span>&#160;<\/div><div class="ttc" id="calculator_8h_html_a276d9db46d4c5b241b5b75e50646daf4"><div class="ttname"><a href="calculator_8h.html#a276d9db46d4c5b241b5b75e50646daf4">calc<\/a><\/div><div class="ttdeci">int calc(int *)<\/div><div class="ttdoc">calculator function to evaluate postifx expression <\/div><div class="ttdef"><b>Definition:<\/b> calculator.c:24<\/div><\/div>$/;"	a
 l00001	html/convert_8h_source.html	/^<a href="convert_8h.html">Go to the documentation of this file.<\/a><div class="fragment"><div class="line"><a name="l00001"><\/a><span class="lineno">    1<\/span>&#160;<\/div><div class="line"><a name="l00009"><\/a><span class="lineno">    9<\/span>&#160;<span class="preprocessor">#ifndef __CONVERT_H__<\/span><\/div><div class="line"><a name="l00010"><\/a><span class="lineno">   10<\/span>&#160;<span class="preprocessor">#define __CONVERT_H__<\/span><\/div><div class="line"><a name="l00011"><\/a><span class="lineno">   11<\/span>&#160;<\/div><div class="line"><a name="l00016"><\/a><span class="lineno">   16<\/span>&#160;<span class="keywordtype">int<\/span> <a class="code" href="convert_8h.html#a9eee13860c4c03eac3f53c3a1f3aba80">convertToPostFix<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00017"><\/a><span class="lineno">   17<\/span>&#160;<\/div><div class="line"><a name="l00018"><\/a><span class="lineno">   18<\/span>&#160;<span class="preprocessor">#endif<\/span><\/div><div class="ttc" id="convert_8h_html_a9eee13860c4c03eac3f53c3a1f3aba80"><div class="ttname"><a href="convert_8h.html#a9eee13860c4c03eac3f53c3a1f3aba80">convertToPostFix<\/a><\/div><div class="ttdeci">int convertToPostFix(void)<\/div><div class="ttdef"><b>Definition:<\/b> convert.c:150<\/div><\/div>$/;"	a
 l00001	html/stack_8h_source.html	/^<a href="stack_8h.html">Go to the documentation of this file.<\/a><div class="fragment"><div class="line"><a name="l00001"><\/a><span class="lineno">    1<\/span>&#160;<\/div><div class="line"><a name="l00009"><\/a><span class="lineno">    9<\/span>&#160;<span class="preprocessor">#ifndef __STACK_H__<\/span><\/div><div class="line"><a name="l00010"><\/a><span class="lineno">   10<\/span>&#160;<span class="preprocessor">#define __STACK_H__<\/span><\/div><div class="line"><a name="l00011"><\/a><span class="lineno">   11<\/span>&#160;<\/div><div class="line"><a name="l00012"><\/a><span class="lineno">   12<\/span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="buffer_8h.html">buffer.h<\/a>&gt;<\/span><\/div><div class="line"><a name="l00013"><\/a><span class="lineno">   13<\/span>&#160;<\/div><div class="line"><a name="l00015"><\/a><span class="lineno">   15<\/span>&#160;<span class="keywordtype">void<\/span> <a class="code" href="stack_8h.html#a28fa2e71ac1a03e48f6393e614e9700d">push<\/a>(<a class="code" href="structsymbolT.html">symbolT<\/a> c);<\/div><div class="line"><a name="l00016"><\/a><span class="lineno">   16<\/span>&#160;<\/div><div class="line"><a name="l00018"><\/a><span class="lineno">   18<\/span>&#160;<span class="keywordtype">void<\/span> <a class="code" href="stack_8h.html#ad2c9ad0bb34ef89958ab15329fb47222">pop<\/a>(<a class="code" href="structsymbolT.html">symbolT<\/a> * p);<\/div><div class="line"><a name="l00019"><\/a><span class="lineno">   19<\/span>&#160;<\/div><div class="line"><a name="l00021"><\/a><span class="lineno">   21<\/span>&#160;<a class="code" href="structsymbolT.html">symbolT<\/a> <a class="code" href="stack_8h.html#adc8484c9203490f40d71ecf61d47a8aa">top<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00022"><\/a><span class="lineno">   22<\/span>&#160;<\/div><div class="line"><a name="l00024"><\/a><span class="lineno">   24<\/span>&#160;<span class="keywordtype">int<\/span> <a class="code" href="stack_8h.html#a4667371cc1652ec25dfec478a952c717">empty<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00025"><\/a><span class="lineno">   25<\/span>&#160;<\/div><div class="line"><a name="l00027"><\/a><span class="lineno">   27<\/span>&#160;<span class="keywordtype">int<\/span> <a class="code" href="stack_8h.html#afe4b1c4ca08318016497caf30ad9e0f3">full<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00028"><\/a><span class="lineno">   28<\/span>&#160;<\/div><div class="line"><a name="l00030"><\/a><span class="lineno">   30<\/span>&#160;<span class="keywordtype">void<\/span> <a class="code" href="stack_8h.html#a524d97c94164a24e4d4a8e09622788a5">initStack<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00031"><\/a><span class="lineno">   31<\/span>&#160;<\/div><div class="line"><a name="l00032"><\/a><span class="lineno">   32<\/span>&#160;<span class="preprocessor">#endif<\/span><\/div><div class="ttc" id="stack_8h_html_afe4b1c4ca08318016497caf30ad9e0f3"><div class="ttname"><a href="stack_8h.html#afe4b1c4ca08318016497caf30ad9e0f3">full<\/a><\/div><div class="ttdeci">int full(void)<\/div><div class="ttdoc">Check if stack is full. <\/div><div class="ttdef"><b>Definition:<\/b> stack.c:80<\/div><\/div>$/;"	a
+l00001	html/stack_8hpp_source.html	/^<a href="stack_8hpp.html">Go to the documentation of this file.<\/a><div class="fragment"><div class="line"><a name="l00001"><\/a><span class="lineno">    1<\/span>&#160;<\/div><div class="line"><a name="l00009"><\/a><span class="lineno">    9<\/span>&#160;<span class="preprocessor">#ifndef __STACK_H_CPP__<\/span><\/div><div class="line"><a name="l00010"><\/a><span class="lineno">   10<\/span>&#160;<span class="preprocessor">#define __STACK_H_CPP__<\/span><\/div><div class="line"><a name="l00011"><\/a><span class="lineno">   11<\/span>&#160;<\/div><div class="line"><a name="l00012"><\/a><span class="lineno">   12<\/span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="buffer_8h.html">buffer.h<\/a>&gt;<\/span><\/div><div class="line"><a name="l00013"><\/a><span class="lineno">   13<\/span>&#160;<\/div><div class="line"><a name="l00014"><\/a><span class="lineno"><a class="line" href="classStack.html">   14<\/a><\/span>&#160;<span class="keyword">class <\/span><a class="code" href="classStack.html">Stack<\/a> {<\/div><div class="line"><a name="l00015"><\/a><span class="lineno">   15<\/span>&#160;    <span class="keyword">private<\/span>:<\/div><div class="line"><a name="l00016"><\/a><span class="lineno">   16<\/span>&#160;<\/div><div class="line"><a name="l00017"><\/a><span class="lineno">   17<\/span>&#160;<span class="preprocessor">#define MAX_STACK_SIZE MAX_STRING<\/span><\/div><div class="line"><a name="l00018"><\/a><span class="lineno">   18<\/span>&#160;<\/div><div class="line"><a name="l00020"><\/a><span class="lineno">   20<\/span>&#160;        <a class="code" href="structsymbolT.html">symbolT<\/a> *stack;<\/div><div class="line"><a name="l00021"><\/a><span class="lineno">   21<\/span>&#160;<\/div><div class="line"><a name="l00023"><\/a><span class="lineno">   23<\/span>&#160;        <span class="keywordtype">int<\/span> sp;<\/div><div class="line"><a name="l00024"><\/a><span class="lineno">   24<\/span>&#160;<\/div><div class="line"><a name="l00026"><\/a><span class="lineno">   26<\/span>&#160;        <span class="keywordtype">int<\/span> size;<\/div><div class="line"><a name="l00027"><\/a><span class="lineno">   27<\/span>&#160;<\/div><div class="line"><a name="l00029"><\/a><span class="lineno">   29<\/span>&#160;        <span class="keywordtype">void<\/span> initStack(<span class="keywordtype">int<\/span> size);<\/div><div class="line"><a name="l00030"><\/a><span class="lineno">   30<\/span>&#160;<\/div><div class="line"><a name="l00031"><\/a><span class="lineno">   31<\/span>&#160;    <span class="keyword">public<\/span>:<\/div><div class="line"><a name="l00032"><\/a><span class="lineno">   32<\/span>&#160;<\/div><div class="line"><a name="l00034"><\/a><span class="lineno">   34<\/span>&#160;        <a class="code" href="classStack.html#aa6e4e33ccce6c9a8df6e5519418bbd45">Stack<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00035"><\/a><span class="lineno">   35<\/span>&#160;<\/div><div class="line"><a name="l00037"><\/a><span class="lineno">   37<\/span>&#160;        <a class="code" href="classStack.html#aa6e4e33ccce6c9a8df6e5519418bbd45">Stack<\/a>(<span class="keywordtype">int<\/span> size);<\/div><div class="line"><a name="l00038"><\/a><span class="lineno">   38<\/span>&#160;<\/div><div class="line"><a name="l00040"><\/a><span class="lineno">   40<\/span>&#160;        <a class="code" href="classStack.html#a40bd5dff912f0e5290777c4b46d17809">~Stack<\/a>();<\/div><div class="line"><a name="l00041"><\/a><span class="lineno">   41<\/span>&#160;<\/div><div class="line"><a name="l00043"><\/a><span class="lineno">   43<\/span>&#160;        <span class="keywordtype">void<\/span> <a class="code" href="classStack.html#a974a67de02f49899ec9b4a53e6f8d157">push<\/a>(<a class="code" href="structsymbolT.html">symbolT<\/a> c);<\/div><div class="line"><a name="l00044"><\/a><span class="lineno">   44<\/span>&#160;<\/div><div class="line"><a name="l00046"><\/a><span class="lineno">   46<\/span>&#160;        <span class="keywordtype">void<\/span> <a class="code" href="classStack.html#a220c17d4bafbab660762be294d39c3eb">pop<\/a>(<a class="code" href="structsymbolT.html">symbolT<\/a> * p);<\/div><div class="line"><a name="l00047"><\/a><span class="lineno">   47<\/span>&#160;<\/div><div class="line"><a name="l00049"><\/a><span class="lineno">   49<\/span>&#160;        <a class="code" href="structsymbolT.html">symbolT<\/a> <a class="code" href="classStack.html#a5e190884440b0eed5edf06f31d70244f">top<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00050"><\/a><span class="lineno">   50<\/span>&#160;<\/div><div class="line"><a name="l00052"><\/a><span class="lineno">   52<\/span>&#160;        <span class="keywordtype">int<\/span> <a class="code" href="classStack.html#ae340b80cf90a09d5fd6e14efe73f1166">empty<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00053"><\/a><span class="lineno">   53<\/span>&#160;<\/div><div class="line"><a name="l00055"><\/a><span class="lineno">   55<\/span>&#160;        <span class="keywordtype">int<\/span> <a class="code" href="classStack.html#a30424a3106b7c53dced7c630e35308d6">full<\/a>(<span class="keywordtype">void<\/span>);<\/div><div class="line"><a name="l00056"><\/a><span class="lineno">   56<\/span>&#160;};<\/div><div class="line"><a name="l00057"><\/a><span class="lineno">   57<\/span>&#160;<\/div><div class="line"><a name="l00058"><\/a><span class="lineno">   58<\/span>&#160;<span class="preprocessor">#endif<\/span><\/div><div class="line"><a name="l00059"><\/a><span class="lineno">   59<\/span>&#160;<\/div><div class="ttc" id="classStack_html_a30424a3106b7c53dced7c630e35308d6"><div class="ttname"><a href="classStack.html#a30424a3106b7c53dced7c630e35308d6">Stack::full<\/a><\/div><div class="ttdeci">int full(void)<\/div><div class="ttdoc">Check if stack is full. <\/div><div class="ttdef"><b>Definition:<\/b> stack.cpp:142<\/div><\/div>$/;"	a
 l00001	html/utility_8h_source.html	/^<a href="utility_8h.html">Go to the documentation of this file.<\/a><div class="fragment"><div class="line"><a name="l00001"><\/a><span class="lineno">    1<\/span>&#160;<\/div><div class="line"><a name="l00009"><\/a><span class="lineno">    9<\/span>&#160;<span class="preprocessor">#ifndef __UTILITY_H__<\/span><\/div><div class="line"><a name="l00010"><\/a><span class="lineno">   10<\/span>&#160;<span class="preprocessor">#define __UTILITY_H__<\/span><\/div><div class="line"><a name="l00011"><\/a><span class="lineno">   11<\/span>&#160;<\/div><div class="line"><a name="l00013"><\/a><span class="lineno"><a class="line" href="utility_8h.html#af01b43bbb0e04b9b0e9fd509f941deb8">   13<\/a><\/span>&#160;<span class="preprocessor">#define isNum(c) ((c &gt;= &#39;0&#39;) &amp;&amp; (c &lt;= &#39;9&#39;))<\/span><\/div><div class="line"><a name="l00014"><\/a><span class="lineno">   14<\/span>&#160;<\/div><div class="line"><a name="l00016"><\/a><span class="lineno"><a class="line" href="utility_8h.html#a5fd3acbdba0ff2963d05d6af8bcff181">   16<\/a><\/span>&#160;<span class="preprocessor">#define isTerminator(c) ((c == &#39;\\n&#39;) || (c == 0))<\/span><\/div><div class="line"><a name="l00017"><\/a><span class="lineno">   17<\/span>&#160;<\/div><div class="line"><a name="l00019"><\/a><span class="lineno"><a class="line" href="utility_8h.html#ac975112ba9f532db68e2b1b3aa2efa89">   19<\/a><\/span>&#160;<span class="preprocessor">#define isWhitespace(c) ((c == &#39; &#39;) || (c == &#39;\\t&#39;))<\/span><\/div><div class="line"><a name="l00020"><\/a><span class="lineno">   20<\/span>&#160;<\/div><div class="line"><a name="l00022"><\/a><span class="lineno"><a class="line" href="utility_8h.html#a44f7c035009c45eacb8d7c8680e4dddd">   22<\/a><\/span>&#160;<span class="preprocessor">#define toNumeric(c) (c - &#39;0&#39;)<\/span><\/div><div class="line"><a name="l00023"><\/a><span class="lineno">   23<\/span>&#160;<\/div><div class="line"><a name="l00024"><\/a><span class="lineno">   24<\/span>&#160;<span class="preprocessor">#endif<\/span><\/div><div class="line"><a name="l00025"><\/a><span class="lineno">   25<\/span>&#160;<\/div><\/div><!-- fragment --><\/div><!-- contents -->$/;"	a
 latex_count	latex/Makefile	/^	latex_count=8 ; \\$/;"	m
 letter_s	html/classes.html	/^<tr><td rowspan="2" valign="bottom"><a name="letter_s"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;s&#160;&#160;<\/div><\/td><\/tr><\/table>$/;"	a
+main	main.C	/^int main(void)$/;"	f
 main	main.c	/^int main(void)$/;"	f
 main.   c File Reference	latex/main_8c.tex	/^\\hypertarget{main_8c}{}\\section{main.\\+c File Reference}$/;"	s
 makeTree	html/menu.js	/^  function makeTree(data,relPath) {$/;"	f	function:initMenu
 nested-classes	html/buffer_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"><\/a>$/;"	a
+nested-classes	html/stack_8hpp.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"><\/a>$/;"	a
+parseSymbol	convert.C	/^char *Convertor::parseSymbol(char *in, symbolT * symbol)$/;"	f	class:Convertor
 parseSymbol	convert.c	/^static char *parseSymbol(char *in, symbolT * symbol)$/;"	f	file:
+pop	stack.C	/^void Stack::pop(symbolT * p)$/;"	f	class:Stack
 pop	stack.c	/^void pop(symbolT * p)$/;"	f
+postfix	buffer.H	/^    symbolT *postfix;$/;"	m	class:Buffer
 postfix	buffer.c	/^static symbolT postfix[MAX_STRING];$/;"	v	file:
+precedence	convert.C	/^int Convertor::precedence(char c)$/;"	f	class:Convertor
 precedence	convert.c	/^static int precedence(char c)$/;"	f	file:
+printInfixBuffer	buffer.C	/^void Buffer::printInfixBuffer(void)$/;"	f	class:Buffer
 printInfixBuffer	buffer.c	/^void printInfixBuffer(void)$/;"	f
+printPostfixBuffer	buffer.C	/^void Buffer::printPostfixBuffer(void)$/;"	f	class:Buffer
 printPostfixBuffer	buffer.c	/^void printPostfixBuffer(void)$/;"	f
+printPostfixSymbol	buffer.C	/^void Buffer::printPostfixSymbol(symbolT s)$/;"	f	class:Buffer
 printPostfixSymbol	buffer.c	/^void printPostfixSymbol(symbolT s)$/;"	f
 pub-attribs	html/struct__postfixT.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"><\/a>$/;"	a
 pub-attribs	html/structsymbolT.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"><\/a>$/;"	a
+pub-methods	html/classStack.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"><\/a>$/;"	a
+push	stack.C	/^void Stack::push(symbolT c)$/;"	f	class:Stack
 push	stack.c	/^void push(symbolT c)$/;"	f
 searchData	html/search/all_0.js	/^var searchData=$/;"	v
 searchData	html/search/all_1.js	/^var searchData=$/;"	v
@@ -194,6 +254,7 @@ searchData	html/search/all_8.js	/^var searchData=$/;"	v
 searchData	html/search/all_9.js	/^var searchData=$/;"	v
 searchData	html/search/all_a.js	/^var searchData=$/;"	v
 searchData	html/search/all_b.js	/^var searchData=$/;"	v
+searchData	html/search/all_c.js	/^var searchData=$/;"	v
 searchData	html/search/classes_0.js	/^var searchData=$/;"	v
 searchData	html/search/defines_0.js	/^var searchData=$/;"	v
 searchData	html/search/defines_1.js	/^var searchData=$/;"	v
@@ -210,22 +271,35 @@ searchData	html/search/functions_4.js	/^var searchData=$/;"	v
 searchData	html/search/functions_5.js	/^var searchData=$/;"	v
 searchData	html/search/functions_6.js	/^var searchData=$/;"	v
 searchData	html/search/functions_7.js	/^var searchData=$/;"	v
+searchData	html/search/functions_8.js	/^var searchData=$/;"	v
+searchData	html/search/functions_9.js	/^var searchData=$/;"	v
 searchData	html/search/variables_0.js	/^var searchData=$/;"	v
 searchData	html/search/variables_1.js	/^var searchData=$/;"	v
 setClassAttr	html/search/search.js	/^function setClassAttr(elem,attr)$/;"	f
 setKeyActions	html/search/search.js	/^function setKeyActions(elem,action)$/;"	f
+size	buffer.H	/^    int size;$/;"	m	class:Buffer
+size	stack.H	/^        int size;$/;"	m	class:Stack
+sp	stack.H	/^        int sp;$/;"	m	class:Stack
 sp	stack.c	/^static int sp = -1;$/;"	v	file:
+stack	stack.H	/^        symbolT *stack;$/;"	m	class:Stack
 stack	stack.c	/^static symbolT stack[MAX_STACK_SIZE];$/;"	v	file:
 stack.   c File Reference	latex/stack_8c.tex	/^\\hypertarget{stack_8c}{}\\section{stack.\\+c File Reference}$/;"	s
+stack.   cpp File Reference	latex/stack_8cpp.tex	/^\\hypertarget{stack_8cpp}{}\\section{stack.\\+cpp File Reference}$/;"	s
 stack.   h File Reference	latex/stack_8h.tex	/^\\hypertarget{stack_8h}{}\\section{stack.\\+h File Reference}$/;"	s
-symbolT	buffer.h	/^} symbolT;$/;"	t	typeref:struct:__anon1
+stack.   hpp File Reference	latex/stack_8hpp.tex	/^\\hypertarget{stack_8hpp}{}\\section{stack.\\+hpp File Reference}$/;"	s
+symbolT	buffer.H	/^} symbolT;$/;"	t	typeref:struct:__anon1
+symbolT	buffer.h	/^} symbolT;$/;"	t	typeref:struct:__anon2
 symbolT Struct Reference	latex/structsymbolT.tex	/^\\hypertarget{structsymbolT}{}\\section{symbolT Struct Reference}$/;"	s
+texorpdfstring  $ sim$   Stack  	latex/classStack.tex	/^\\index{````~Stack@{$\\sim$\\+Stack}!Stack@{Stack}}$/;"	b
+texorpdfstring  Stack  	latex/classStack.tex	/^\\index{Stack@{Stack}!Stack@{Stack}}$/;"	b
 texorpdfstring  calc  	latex/calculator_8c.tex	/^\\index{calc@{calc}!calculator.\\+c@{calculator.\\+c}}$/;"	b
 texorpdfstring  calc  	latex/calculator_8h.tex	/^\\index{calc@{calc}!calculator.\\+h@{calculator.\\+h}}$/;"	b
 texorpdfstring  convert   To   Post   Fix  	latex/convert_8c.tex	/^\\index{convert\\+To\\+Post\\+Fix@{convert\\+To\\+Post\\+Fix}!convert.\\+c@{convert.\\+c}}$/;"	b
 texorpdfstring  convert   To   Post   Fix  	latex/convert_8h.tex	/^\\index{convert\\+To\\+Post\\+Fix@{convert\\+To\\+Post\\+Fix}!convert.\\+h@{convert.\\+h}}$/;"	b
+texorpdfstring  empty  	latex/classStack.tex	/^\\index{empty@{empty}!Stack@{Stack}}$/;"	b
 texorpdfstring  empty  	latex/stack_8c.tex	/^\\index{empty@{empty}!stack.\\+c@{stack.\\+c}}$/;"	b
 texorpdfstring  empty  	latex/stack_8h.tex	/^\\index{empty@{empty}!stack.\\+h@{stack.\\+h}}$/;"	b
+texorpdfstring  full  	latex/classStack.tex	/^\\index{full@{full}!Stack@{Stack}}$/;"	b
 texorpdfstring  full  	latex/stack_8c.tex	/^\\index{full@{full}!stack.\\+c@{stack.\\+c}}$/;"	b
 texorpdfstring  full  	latex/stack_8h.tex	/^\\index{full@{full}!stack.\\+h@{stack.\\+h}}$/;"	b
 texorpdfstring  get   Infix   Buffer  	latex/buffer_8c.tex	/^\\index{get\\+Infix\\+Buffer@{get\\+Infix\\+Buffer}!buffer.\\+c@{buffer.\\+c}}$/;"	b
@@ -239,6 +313,7 @@ texorpdfstring  init   Stack  	latex/stack_8h.tex	/^\\index{init\\+Stack@{init\\
 texorpdfstring  initialize   Buffers  	latex/buffer_8c.tex	/^\\index{initialize\\+Buffers@{initialize\\+Buffers}!buffer.\\+c@{buffer.\\+c}}$/;"	b
 texorpdfstring  initialize   Buffers  	latex/buffer_8h.tex	/^\\index{initialize\\+Buffers@{initialize\\+Buffers}!buffer.\\+h@{buffer.\\+h}}$/;"	b
 texorpdfstring  main  	latex/main_8c.tex	/^\\index{main@{main}!main.\\+c@{main.\\+c}}$/;"	b
+texorpdfstring  pop  	latex/classStack.tex	/^\\index{pop@{pop}!Stack@{Stack}}$/;"	b
 texorpdfstring  pop  	latex/stack_8c.tex	/^\\index{pop@{pop}!stack.\\+c@{stack.\\+c}}$/;"	b
 texorpdfstring  pop  	latex/stack_8h.tex	/^\\index{pop@{pop}!stack.\\+h@{stack.\\+h}}$/;"	b
 texorpdfstring  print   Infix   Buffer  	latex/buffer_8c.tex	/^\\index{print\\+Infix\\+Buffer@{print\\+Infix\\+Buffer}!buffer.\\+c@{buffer.\\+c}}$/;"	b
@@ -247,8 +322,10 @@ texorpdfstring  print   Postfix   Buffer  	latex/buffer_8c.tex	/^\\index{print\\
 texorpdfstring  print   Postfix   Buffer  	latex/buffer_8h.tex	/^\\index{print\\+Postfix\\+Buffer@{print\\+Postfix\\+Buffer}!buffer.\\+h@{buffer.\\+h}}$/;"	b
 texorpdfstring  print   Postfix   Symbol  	latex/buffer_8c.tex	/^\\index{print\\+Postfix\\+Symbol@{print\\+Postfix\\+Symbol}!buffer.\\+c@{buffer.\\+c}}$/;"	b
 texorpdfstring  print   Postfix   Symbol  	latex/buffer_8h.tex	/^\\index{print\\+Postfix\\+Symbol@{print\\+Postfix\\+Symbol}!buffer.\\+h@{buffer.\\+h}}$/;"	b
+texorpdfstring  push  	latex/classStack.tex	/^\\index{push@{push}!Stack@{Stack}}$/;"	b
 texorpdfstring  push  	latex/stack_8c.tex	/^\\index{push@{push}!stack.\\+c@{stack.\\+c}}$/;"	b
 texorpdfstring  push  	latex/stack_8h.tex	/^\\index{push@{push}!stack.\\+h@{stack.\\+h}}$/;"	b
+texorpdfstring  top  	latex/classStack.tex	/^\\index{top@{top}!Stack@{Stack}}$/;"	b
 texorpdfstring  top  	latex/stack_8c.tex	/^\\index{top@{top}!stack.\\+c@{stack.\\+c}}$/;"	b
 texorpdfstring  top  	latex/stack_8h.tex	/^\\index{top@{top}!stack.\\+h@{stack.\\+h}}$/;"	b
 toNumeric	utility.h	22;"	d
@@ -256,8 +333,13 @@ toggleFolder	html/dynsections.js	/^function toggleFolder(id)$/;"	f
 toggleInherit	html/dynsections.js	/^function toggleInherit(id)$/;"	f
 toggleLevel	html/dynsections.js	/^function toggleLevel(level)$/;"	f
 toggleVisibility	html/dynsections.js	/^function toggleVisibility(linkObj)$/;"	f
+top	stack.C	/^symbolT Stack::top(void)$/;"	f	class:Stack
 top	stack.c	/^symbolT top(void)$/;"	f
-type	buffer.h	/^    unsigned char type; \/\/\/< indicator (operand or operator)$/;"	m	struct:__anon1
+type	buffer.H	/^    unsigned char type; \/\/\/< indicator (operand or operator)$/;"	m	struct:__anon1
+type	buffer.h	/^    unsigned char type; \/\/\/< indicator (operand or operator)$/;"	m	struct:__anon2
 updateStripes	html/dynsections.js	/^function updateStripes()$/;"	f
 utility.   h File Reference	latex/utility_8h.tex	/^\\hypertarget{utility_8h}{}\\section{utility.\\+h File Reference}$/;"	s
-val	buffer.h	/^    int val; \/\/\/< parsed integer value or operator$/;"	m	struct:__anon1
+val	buffer.H	/^    int val; \/\/\/< parsed integer value or operator$/;"	m	struct:__anon1
+val	buffer.h	/^    int val; \/\/\/< parsed integer value or operator$/;"	m	struct:__anon2
+~Buffer	buffer.C	/^Buffer::~Buffer()$/;"	f	class:Buffer
+~Stack	stack.C	/^Stack::~Stack(void)$/;"	f	class:Stack

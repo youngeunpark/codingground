@@ -1,20 +1,20 @@
 
 CC = gcc
 CPP = g++
-CFLAGS = -I. -g -Werror #-DDEBUG
+CFLAGS = -I. -g -Werror # -DDEBUG
 
 default: calculator calculatorCpp
 
 calculator: main.c calculator.c buffer.c convert.c stack.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-calculatorCpp: main.cpp stack.cpp
+calculatorCpp: main.C calculator.C buffer.C convert.C stack.C
 	$(CPP) $(CFLAGS) -o $@ $^
 
 clean:
 	rm -rf calculator calculatorCpp *.o
 
 doxygen:
-	doxygen *.c *.h *.cpp *.hpp
+	doxygen *.c *.h *.C *.H
 
 all: calculator calculatorCpp doxygen
