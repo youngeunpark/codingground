@@ -15,6 +15,6 @@ clean:
 	rm -rf calculator calculatorCpp *.o
 
 doxygen:
-	doxygen *.c *.h
+	doxygen *.c *.h *.cpp *.hpp
 
 all: calculator calculatorCpp doxygen
