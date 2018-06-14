@@ -4,5 +4,7 @@
 <area shape="rect" id="node4" href="$stack_8h.html" title="header file for stack implementation " alt="" coords="147,80,213,107"/>
 <area shape="rect" id="node5" href="$convert_8c.html" title="Infix&#45;to&#45;postfix convertor. " alt="" coords="237,155,313,181"/>
 <area shape="rect" id="node7" href="$main_8c.html" title="Calculator program reads the string of numeric infix expression, converts it postfix expression..." alt="" coords="288,80,349,107"/>
+<area shape="rect" id="node8" href="$stack_8hpp.html" title="C++ header file for stack implementation. " alt="" coords="374,80,453,107"/>
 <area shape="rect" id="node6" href="$stack_8c.html" title="Stack implementation for symbols. " alt="" coords="147,155,213,181"/>
+<area shape="rect" id="node9" href="$stack_8cpp.html" title="C++ Stack implementation for symbols. " alt="" coords="374,155,453,181"/>
 </map>
