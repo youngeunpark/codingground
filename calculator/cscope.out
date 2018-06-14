@@ -1,4 +1,4 @@
-cscope 15 $HOME/codingground/calculator               0000075625
+cscope 15 $HOME/codingground/calculator               0000075928
 	@buffer.C
 
 9 
@@ -29,83 +29,15 @@ usšg
 	g¡d
 ;
 
-24 
+24 
 	gBufãr
 ::
-	$Bufãr
-()
+	$®locBufãrs
+(
+size
+)
 
 26 
-	`š™ŸlizeBufãrs
-(
-MAX_STRING
-);
-
-27 
-	}
-}
-
-36 
-	gBufãr
-::
-	$Bufãr
-(
-size
-)
-
-38 if(
-size
- <= 0) {
-
-39 
-cout
- << "OÝs, inv®id siz" << 
-size
- << 
-’dl
-;
-
-42 
-	`š™ŸlizeBufãrs
-(
-size
-);
-
-43 
-	}
-}
-
-52 
-	gBufãr
-::~
-	$Bufãr
-()
-
-54 
-	`ä“
-(
-šfix
-);
-
-55 
-	`ä“
-(
-po¡fix
-);
-
-56 
-	}
-}
-
-65 
-	gBufãr
-::
-	$š™ŸlizeBufãrs
-(
-size
-)
-
-67 
 šfix
  = (*)
 	`m®loc
@@ -115,17 +47,17 @@ size_t
 size
 );
 
-68 if(!
+27 if(!
 šfix
 ) {
 
-69 
+28 
 cout
  << "OÝs, infix m®loøçžed" << 
 ’dl
 ;
 
-72 
+31 
 po¡fix
  = (
 symbÞT
@@ -135,49 +67,139 @@ symbÞT
 size
 );
 
-73 if(!
+32 if(!
 po¡fix
 ) {
 
-74 
+33 
 cout
  << "OÝs,…o¡fix m®loøçžed" << 
 ’dl
 ;
 
-78 
+37 
 this
 ->
 size
  = size;
 
-79 
-	`mem£t
-(
-šfix
-, 0x0, (infix));
+38 
+	`š™ŸlizeBufãrs
+();
 
-80 
-	`mem£t
-(
-po¡fix
-, 0x0, (postfix));
-
-81 
+39 
 	}
 }
 
-92 
+48 
+	gBufãr
+::
+	$Bufãr
+()
+
+50 
+	`®locBufãrs
+(
+MAX_STRING
+);
+
+51 
+	}
+}
+
+60 
+	gBufãr
+::
+	$Bufãr
+(
+size
+)
+
+62 if(
+size
+ <= 0) {
+
+63 
+cout
+ << "OÝs, inv®id siz" << 
+size
+ << 
+’dl
+;
+
+66 
+	`®locBufãrs
+(
+size
+);
+
+67 
+	}
+}
+
+76 
+	gBufãr
+::~
+	$Bufãr
+()
+
+78 
+	`ä“
+(
+šfix
+);
+
+79 
+	`ä“
+(
+po¡fix
+);
+
+80 
+	}
+}
+
+89 
+	gBufãr
+::
+	$š™ŸlizeBufãrs
+()
+
+91 
+	`mem£t
+(
+šfix
+, 0x0, (
+size_t
+)
+size
+);
+
+92 
+	`mem£t
+(
+po¡fix
+, 0x0, (
+symbÞT
+è* 
+size
+);
+
+93 
+	}
+}
+
+104 
 	gBufãr
 ::
 	$g‘InfixEx´essiÚ
 ()
 
-94 
+106 
 Ën
 ;
 
-96 ià(
+108 ià(
 	`fg‘s
 (
 šfix
@@ -189,15 +211,15 @@ size
 NULL
 ) {
 
-97 if(
+109 if(
 ”ºo
  == 0) {
 
-99 
+111 
 	`ex™
 (0);
 
-102 
+114 
 	`´štf
 ("ERROR [%s:%d]ƒ¼no(%d)\n", 
 __FILE__
@@ -207,21 +229,21 @@ __LINE__
 ”ºo
 );
 
-108 if(
+120 if(
 šfix
 [0] == '#') {
 
-109 #ifdeà
+121 #ifdeà
 DEBUG
 
 
-110 
+122 
 	`´štf
 ("Sk comm’t, %s", 
 šfix
 );
 
-115 
+127 
 Ën
  = 
 	`¡¾’
@@ -229,61 +251,61 @@ DEBUG
 šfix
 );
 
-118 if(
+130 if(
 šfix
 [
 Ën
  - 1] == '\n') {
 
-119 
+131 
 šfix
 [
 Ën
  - 1] = 0;
 
-122  
-Ën
-;
-
-123 
-	}
-}
-
-132 *
-	gBufãr
-::
-	$g‘InfixBufãr
-()
-
 134  
-šfix
+Ën
 ;
 
 135 
 	}
 }
 
-144 
+144 *
+	gBufãr
+::
+	$g‘InfixBufãr
+()
+
+146  
+šfix
+;
+
+147 
+	}
+}
+
+156 
 	gBufãr
 ::
 	$´štInfixBufãr
 ()
 
-146 
+158 
 	`´štf
 ("infix: ");
 
-147 
+159 
 	`´štf
 ("%s\n", 
 šfix
 );
 
-148 
+160 
 	}
 }
 
-157 
+169 
 symbÞT
  *
 	gBufãr
@@ -291,29 +313,29 @@ symbÞT
 	$g‘Po¡fixBufãr
 ()
 
-159  
+171  
 po¡fix
 ;
 
-160 
+172 
 	}
 }
 
-169 
+181 
 	gBufãr
 ::
 	$´štPo¡fixBufãr
 ()
 
-171 
+183 
 idx
  = 0;
 
-173 
+185 
 	`´štf
 ("postfix:\n");
 
-175 !(
+187 !(
 	`IsT”mš©Ü
 (
 po¡fix
@@ -323,7 +345,7 @@ idx
 	`IsNÚe
 (postfix[idx]))) {
 
-176 ià(
+188 ià(
 	`IsO³¿tÜ
 (
 po¡fix
@@ -331,7 +353,7 @@ po¡fix
 idx
 ])) {
 
-177 
+189 
 	`´štf
 ("[%d] %c\n", 
 idx
@@ -341,7 +363,7 @@ po¡fix
 v®
 );
 
-178 } ià(
+190 } ià(
 	`IsO³¿nd
 (
 po¡fix
@@ -349,7 +371,7 @@ po¡fix
 idx
 ])) {
 
-179 
+191 
 	`´štf
 ("[%d] %d\n", 
 idx
@@ -359,15 +381,15 @@ po¡fix
 v®
 );
 
-181 
+193 
 idx
 ++;
 
-183 
+195 
 	}
 }
 
-192 
+204 
 	gBufãr
 ::
 	$´štPo¡fixSymbÞ
@@ -377,13 +399,13 @@ symbÞT
 s
 )
 
-194 ià(
+206 ià(
 	`IsO³¿tÜ
 (
 s
 )) {
 
-195 
+207 
 	`´štf
 ("%c\n", ()
 s
@@ -391,13 +413,13 @@ s
 v®
 );
 
-196 } ià(
+208 } ià(
 	`IsO³¿nd
 (
 s
 )) {
 
-197 
+209 
 	`´štf
 ("%d\n", 
 s
@@ -405,7 +427,7 @@ s
 v®
 );
 
-199 
+211 
 	}
 }
 
@@ -551,53 +573,57 @@ symbÞT
 	mpo¡fix
 ;
 
-45 
+46 
+®locBufãrs
+(
+size
+);
+
+48 
 	mpublic
 :
 
-48 
-Bufãr
-();
-
 51 
 Bufãr
+();
+
+54 
+Bufãr
 (
 size
 );
 
-54 ~
+57 ~
 Bufãr
 ();
 
-57 
+60 
 š™ŸlizeBufãrs
-(
-size
-);
+();
 
-60 
+63 
 g‘InfixEx´essiÚ
 ();
 
-63 *
+66 *
 g‘InfixBufãr
 ();
 
-66 
+69 
 ´štInfixBufãr
 ();
 
-69 
+72 
 symbÞT
  *
 g‘Po¡fixBufãr
 ();
 
-72 
+75 
 ´štPo¡fixBufãr
 ();
 
-75 
+78 
 ´štPo¡fixSymbÞ
 (
 symbÞT
@@ -3065,11 +3091,15 @@ usšg
 	g¡d
 ;
 
-16 
+16 #undeà
+DEBUG
+
+
+18 
 	$maš
 ()
 
-18 
+20 
 Bufãr
  *
 bufãr
@@ -3079,7 +3109,7 @@ bufãr
 	`Bufãr
 ();
 
-19 
+21 
 CÚv”tÜ
  *
 cÚv”tÜ
@@ -3089,7 +3119,7 @@ cÚv”tÜ
 	`CÚv”tÜ
 ();
 
-20 
+22 
 C®cuÏtÜ
  *
 ÿlc
@@ -3099,13 +3129,29 @@ C®cuÏtÜ
 	`C®cuÏtÜ
 ();
 
-25 ià(!
+26 
+bufãr
+->
+	`š™ŸlizeBufãrs
+();
+
+29 ià(!
 bufãr
 ->
 	`g‘InfixEx´essiÚ
 ()) {
 
-30 ià(
+33 #ifdeà
+DEBUG
+
+
+34 
+bufãr
+->
+	`´štInfixBufãr
+();
+
+37 ià(
 cÚv”tÜ
 ->
 	`cÚv”tToPo¡Fix
@@ -3113,11 +3159,21 @@ cÚv”tÜ
 bufãr
 ) > 0) {
 
-31 
+38 
 »suÉ
 ;
 
-34 if(
+40 #ifdeà
+DEBUG
+
+
+41 
+bufãr
+->
+	`´štPo¡fixBufãr
+();
+
+44 if(
 ÿlc
 ->
 	`ÿlc
@@ -3127,7 +3183,7 @@ bufãr
 »suÉ
 )) {
 
-36 
+46 
 cout
  << 
 bufãr
@@ -3139,7 +3195,19 @@ bufãr
 ’dl
 ;
 
-42 
+51 
+d–‘e
+ 
+cÚv”tÜ
+;
+
+52 
+d–‘e
+ 
+ÿlc
+;
+
+55 
 	}
 }
 

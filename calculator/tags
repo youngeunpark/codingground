@@ -39,6 +39,7 @@ CloseResultsWindow	html/search/search.js	/^  this.CloseResultsWindow = function(
 CloseSelectionWindow	html/search/search.js	/^  this.CloseSelectionWindow = function()$/;"	m	class:SearchBox
 Constructor   Destructor Documentation	latex/classStack.tex	/^\\begin{DoxyCompactList}\\small\\item\\em Check if stack is full. \\end{DoxyCompactList}\\end{DoxyCompactItemize}$/;"	u
 Convertor	convert.H	/^class Convertor {$/;"	c
+DEBUG	main.C	16;"	d	file:
 DOMPopupSearchResults	html/search/search.js	/^  this.DOMPopupSearchResults = function()$/;"	m	class:SearchBox
 DOMPopupSearchResultsWindow	html/search/search.js	/^  this.DOMPopupSearchResultsWindow = function()$/;"	m	class:SearchBox
 DOMSearchBox	html/search/search.js	/^  this.DOMSearchBox = function()$/;"	m	class:SearchBox
@@ -144,6 +145,7 @@ __CONVERT_H__	convert.h	10;"	d
 __STACK_H_CPP__	stack.H	10;"	d
 __STACK_H__	stack.h	10;"	d
 __UTILITY_H__	utility.h	10;"	d
+allocBuffers	buffer.C	/^void Buffer::allocBuffers(int size)$/;"	f	class:Buffer
 buffer.   c File Reference	latex/buffer_8c.tex	/^\\hypertarget{buffer_8c}{}\\section{buffer.\\+c File Reference}$/;"	s
 buffer.   h File Reference	latex/buffer_8h.tex	/^\\hypertarget{buffer_8h}{}\\section{buffer.\\+h File Reference}$/;"	s
 calc	calculator.C	/^int Calculator::calc(Buffer *buf, int *result)$/;"	f	class:Calculator
@@ -200,7 +202,7 @@ initMenu	html/menu.js	/^function initMenu(relPath,searchEnabled,serverSide,searc
 initStack	stack.C	/^void Stack::initStack(int size)$/;"	f	class:Stack
 initStack	stack.c	/^void initStack(void)$/;"	f
 init_search	html/search/search.js	/^function init_search()$/;"	f
-initializeBuffers	buffer.C	/^void Buffer::initializeBuffers(int size)$/;"	f	class:Buffer
+initializeBuffers	buffer.C	/^void Buffer::initializeBuffers(void)$/;"	f	class:Buffer
 initializeBuffers	buffer.c	/^void initializeBuffers(void)$/;"	f
 isNum	utility.h	13;"	d
 isOperator	convert.C	/^int Convertor::isOperator(char c)$/;"	f	class:Convertor
