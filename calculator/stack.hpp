@@ -26,7 +26,7 @@ class Stack {
         int size;
 
         /// Initialize stack
-        void initStack(void);
+        void initStack(int size);
 
     public:
 

@@ -7,11 +7,13 @@ int main(void)
     symbolT symbol = {_OPERATOR_, '+'};
 
     s->push(symbol);
-    //s->push(symbol);
+    s->push(symbol);
+    //s->print();
+
+    s->pop(&symbol);
     //s->print();
     s->pop(&symbol);
     //s->print();
-    //s->pop(&symbol);
 
     delete s;
 

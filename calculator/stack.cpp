@@ -18,12 +18,41 @@
     NONE
 
     @param
+    size: the size of stack
+*/
+void Stack::initStack(int size)
+{
+    if(size <= 0) {
+        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+        std::cout << " invalid size(" << size << ")" << std::endl;
+        return;
+    }
+    stack = (symbolT *)malloc(sizeof(symbolT) * size);
+    if(!stack) {
+        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+        std::cout << " malloc failed" << std::endl;
+        return;
+    }
+
+    sp = -1;
+    this->size = size;
+    memset(stack, 0x0, sizeof(symbolT) * size);
+}
+
+/**
+    @return
+    NONE
+
+    @param
     NONE
 */
 Stack::Stack(void)
 {
-    std::cout << "Stack::Stack" << std::endl;
-    Stack(MAX_STACK_SIZE);
+    initStack(MAX_STACK_SIZE);
+
+    // Note that
+    // calling another constructor like below creates 2 different instances
+    // Stack(MAX_STACK_SIZE);
 }
 
 /**
@@ -35,21 +64,7 @@ Stack::Stack(void)
 */
 Stack::Stack(int size)
 {
-    std::cout << "Stack::Stack(size)" << std::endl;
-    if(size <= 0) {
-        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-        std::cout << " invalid size(" << size << ")" << std::endl;
-        return;
-    }
-    this->stack = (symbolT *)malloc(sizeof(symbolT) * size);
-    if(!stack) {
-        std::cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-        std::cout << " malloc failed" << std::endl;
-        return;
-    }
-
-    this->size = size;
-    initStack();
+    initStack(size);
 }
 
 /**
@@ -73,9 +88,6 @@ Stack::~Stack(void)
 */
 void Stack::push(symbolT c)
 {
-    std::cout << "size = " << this->size << std::endl;
-    std::cout << "sp = " << this->sp << std::endl;
-    std::cout << "stack = " << this->stack << std::endl;
     if (!full())
         stack[++sp] = c;
 }
@@ -130,18 +142,5 @@ int Stack::empty(void)
 int Stack::full(void)
 {
     return (sp == (MAX_STRING - 1));
-}
-
-/**
-    @return
-    NONE
-
-    @param
-    NONE
-*/
-void Stack::initStack(void)
-{
-    this->sp = -1;
-    memset(stack, 0x0, sizeof(symbolT) * size);
 }
 
