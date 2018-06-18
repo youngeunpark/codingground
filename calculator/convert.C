@@ -187,11 +187,13 @@ int Convertor::convertToPostFix(Buffer *buffer)
 
         // Consecutive same type of symbols must be invalid
         if (symbol.type == previousSymbol.type) {
-            printf("ERROR [%s:%d] invalid infix expression\n", __FILE__,
-                   __LINE__);
+            cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+            cout << " invalid infix expression" << endl;
+
             buffer->printInfixBuffer();
-            printf("previous symbol : "); buffer->printPostfixSymbol(previousSymbol);
-            printf("current symbol : "); buffer->printPostfixSymbol(symbol);
+
+            cout << "previous symbol : " ; buffer->printPostfixSymbol(previousSymbol);
+            cout << "current symbol : " ; buffer->printPostfixSymbol(symbol);
             delete stack;
             return -1;
         }

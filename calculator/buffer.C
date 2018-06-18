@@ -111,7 +111,8 @@ int Buffer::getInfixExpression(void)
             exit(0);
         } else {
             // Something wrong happens
-            printf("ERROR [%s:%d] errno(%d)\n", __FILE__, __LINE__, errno);
+            cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+            cout << " errno(" << errno << ")" << endl;
         }
         return -1;
     }
@@ -119,7 +120,7 @@ int Buffer::getInfixExpression(void)
     // expression is comment starting with #
     if(infix[0] == '#') {
 #ifdef DEBUG
-        printf("Skip comment, %s", infix);
+        cout << "Skip comment, " << infix ;
 #endif
         return 0;
     }
@@ -155,8 +156,7 @@ char *Buffer::getInfixBuffer(void)
 */
 void Buffer::printInfixBuffer(void)
 {
-    printf("infix: ");
-    printf("%s\n", infix);
+    cout << "infix: " << infix << endl ;
 }
 
 /**
@@ -182,13 +182,13 @@ void Buffer::printPostfixBuffer(void)
 {
     int idx = 0;
 
-    printf("postfix:\n");
+    cout << "postfix:" << endl;
 
     while (!(IsTerminator(postfix[idx]) || IsNone(postfix[idx]))) {
         if (IsOperator(postfix[idx])) {
-            printf("[%d] %c\n", idx, (char)postfix[idx].val);
+            cout << "[" << idx << "]" << (char)postfix[idx].val << endl;
         } else if (IsOperand(postfix[idx])) {
-            printf("[%d] %d\n", idx, postfix[idx].val);
+            cout << "[" << idx << "]" << postfix[idx].val << endl;
         }
         idx++;
     }
@@ -204,9 +204,9 @@ void Buffer::printPostfixBuffer(void)
 void Buffer::printPostfixSymbol(symbolT s)
 {
     if (IsOperator(s)) {
-        printf("%c\n", (char)s.val);
+        cout << (char)s.val << endl;
     } else if (IsOperand(s)) {
-        printf("%d\n", s.val);
+        cout << s.val << endl;
     }
 }
 

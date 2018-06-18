@@ -6,13 +6,15 @@
     C++ Calculator implementation
 */
 
-#include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
 #include <buffer.H>
 #include <stack.H>
 #include <utility.h>
 #include <calculator.H>
+
+using namespace std;
 
 /**
     @return
@@ -29,7 +31,8 @@ int Calculator::calc(Buffer *buf, int *result)
     Stack *stack;
 
     if(!result || !buf) {
-        printf("ERROR [%s:%d] parameter is NULL\n", __FILE__, __LINE__);
+        cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+        cout << " parameter is NULL" << endl ;
         return 0;
     }
 
@@ -72,16 +75,17 @@ int Calculator::calc(Buffer *buf, int *result)
                 break;
             case '/':
                 if (a.val == 0) {
-                    printf("ERROR [%s:%d] divide by zero (%d/%d)\n", __FILE__,
-                           __LINE__, b.val, a.val);
+                    cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+                    cout << " divide by zero (" << b.val << "/" << a.val << ")" << endl;
                     delete stack;
                     return 0;
                 }
                 s.val = b.val / a.val;
                 break;
             default:
-                printf("ERROR [%s:%d] invalid operator(%c, %d)\n", __FILE__,
-                       __LINE__, (char)symbol.val, symbol.val);
+                cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+                cout << " invalid operator (" << (char)symbol.val << ":" ;
+                cout << symbol.val << ")" << endl;
                 delete stack;
                 return 0;
                 break;
@@ -90,9 +94,9 @@ int Calculator::calc(Buffer *buf, int *result)
             stack->push(s);
         } else {
             buf->printPostfixSymbol(symbol);
-            printf("ERROR [%s:%d] invalid symbol(type: %c, %d)\n",
-                   __FILE__, __LINE__, (char)symbol.type,
-                   symbol.type);
+            cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+            cout << " invalid symbol(type: " << (char) symbol.type ;
+            cout << ", " << symbol.type << ")" << endl;
             delete stack;
             return 0;
         }
