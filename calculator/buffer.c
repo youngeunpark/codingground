@@ -139,7 +139,7 @@ void printPostfixBuffer(void)
 */
 void printPostfixSymbol(symbolT s)
 {
-    if (IsOperator(s)) {
+    if (IsOperator(s) || IsParenthesis(s)) {
         printf("%c\n", (char)s.val);
     } else if (IsOperand(s)) {
         printf("%d\n", s.val);

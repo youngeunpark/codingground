@@ -187,15 +187,19 @@ int Convertor::convertToPostFix(Buffer *buffer)
 
         // Consecutive same type of symbols must be invalid
         if (symbol.type == previousSymbol.type) {
-            cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-            cout << " invalid infix expression" << endl;
+            if(IsParenthesis(symbol) && (symbol.val == previousSymbol.val)) {
+                ; // Consecurive parenthesis like (( or )) is acceptable
+            } else {
+                cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
+                cout << " invalid infix expression" << endl;
 
-            buffer->printInfixBuffer();
+                buffer->printInfixBuffer();
 
-            cout << "previous symbol : " ; buffer->printPostfixSymbol(previousSymbol);
-            cout << "current symbol : " ; buffer->printPostfixSymbol(symbol);
-            delete stack;
-            return -1;
+                cout << "previous symbol : " ; buffer->printPostfixSymbol(previousSymbol);
+                cout << "current symbol : " ; buffer->printPostfixSymbol(symbol);
+                delete stack;
+                return -1;
+            }
         }
 
         previousSymbol = symbol;

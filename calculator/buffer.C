@@ -203,7 +203,7 @@ void Buffer::printPostfixBuffer(void)
 */
 void Buffer::printPostfixSymbol(symbolT s)
 {
-    if (IsOperator(s)) {
+    if (IsOperator(s) || IsParenthesis(s)) {
         cout << (char)s.val << endl;
     } else if (IsOperand(s)) {
         cout << s.val << endl;
