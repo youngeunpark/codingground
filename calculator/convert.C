@@ -157,6 +157,13 @@ char *Convertor::parseSymbol(char *in, symbolT * symbol)
     return c;
 }
 
+#define ERROR_POSTFIX_EXPRESSION() \
+    cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ; \
+    cout << " invalid infix expression" << endl; \
+    buffer->printInfixBuffer(); \
+    cout << "previous symbol : " ; buffer->printPostfixSymbol(previousSymbol); \
+    cout << "current symbol : " ; buffer->printPostfixSymbol(symbol); \
+
 /**
     @return
     On success, the number of operators to be parsed\n
@@ -185,21 +192,23 @@ int Convertor::convertToPostFix(Buffer *buffer)
             break;
         }
 
-        // Consecutive same type of symbols must be invalid
+#ifdef DEBUG
+        buffer->printPostfixSymbol(symbol);
+#endif
+
+        // Check invalid expression in postfix
         if (symbol.type == previousSymbol.type) {
             if(IsParenthesis(symbol) && (symbol.val == previousSymbol.val)) {
                 ; // Consecurive parenthesis like (( or )) is acceptable
             } else {
-                cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-                cout << " invalid infix expression" << endl;
-
-                buffer->printInfixBuffer();
-
-                cout << "previous symbol : " ; buffer->printPostfixSymbol(previousSymbol);
-                cout << "current symbol : " ; buffer->printPostfixSymbol(symbol);
+                ERROR_POSTFIX_EXPRESSION()
                 delete stack;
                 return -1;
             }
+        } else if (IsOperand(previousSymbol) && ((char)symbol.val == '(')) {
+            ERROR_POSTFIX_EXPRESSION()
+            delete stack;
+            return -1;
         }
 
         previousSymbol = symbol;

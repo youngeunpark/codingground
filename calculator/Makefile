@@ -1,7 +1,7 @@
 
 CC = gcc
 CPP = g++
-CFLAGS = -I. -g -Werror # -DDEBUG
+CFLAGS = -I. -g -Werror #-DDEBUG
 
 default: calculator calculatorCpp
 

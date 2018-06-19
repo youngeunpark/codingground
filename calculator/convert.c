@@ -141,6 +141,11 @@ static char *parseSymbol(char *in, symbolT * symbol)
 
     return c;
 }
+#define ERROR_POSTFIX_EXPRESSION() \
+    printf("ERROR [%s:%d] invalid infix expression\n", __FILE__, __LINE__); \
+    printInfixBuffer(); \
+    printf("previous symbol : "); printPostfixSymbol(previousSymbol); \
+    printf("current symbol : "); printPostfixSymbol(symbol); \
 
 /**
     @return
@@ -176,12 +181,12 @@ int convertToPostFix(void)
             if(IsParenthesis(symbol) && (symbol.val == previousSymbol.val)) {
                 ; // Consecurive parenthesis like (( or )) is acceptable
             } else {
-                printf("ERROR [%s:%d] invalid infix expression\n", __FILE__, __LINE__);
-                printInfixBuffer();
-                printf("previous symbol : "); printPostfixSymbol(previousSymbol);
-                printf("current symbol : "); printPostfixSymbol(symbol);
+                ERROR_POSTFIX_EXPRESSION()
                 return -1;
             }
+        } else if (IsOperand(previousSymbol) && ((char)symbol.val == '(')) {
+            ERROR_POSTFIX_EXPRESSION()
+            return -1;
         }
 
         previousSymbol = symbol;
