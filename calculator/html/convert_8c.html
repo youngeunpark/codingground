@@ -59,6 +59,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">convert.c File Reference</div>  </div>
@@ -84,6 +85,11 @@ Include dependency graph for convert.c:</div>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab332b24ad5630464cd838e742843742e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERROR_POSTFIX_EXPRESSION</b>()</td></tr>
+<tr class="separator:ab332b24ad5630464cd838e742843742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9eee13860c4c03eac3f53c3a1f3aba80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#a9eee13860c4c03eac3f53c3a1f3aba80">convertToPostFix</a> (void)</td></tr>
@@ -93,7 +99,26 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Infix-to-postfix convertor. </p>
 <dl class="section date"><dt>Date</dt><dd>2018/06/10 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Youngeun Park </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ab332b24ad5630464cd838e742843742e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab332b24ad5630464cd838e742843742e">&#9670;&nbsp;</a></span>ERROR_POSTFIX_EXPRESSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_POSTFIX_EXPRESSION</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;ERROR [%s:%d] invalid infix expression\n&quot;</span>, __FILE__, __LINE__); \</div><div class="line">    printInfixBuffer(); \</div><div class="line">    printf(<span class="stringliteral">&quot;previous symbol : &quot;</span>); <a class="code" href="buffer_8c.html#a480e702aad3b1bbbda9560444013a473">printPostfixSymbol</a>(previousSymbol); \</div><div class="line">    printf(<span class="stringliteral">&quot;current symbol : &quot;</span>); <a class="code" href="buffer_8c.html#a480e702aad3b1bbbda9560444013a473">printPostfixSymbol</a>(symbol); \</div><div class="ttc" id="buffer_8c_html_a480e702aad3b1bbbda9560444013a473"><div class="ttname"><a href="buffer_8c.html#a480e702aad3b1bbbda9560444013a473">printPostfixSymbol</a></div><div class="ttdeci">void printPostfixSymbol(symbolT s)</div><div class="ttdef"><b>Definition:</b> buffer.c:140</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a9eee13860c4c03eac3f53c3a1f3aba80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9eee13860c4c03eac3f53c3a1f3aba80">&#9670;&nbsp;</a></span>convertToPostFix()</h2>
 

@@ -18,6 +18,11 @@ Include dependency graph for convert.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{convert_8c__incl}
 \end{center}
 \end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}()
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,6 +39,22 @@ Infix-\/to-\/postfix convertor.
 \begin{DoxyAuthor}{Author}
 Youngeun Park 
 \end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{convert_8c_ab332b24ad5630464cd838e742843742e}\label{convert_8c_ab332b24ad5630464cd838e742843742e}} 
+\index{convert.\+c@{convert.\+c}!E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}}
+\index{E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON@{E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}!convert.\+c@{convert.\+c}}
+\subsubsection{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON}{ERROR\_POSTFIX\_EXPRESSION}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+ON(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"ERROR [%s:%d] invalid infix expression\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_); \(\backslash\)
+    printInfixBuffer(); \(\backslash\)
+    printf(\textcolor{stringliteral}{"previous symbol : "}); \hyperlink{buffer_8c_a480e702aad3b1bbbda9560444013a473}{printPostfixSymbol}(previousSymbol); \(\backslash\)
+    printf(\textcolor{stringliteral}{"current symbol : "}); \hyperlink{buffer_8c_a480e702aad3b1bbbda9560444013a473}{printPostfixSymbol}(symbol); \(\backslash\)
+\end{DoxyCode}
 
 
 \subsection{Function Documentation}
