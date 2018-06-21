@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+IsEmpty	stack.c	/^int IsEmpty(void)$/;"	f
+IsFull	stack.c	/^int IsFull(void)$/;"	f
+LIMIT_STACK_SIZE	stack.h	11;"	d
+MAX_STACK_SIZE	stack.H	17;"	d
+MAX_STACK_SIZE	stack.h	10;"	d
+PeekInt	stackInt.c	/^static int PeekInt(int *val)$/;"	f	file:
+PeekString	stackString.c	/^static int PeekString(char **val)$/;"	f	file:
+PeekStruct	stackStruct.c	/^static int PeekStruct(structType ** val)$/;"	f	file:
+PopInt	stackInt.c	/^static int PopInt(int *val)$/;"	f	file:
+PopString	stackString.c	/^static int PopString(char **val)$/;"	f	file:
+PopStruct	stackStruct.c	/^static int PopStruct(structType ** val)$/;"	f	file:
+PrintInt	stackInt.c	/^static void PrintInt(void)$/;"	f	file:
+PrintString	stackString.c	/^static void PrintString(void)$/;"	f	file:
+PrintStruct	stackStruct.c	/^static void PrintStruct(void)$/;"	f	file:
+PushInt	stackInt.c	/^static int PushInt(int val)$/;"	f	file:
+PushString	stackString.c	/^static int PushString(char *val)$/;"	f	file:
+PushStruct	stackStruct.c	/^static int PushStruct(structType * val)$/;"	f	file:
+Stack	stack.C	/^Stack::Stack(int size)$/;"	f	class:Stack
+Stack	stack.C	/^Stack::Stack(void)$/;"	f	class:Stack
+Stack	stack.H	/^class Stack {$/;"	c
+__STACKINT_H__	stackInt.h	3;"	d
+__STACKSTRUCT_H__	stackStruct.h	3;"	d
+__STACKSTR_H__	stackString.h	3;"	d
+__STACK_H_CPP__	stack.H	10;"	d
+__STACK_H__	stack.h	7;"	d
+_printStruct	stackStruct.c	/^static void _printStruct(void *_val)$/;"	f	file:
+empty	stack.C	/^int Stack::empty(void)$/;"	f	class:Stack
+full	stack.C	/^int Stack::full(void)$/;"	f	class:Stack
+initStack	stack.C	/^void Stack::initStack(int size)$/;"	f	class:Stack
+initStack	stack.c	/^static void initStack(void)$/;"	f	file:
+main	stack.c	/^int main(int argc, char *argv[])$/;"	f
+playStackInt	stackInt.c	/^int playStackInt(long n)$/;"	f
+playStackString	stackString.c	/^int playStackString(long n)$/;"	f
+playStackStruct	stackStruct.c	/^int playStackStruct(long n)$/;"	f
+pop	stack.C	/^void Stack::pop(symbolT * p)$/;"	f	class:Stack
+printFnc	stackStruct.c	/^    void (*printFnc) (void *);$/;"	m	struct:__anon1	file:
+push	stack.C	/^void Stack::push(symbolT c)$/;"	f	class:Stack
+size	stack.H	/^        int size;$/;"	m	class:Stack
+sp	stack.H	/^        int sp;$/;"	m	class:Stack
+stack	stack.H	/^        void *stack;$/;"	m	class:Stack
+stack	stack.c	/^void **stack;$/;"	v
+stackSize	stack.c	/^int stackSize = MAX_STACK_SIZE;$/;"	v
+str	stackStruct.c	/^    char *str;$/;"	m	struct:__anon1	file:
+stringData	stackString.c	/^static char stringData[] = "abcdefghijklmnopqrstuvwxyz";$/;"	v	file:
+stringData	stackStruct.c	/^static char stringData[] = "abcdefghijklmnopqrstuvwxyz";$/;"	v	file:
+structType	stackStruct.c	/^} structType;$/;"	t	typeref:struct:__anon1	file:
+top	stack.C	/^symbolT Stack::top(void)$/;"	f	class:Stack
+top	stack.c	/^int top = MAX_STACK_SIZE;$/;"	v
+val	stackStruct.c	/^    int val;$/;"	m	struct:__anon1	file:
+~Stack	stack.C	/^Stack::~Stack(void)$/;"	f	class:Stack
