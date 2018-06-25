@@ -24,7 +24,7 @@ class Convertor {
     int isParenthesis(char c);
 
     /// Parse string in and convert it to symbolT
-    char *parseSymbol(char *in, symbolT * symbol);
+    char *parseSymbol(char *in, symbolT &symbol);
 
     public:
     /**

@@ -10,7 +10,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <buffer.H>
-#include <stack.H>
+#include <../stack/stack.H>
+#include <../symbol/symbol.H>
 #include <utility.h>
 #include <convert.H>
 
@@ -99,7 +100,7 @@ int Convertor::isParenthesis(char c)
     in (IN) : pointer of infix buffer\n
     symbol (OUT) - parsed symbol
 */
-char *Convertor::parseSymbol(char *in, symbolT * symbol)
+char *Convertor::parseSymbol(char *in, symbolT &symbol)
 {
     char *c = in;
 
@@ -116,22 +117,24 @@ char *Convertor::parseSymbol(char *in, symbolT * symbol)
 
     // Reaching terminator char
     if (isTerminator(*c)) {
-        symbol->type = _TERMINATOR_;
-        symbol->val = (int)*c;
+        //symbol->type = _TERMINATOR_;
+        //symbol->val = (int)*c;
+        symbol.setType(_TERMINATOR_);
+        symbol.setVal((int)*c);
         return c;
     }
 
     // Parsing Operator
     if (isOperator(*c)) {
-        symbol->type = _OPERATOR_;
-        symbol->val = (int)*c;
+        symbol.setType(_OPERATOR_);
+        symbol.setVal((int)*c);
         return ++c;
     }
 
     // Parsing Parenthesis
     if (isParenthesis(*c)) {
-        symbol->type = _PARENTHESIS_;
-        symbol->val = (int)*c;
+        symbol.setType(_PARENTHESIS_);
+        symbol.setVal((int)*c);
         return ++c;
     }
 
@@ -150,8 +153,8 @@ char *Convertor::parseSymbol(char *in, symbolT * symbol)
             i = i * 10 + v;
         }
 
-        symbol->type = _OPERAND_;
-        symbol->val = i;
+        symbol.setType(_OPERAND_);
+        symbol.setVal(i);
     }
 
     return c;
@@ -172,15 +175,15 @@ char *Convertor::parseSymbol(char *in, symbolT * symbol)
 int Convertor::convertToPostFix(Buffer *buffer)
 {
     char *in = buffer->getInfixBuffer();
-    symbolT symbol, previousSymbol, *post = buffer->getPostfixBuffer();
+    symbolT symbol, previousSymbol, **post = buffer->getPostfixBuffer();
     int j = 0, nOps = 0;
     Stack *stack = new Stack();
 
-    memset(&previousSymbol, 0x0, sizeof(previousSymbol));
+    //memset(&previousSymbol, 0x0, sizeof(previousSymbol));
 
     while (1) {
         // Take out one symbol from infix expression
-        in = parseSymbol(in, &symbol);
+        in = parseSymbol(in, symbol);
 
         if (!in) {
             cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" << "parseSymbol failed" << endl;
@@ -188,7 +191,7 @@ int Convertor::convertToPostFix(Buffer *buffer)
             return -1;
         }
 
-        if (symbol.type == _TERMINATOR_) {
+        if (symbol.IsTerminator()) {
             break;
         }
 
@@ -197,15 +200,15 @@ int Convertor::convertToPostFix(Buffer *buffer)
 #endif
 
         // Check invalid expression in postfix
-        if (symbol.type == previousSymbol.type) {
-            if(IsParenthesis(symbol) && (symbol.val == previousSymbol.val)) {
+        if (symbol.getType() == previousSymbol.getType()) {
+            if(symbol.IsParenthesis() && (symbol.getVal() == previousSymbol.getVal())) {
                 ; // Consecurive parenthesis like (( or )) is acceptable
             } else {
                 ERROR_POSTFIX_EXPRESSION()
                 delete stack;
                 return -1;
             }
-        } else if (IsOperand(previousSymbol) && ((char)symbol.val == '(')) {
+        } else if (previousSymbol.IsOperand() && ((char)symbol.getVal() == '(')) {
             ERROR_POSTFIX_EXPRESSION()
             delete stack;
             return -1;
@@ -213,37 +216,40 @@ int Convertor::convertToPostFix(Buffer *buffer)
 
         previousSymbol = symbol;
 
-        if (symbol.type == _OPERAND_) {
-            post[j++] = symbol;
+        if (symbol.IsOperand()) {
+            *(post[j++]) = symbol;
         } else {
-            if ((char)symbol.val == '(') {
+            if ((char)symbol.getVal() == '(') {
                 stack->push(symbol);
-            } else if ((char)symbol.val == ')') {
+            } else if ((char)symbol.getVal() == ')') {
                 while (1) {
                     symbolT s;
 
                     stack->pop(&s);
-                    if ((char)s.val != '(') {
-                        post[j++] = s;
+                    if ((char)s.getVal() != '(') {
+                        *(post[j++]) = s;
                     } else {
                         break;
                     }
                 }
             } else {
+                symbolT s;
+                stack->top(&s);
                 nOps++;
                 if (stack->empty()) {
                     stack->push(symbol);
-                } else if (precedence((char)symbol.val) >
-                           precedence((char)(stack->top().val))) {
+                } else if (precedence((char)symbol.getVal()) >
+                            precedence((char)(s.getVal()))) {
                     stack->push(symbol);
                 } else {
                     while (1) {
+                        stack->top(&s);
                         if (stack->empty()) {
                             stack->push(symbol);
                             break;
-                        } else if (precedence((char)symbol.val) <=
-                                   precedence((char)(stack->top().val))) {
-                            stack->pop(&post[j++]);
+                        } else if (precedence((char)symbol.getVal()) <=
+                                    precedence((char)(s.getVal()))) {
+                            stack->pop(post[j++]);
                         } else {
                             stack->push(symbol);
                             break;
@@ -255,7 +261,7 @@ int Convertor::convertToPostFix(Buffer *buffer)
     }
 
     while (!stack->empty()) {
-        stack->pop(&post[j++]);
+        stack->pop(post[j++]);
     }
 
     if(nOps == 0) {

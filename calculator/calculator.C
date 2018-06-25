@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <buffer.H>
-#include <stack.H>
+#include <../stack/stack.H>
 #include <utility.h>
 #include <calculator.H>
 
@@ -27,7 +27,7 @@ using namespace std;
 int Calculator::calc(Buffer *buf, int *result)
 {
     int i = 0;
-    symbolT a, b, s, symbol, *post = buf->getPostfixBuffer();
+    symbolT a, b, s, *symbol, **post = buf->getPostfixBuffer();
     Stack *stack;
 
     if(!result || !buf) {
@@ -45,47 +45,47 @@ int Calculator::calc(Buffer *buf, int *result)
     while (1) {
         symbol = post[i++];
 
-        if (IsTerminator(symbol) || IsNone(symbol)) {
-            stack->pop(&symbol);
+        if (symbol->IsTerminator() || symbol->IsNone()) {
+            stack->pop(symbol); // why ?
             break;
         }
 
-        if (IsOperand(symbol)) {
+        if (symbol->IsOperand()) {
 #ifdef DEBUG
-            buf->printPostfixSymbol(symbol);
+            buf->printPostfixSymbol(*symbol);
 #endif
-            stack->push(symbol);
-        } else if (IsOperator(symbol)) {
+            stack->push(*symbol);
+        } else if (symbol->IsOperator()) {
 #ifdef DEBUG
-            buf->printPostfixSymbol(symbol);
+            buf->printPostfixSymbol(*symbol);
 #endif
-            s.type = _OPERAND_;
+            s.setType(_OPERAND_);
             stack->pop(&a);
             stack->pop(&b);
 
-            switch ((char)symbol.val) {
+            switch ((char)symbol->getVal()) {
             case '+':
-                s.val = b.val + a.val;
+                s = b + a;
                 break;
             case '-':
-                s.val = b.val - a.val;
+                s = b - a;
                 break;
             case '*':
-                s.val = b.val * a.val;
+                s = b * a;
                 break;
             case '/':
-                if (a.val == 0) {
+                if (a.getVal() == 0) {
                     cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-                    cout << " divide by zero (" << b.val << "/" << a.val << ")" << endl;
+                    cout << " divide by zero (" << b.getVal() << "/" << a.getVal() << ")" << endl;
                     delete stack;
                     return 0;
                 }
-                s.val = b.val / a.val;
+                s = b / a;
                 break;
             default:
                 cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-                cout << " invalid operator (" << (char)symbol.val << ":" ;
-                cout << symbol.val << ")" << endl;
+                cout << " invalid operator (" << (char)symbol->getVal() << ":" ;
+                cout << symbol->getVal() << ")" << endl;
                 delete stack;
                 return 0;
                 break;
@@ -93,16 +93,16 @@ int Calculator::calc(Buffer *buf, int *result)
 
             stack->push(s);
         } else {
-            buf->printPostfixSymbol(symbol);
+            buf->printPostfixSymbol(*symbol);
             cout << "ERROR [" << __FILE__ << ":" << __LINE__ << "]" ;
-            cout << " invalid symbol(type: " << (char) symbol.type ;
-            cout << ", " << symbol.type << ")" << endl;
+            cout << " invalid symbol(type: " << (char) symbol->getType() ;
+            cout << ", " << symbol->getType() << ")" << endl;
             delete stack;
             return 0;
         }
     }
 
-    *result = symbol.val;
+    *result = symbol->getVal();
     delete stack;
     return 1;
 }

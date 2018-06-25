@@ -11,6 +11,8 @@
 #include <string.h>
 #include <errno.h>
 #include <buffer.H>
+#include <../stack/stack.H>
+#include <../symbol/symbol.H>
 
 using namespace std;
 
@@ -28,10 +30,14 @@ void Buffer::allocBuffers(int size)
         cout << "Oops, infix malloc failed" << endl;
         return;
     }
-    postfix = (symbolT *)malloc(sizeof(symbolT) * size);
+
+    postfix = (symbolT **)malloc(sizeof(symbolT *) * size);
     if(!postfix) {
-        cout << "Oops, postfix malloc failed" << endl;
+        cout << "Oops, postfix malloc1 failed" << endl;
         return;
+    }
+    for(int i = 0; i < size; i++) {
+        postfix[i] = new symbolT();
     }
 
     this->size = size;
@@ -47,7 +53,7 @@ void Buffer::allocBuffers(int size)
 */
 Buffer::Buffer()
 {
-    allocBuffers(MAX_STRING);
+    allocBuffers(MAX_STACK_SIZE);
 }
 
 /**
@@ -76,7 +82,10 @@ Buffer::Buffer(int size)
 Buffer::~Buffer()
 {
     free(infix);
-    free(postfix);
+    for(int i = 0; i < size; i++) {
+        delete postfix[i];
+    }
+    delete postfix;
 }
 
 /**
@@ -89,7 +98,7 @@ Buffer::~Buffer()
 void Buffer::initializeBuffers(void)
 {
     memset(infix, 0x0, (size_t)size);
-    memset(postfix, 0x0, sizeof(symbolT) * size);
+    //memset(postfix, 0x0, sizeof(symbolT) * size);
 }
 
 /**
@@ -166,9 +175,21 @@ void Buffer::printInfixBuffer(void)
     @param
     NONE
 */
-symbolT *Buffer::getPostfixBuffer(void)
+symbolT **Buffer::getPostfixBuffer(void)
 {
     return postfix;
+}
+
+/**
+    @return
+    The size of buffer
+
+    @param
+    NONE
+*/
+int Buffer::getSize(void)
+{
+    return size;
 }
 
 /**
@@ -184,12 +205,8 @@ void Buffer::printPostfixBuffer(void)
 
     cout << "postfix:" << endl;
 
-    while (!(IsTerminator(postfix[idx]) || IsNone(postfix[idx]))) {
-        if (IsOperator(postfix[idx])) {
-            cout << "[" << idx << "]" << (char)postfix[idx].val << endl;
-        } else if (IsOperand(postfix[idx])) {
-            cout << "[" << idx << "]" << postfix[idx].val << endl;
-        }
+    while (!((postfix[idx]->IsTerminator()) || postfix[idx]->IsNone())) {
+        cout << *postfix[idx];
         idx++;
     }
 }
@@ -203,10 +220,10 @@ void Buffer::printPostfixBuffer(void)
 */
 void Buffer::printPostfixSymbol(symbolT s)
 {
-    if (IsOperator(s) || IsParenthesis(s)) {
-        cout << (char)s.val << endl;
-    } else if (IsOperand(s)) {
-        cout << s.val << endl;
+    if (s.IsOperator() || s.IsParenthesis()) {
+        cout << (char)s.getVal() << endl;
+    } else if (s.IsOperand()) {
+        cout << s.getVal() << endl;
     }
 }
 

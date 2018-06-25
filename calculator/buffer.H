@@ -9,25 +9,7 @@
 #ifndef __BUFFER_CPP_H__
 #define __BUFFER_CPP_H__
 
-#define MAX_STRING 1001
-
-#define _NONE_ 0
-#define _OPERAND_ 1
-#define _OPERATOR_ 2
-#define _PARENTHESIS_ 3
-#define _TERMINATOR_ 4
-
-/// structure symbolT
-typedef struct {
-    unsigned char type; ///< indicator (operand or operator)
-    int val; ///< parsed integer value or operator
-} symbolT;
-
-#define IsNone(a) (a.type == _NONE_)
-#define IsOperand(a) (a.type == _OPERAND_)
-#define IsOperator(a) (a.type == _OPERATOR_)
-#define IsParenthesis(a) (a.type == _PARENTHESIS_)
-#define IsTerminator(a) (a.type == _TERMINATOR_)
+#include <../symbol/symbol.H>
 
 /// class Buffer
 class Buffer {
@@ -40,7 +22,7 @@ class Buffer {
     int size;
 
     /// postfix buffer
-    symbolT *postfix;
+    symbolT **postfix;
 
     /// Allocate infix & postfix buffer and fill them by 0x0
     void allocBuffers(int size);
@@ -69,7 +51,10 @@ class Buffer {
     void printInfixBuffer(void);
 
     /// Return postfix buffer
-    symbolT *getPostfixBuffer(void);
+    symbolT **getPostfixBuffer(void);
+
+    /// Return size of buffer
+    int getSize(void);
 
     /// Print postfix buffer
     void printPostfixBuffer(void);

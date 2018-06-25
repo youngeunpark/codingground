@@ -151,7 +151,8 @@ void symbolT::setVal(int v)
     out: standard output stream\n
     s: symbol to print out
 */
-ostream &operator<<(ostream &out, const symbolT &s) {
+ostream &operator<<(ostream &out, const symbolT &s)
+{
     switch(s.type) {
         case _NONE_:
             out << "none:" << endl;
@@ -178,6 +179,89 @@ ostream &operator<<(ostream &out, const symbolT &s) {
     }
 
     return out;
+}
+
+/**
+    @return
+    NONE
+
+    @param
+    out: standard output stream\n
+    s: symbol to print out
+*/
+void symbolT::operator=(const symbolT &s)
+{
+    this->val = s.val;
+    this->type = s.type;
+}
+
+/**
+    @return
+    symbol of a + b
+
+    @param
+    s: right operand of +
+*/
+symbolT symbolT::operator+(const symbolT &s)
+{
+    symbolT t;
+
+    t.val = this->val + s.val;
+
+    return t;
+}
+
+/**
+    @return
+    symbol  of a - b
+
+    @param
+    s: right operand of -
+*/
+symbolT symbolT::operator-(const symbolT &s)
+{
+    symbolT t;
+
+    t.val = this->val - s.val;
+
+    return t;
+}
+
+/**
+    @return
+    symbol  of a * b
+
+    @param
+    s: right operand of *
+*/
+symbolT symbolT::operator*(const symbolT &s)
+{
+    symbolT t;
+
+    t.val = this->val * s.val;
+
+    return t;
+}
+
+/**
+    @return
+    symbol  of a / b
+
+    @param
+    s: right operand of /
+*/
+symbolT symbolT::operator/(const symbolT &s)
+{
+    symbolT t;
+
+    if(s.val == 0) {
+        cout << "Oops, divide by zero" <<endl;
+        return t;
+    } else {
+        t.val = this->val / s.val;
+    }
+
+    return t;
 }
 
 /**

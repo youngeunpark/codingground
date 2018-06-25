@@ -9,7 +9,7 @@
 #ifndef __STACK_H_CPP__
 #define __STACK_H_CPP__
 
-#include <../calculator/buffer.H>
+#include <../symbol/symbol.H>
 
 class Stack {
     private:

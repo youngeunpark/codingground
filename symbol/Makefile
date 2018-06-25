@@ -1,17 +1,17 @@
 
 CPP = g++
-CFLAGS = -I. -g -Werror #-DDEBUG
+CFLAGS = -I. -g -c -Werror#-DDEBUG
 
-all : symbol
+default : libsymbol.a
 
 clean :
-	rm -rf symbol *.o
+	rm -rf symbol *.o *.a
 
-symbol : symbol.C
+libsymbol.a : symbol.C
 	$(CPP) $(CFLAGS) -o $@ $^
 
 doxygen:
-	doxygen *.c *.h *.C *.H
+	doxygen *.C *.H
 
-all: symbol doxygen
+all: libsymbol.a doxygen
 

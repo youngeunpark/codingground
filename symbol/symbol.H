@@ -56,6 +56,21 @@ class symbolT {
     /// Overloading << to display type and val
     friend ostream &operator<<(ostream &out, const symbolT &s);
 
+    /// Overloading = for assignment operation
+    void operator=(const symbolT &s);
+
+    /// Overloading +
+    symbolT operator+(const symbolT &s);
+
+    /// Overloading -
+    symbolT operator-(const symbolT &s);
+
+    /// Overloading *
+    symbolT operator*(const symbolT &s);
+
+    /// Overloading /
+    symbolT operator/(const symbolT &s);
+
     /// Check if type of this symbol is notype
     int IsNone(void);
 

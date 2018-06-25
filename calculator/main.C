@@ -17,16 +17,18 @@ using namespace std;
 
 int main(void)
 {
-    Buffer *buffer = new Buffer();
     Convertor *convertor = new Convertor();
     Calculator *calc = new Calculator();
 
     while (1) {
+        Buffer *buffer = new Buffer();
+
         // Initialize buffers
         buffer->initializeBuffers();
 
         // Read infix expresssion
         if (!buffer->getInfixExpression()) {
+            delete buffer;
             continue;
         }
 
@@ -46,6 +48,8 @@ int main(void)
                 cout << buffer->getInfixBuffer() << " = " << result << endl;
             }
         }
+
+        delete buffer;
     }
 
     delete convertor;

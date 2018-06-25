@@ -47,7 +47,8 @@ int calc(int *result)
 
         if (IsOperand(symbol)) {
 #ifdef DEBUG
-            printPostfixSymbol(symbol);
+            //printPostfixSymbol(symbol);
+            cout << symbol;
 #endif
             push(symbol);
         } else if (IsOperator(symbol)) {
