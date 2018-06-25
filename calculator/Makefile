@@ -1,20 +1,21 @@
 
-CC = gcc
-CPP = g++
-CFLAGS = -I. -g -Werror #-DDEBUG
+include ../mkdefs
 
 default: calculator calculatorCpp
 
 calculator: main.c calculator.c buffer.c convert.c stack.c
 	$(CC) -o $@ \
 	$(CFLAGS) \
-	$^
+	$^ \
+	$(CINCLUDE)
 
-calculatorCpp: main.C calculator.C buffer.C convert.C
+calculatorCpp: main.C calculator.C
 	$(CPP) -o $@ \
 	$(CFLAGS) \
 	$^ \
-	-lstack -lsymbol -L../stack -L../symbol
+	$(CINCLUDE) \
+	$(LINCLUDE) \
+	-lstack -lsymbol -lconvert -lbuffer
 
 clean:
 	rm -rf calculator calculatorCpp *.o

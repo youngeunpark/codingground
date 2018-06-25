@@ -1,22 +1,22 @@
 
-CC = gcc
-CPP = g++
-CFLAGS = -I. -g -Werror #-DDEBUG
-CLIBFLAGS = -I. -g -Werror -c #-DDEBUG
+include ../mkdefs
 
-default : stack libstack.a
+default : libstack.a stack
 
 clean :
-	rm -rf stack Stack *.o *.a
-
-stack : stack.c stackInt.c stackString.c stackStruct.c
-	$(CC) $(CFLAGS) -o $@ $^
+	rm -rf *.o *.a stack
 
 libstack.a : stack.C
-	$(CC) $(CLIBFLAGS) -o $@ $^
+	$(CC) $(CLIBFLAGS) -o $@ $^ \
+	$(CINCLUDE)
+
+stack : stack.c stackInt.c stackString.c stackStruct.c
+	$(CC) $(CFLAGS) -o $@ \
+	$^ \
+	$(CINCLUDE)
 
 doxygen:
 	doxygen *.c *.h *.C *.H
 
-all: stack stacklib.a doxygen
+all: libstack.a stack doxygen
 

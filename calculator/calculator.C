@@ -9,7 +9,6 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-#include <buffer.H>
 #include <../stack/stack.H>
 #include <utility.h>
 #include <calculator.H>

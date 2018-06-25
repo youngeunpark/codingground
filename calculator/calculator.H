@@ -9,7 +9,7 @@
 #ifndef __CALC_CPP_H__
 #define __CALC_CPP_H__
 
-#include <buffer.H>
+#include <../buffer/buffer.H>
 
 /// Class Calculator
 class Calculator {

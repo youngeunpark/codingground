@@ -9,10 +9,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-#include <buffer.H>
 #include <../stack/stack.H>
 #include <../symbol/symbol.H>
-#include <utility.h>
+#include <../calculator/utility.h>
 #include <convert.H>
 
 using namespace std;

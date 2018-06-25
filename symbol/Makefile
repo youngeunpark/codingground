@@ -1,14 +1,13 @@
-
-CPP = g++
-CFLAGS = -I. -g -c -Werror#-DDEBUG
+include ../mkdefs
 
 default : libsymbol.a
 
-clean :
+clean:
 	rm -rf symbol *.o *.a
 
 libsymbol.a : symbol.C
-	$(CPP) $(CFLAGS) -o $@ $^
+	$(CPP) $(CLIBFLAGS) -o $@ $^ \
+	$(CINCLUDE)
 
 doxygen:
 	doxygen *.C *.H

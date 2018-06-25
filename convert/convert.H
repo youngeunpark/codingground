@@ -9,7 +9,7 @@
 #ifndef __CONVERT_CPP_H__
 #define __CONVERT_CPP_H__
 
-#include <buffer.H>
+#include <../buffer/buffer.H>
 
 class Convertor {
     private:

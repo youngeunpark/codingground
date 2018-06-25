@@ -1,0 +1,28 @@
+
+# Definitions
+ROOT = /home/youngeunpark/codingground
+
+# Toolchain
+CC = gcc
+CPP = g++
+
+# Path for headers
+CINCLUDE = -I.
+CINCLUDE += -I$(ROOT)/symbol
+CINCLUDE += -I$(ROOT)/stack
+CINCLUDE += -I$(ROOT)/convert
+CINCLUDE += -I$(ROOT)/buffer
+
+# Path for libraries
+LINCLUDE += -L$(ROOT)/symbol
+LINCLUDE += -L$(ROOT)/stack
+LINCLUDE += -L$(ROOT)/convert
+LINCLUDE += -L$(ROOT)/buffer
+
+# Build options
+CFLAGS = -g -Werror
+CLIBFLAGS = -g -c -Werror
+
+# Include if debug is needed
+DEBUG = -DDEBUG
+

@@ -7,8 +7,8 @@
 */
 
 #include <iostream>
-#include <buffer.H>
-#include <convert.H>
+#include <../buffer/buffer.H>
+#include <../convert/convert.H>
 #include <calculator.H>
 
 using namespace std;
