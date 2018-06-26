@@ -23,6 +23,9 @@ LINCLUDE += -L$(ROOT)/buffer
 CFLAGS = -g -Werror
 CLIBFLAGS = -g -c -Werror
 
+CFLAGS_SPLINT =
+CLIBFLAGS_SPLINT = -c
+
 # Include if debug is needed
 DEBUG = -DDEBUG
 

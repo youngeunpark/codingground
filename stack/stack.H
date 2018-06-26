@@ -28,6 +28,7 @@ class Stack {
 #define STACK_TYPE_SYMBOL   1
 #define STACK_TYPE_INT      2
 #define STACK_TYPE_CHAR     3
+#define STACK_TYPE_STRING   4
 
         /// data type
         int type;
@@ -36,6 +37,7 @@ class Stack {
         void initStack(symbolT v, size_t size);
         void initStack(int v, size_t size);
         void initStack(char v, size_t size);
+        void initStack(const char *v, size_t size);
 
     public:
 
@@ -52,6 +54,9 @@ class Stack {
         /// Constructor for char type with default stack size
         Stack(char v);
 
+        /// Constructor for string type with default stack size
+        Stack(const char *v);
+
         /// Constructor for symbolT type with given stack size
         Stack(symbolT v, int size);
 
@@ -60,6 +65,9 @@ class Stack {
 
         /// Constructor for char type with given stack size
         Stack(char v, int size);
+
+        /// Constructor for string type with given stack size
+        Stack(const char *v, int size);
 
         /// Destructor
         ~Stack();
@@ -74,6 +82,9 @@ class Stack {
         /// Push symbol onto stack for char type
         int push(char c);
 
+        /// Push symbol onto stack for string type
+        int push(const char *s);
+
         /// pop functions
         /// Pop symbol from stack for symbolT type
         int pop(symbolT *p);
@@ -83,6 +94,9 @@ class Stack {
 
         /// Pop symbol from stack for char type
         int pop(char *c);
+
+        /// Pop symbol from stack for string type
+        int pop(char **s);
 
         /// top functions
         /// Peek symbol on stack top for symbolT type
@@ -94,11 +108,17 @@ class Stack {
         /// Peek symbol on stack top for char type
         int top(char *c);
 
+        /// Peek symbol on stack top for string type
+        int top(char **s);
+
         /// Check if stack is empty
         int empty(void);
 
         /// Check if stack is full
         int full(void);
+
+        /// Return data type of stack
+        int getType(void);
 
         /// print function
         void print(void);
