@@ -5,3 +5,6 @@
 
 obj-m := my_mod.o
 
+doxygen:
+	doxygen *.c *.h
+
