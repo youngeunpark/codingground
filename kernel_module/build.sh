@@ -1,4 +1,5 @@
 
+# Build source codes to make it kernel module along with kernel specified by -C
 make -C /usr/src/linux-headers-4.15.0-23-generic SUBDIRS=$PWD modules
 
 # Create signing key
