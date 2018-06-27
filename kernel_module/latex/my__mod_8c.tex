@@ -8,14 +8,19 @@ Test codes to study kernel module.
 {\ttfamily \#include $<$linux/init.\+h$>$}\newline
 {\ttfamily \#include $<$linux/module.\+h$>$}\newline
 {\ttfamily \#include $<$linux/kernel.\+h$>$}\newline
-Include dependency graph for my\+\_\+mod.\+c\+:
-\nopagebreak
+Include dependency graph for my\+\_\+mod.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=332pt]{my__mod_8c__incl}
 \end{center}
 \end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{my__mod_8c_a8b5839f71a3b6e7d64b2d5e9967e3dd1}\label{my__mod_8c_a8b5839f71a3b6e7d64b2d5e9967e3dd1}} 
+\#define {\bfseries B\+U\+F\+\_\+\+L\+EN}~100
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,7 +38,30 @@ Include dependency graph for my\+\_\+mod.\+c\+:
 \begin{DoxyCompactList}\small\item\em Macro for the author of this module. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{my__mod_8c_a79015fa990f0d83ee6cf43f4a2440c53}\label{my__mod_8c_a79015fa990f0d83ee6cf43f4a2440c53}} 
 \hyperlink{my__mod_8c_a79015fa990f0d83ee6cf43f4a2440c53}{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON} (\char`\"{}Test module to learn Kernel module A\+PI\char`\"{})
-\begin{DoxyCompactList}\small\item\em Macro for the description of this module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Macro for the description of this module. \end{DoxyCompactList}\item 
+\hyperlink{my__mod_8c_aed0ed9139aafb6bc3948e23a4ab3209d}{module\+\_\+param} (m\+\_\+param\+\_\+int, int, 0644)
+\begin{DoxyCompactList}\small\item\em Module parameters definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{my__mod_8c_ad99b62cb2006d9b3c8b48fa516f9225c}\label{my__mod_8c_ad99b62cb2006d9b3c8b48fa516f9225c}} 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+R\+M\+\_\+\+D\+E\+SC} (m\+\_\+param\+\_\+int, \char`\"{}Module parameter of int type, m\+\_\+param\+\_\+int\char`\"{})
+\item 
+\mbox{\Hypertarget{my__mod_8c_a1bb64350a6b0dcbb166d5e1161d00c82}\label{my__mod_8c_a1bb64350a6b0dcbb166d5e1161d00c82}} 
+{\bfseries module\+\_\+param} (m\+\_\+param\+\_\+char, byte, 0644)
+\item 
+\mbox{\Hypertarget{my__mod_8c_a5b2c4451595f09b6008d860babc22e2d}\label{my__mod_8c_a5b2c4451595f09b6008d860babc22e2d}} 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+R\+M\+\_\+\+D\+E\+SC} (m\+\_\+param\+\_\+char, \char`\"{}Module parameter of byte type, m\+\_\+param\+\_\+char\char`\"{})
+\item 
+\mbox{\Hypertarget{my__mod_8c_a199aa628dd6403df7efe5e8d7b7867db}\label{my__mod_8c_a199aa628dd6403df7efe5e8d7b7867db}} 
+{\bfseries module\+\_\+param} (m\+\_\+param\+\_\+str, charp, 0644)
+\item 
+\mbox{\Hypertarget{my__mod_8c_a639d6cc5bdc6b03f8ec60b80777f7ce3}\label{my__mod_8c_a639d6cc5bdc6b03f8ec60b80777f7ce3}} 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+R\+M\+\_\+\+D\+E\+SC} (m\+\_\+param\+\_\+str, \char`\"{}Module parameter of charp, m\+\_\+param\+\_\+str\char`\"{})
+\item 
+\mbox{\Hypertarget{my__mod_8c_ad4e0ebe66de7180cb8b8fc1344f0b02c}\label{my__mod_8c_ad4e0ebe66de7180cb8b8fc1344f0b02c}} 
+{\bfseries module\+\_\+param\+\_\+string} (m\+\_\+param\+\_\+strbuf, m\+\_\+param\+\_\+strbuf, B\+U\+F\+\_\+\+L\+EN, 0644)
+\item 
+\mbox{\Hypertarget{my__mod_8c_ac6bbec4b0dac02b5fd7f92fa016d1108}\label{my__mod_8c_ac6bbec4b0dac02b5fd7f92fa016d1108}} 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+P\+A\+R\+M\+\_\+\+D\+E\+SC} (m\+\_\+param\+\_\+strbuf, \char`\"{}Module parameter of string, m\+\_\+param\+\_\+strbuf\char`\"{})
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -45,3 +73,19 @@ Test codes to study kernel module.
 \begin{DoxyAuthor}{Author}
 Youngeun Park 
 \end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{my__mod_8c_aed0ed9139aafb6bc3948e23a4ab3209d}\label{my__mod_8c_aed0ed9139aafb6bc3948e23a4ab3209d}} 
+\index{my\+\_\+mod.\+c@{my\+\_\+mod.\+c}!module\+\_\+param@{module\+\_\+param}}
+\index{module\+\_\+param@{module\+\_\+param}!my\+\_\+mod.\+c@{my\+\_\+mod.\+c}}
+\subsubsection{\texorpdfstring{module\+\_\+param()}{module\_param()}}
+{\footnotesize\ttfamily module\+\_\+param (\begin{DoxyParamCaption}\item[{m\+\_\+param\+\_\+int}]{,  }\item[{int}]{,  }\item[{0644}]{ }\end{DoxyParamCaption})}
+
+
+
+Module parameters definitions. 
+
+Perms should be 0644. Error is caused with 0777, Need to investigate...
+
+insmod my\+\_\+mod.\+ko m\+\_\+param\+\_\+int=100 m\+\_\+param\+\_\+char=66 m\+\_\+param\+\_\+str=\char`\"{}panzee\char`\"{} m\+\_\+param\+\_\+strbuf=\char`\"{}hello\char`\"{} 

@@ -59,6 +59,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">my_mod.c File Reference</div>  </div>
@@ -74,10 +75,14 @@ $(function() {
 Include dependency graph for my_mod.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="my__mod_8c__incl.png" border="0" usemap="#my__mod_8c" alt=""/></div>
-<map name="my__mod_8c" id="my__mod_8c">
-</map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8b5839f71a3b6e7d64b2d5e9967e3dd1"><td class="memItemLeft" align="right" valign="top"><a id="a8b5839f71a3b6e7d64b2d5e9967e3dd1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUF_LEN</b>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a8b5839f71a3b6e7d64b2d5e9967e3dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aaee9b4944367015e0fc61caadc10c0ca"><td class="memItemLeft" align="right" valign="top"><a id="aaee9b4944367015e0fc61caadc10c0ca"></a>
@@ -100,12 +105,75 @@ Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__mod_8c.html#a79015fa990f0d83ee6cf43f4a2440c53">MODULE_DESCRIPTION</a> (&quot;Test module to learn Kernel module API&quot;)</td></tr>
 <tr class="memdesc:a79015fa990f0d83ee6cf43f4a2440c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for the description of this module. <br /></td></tr>
 <tr class="separator:a79015fa990f0d83ee6cf43f4a2440c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0ed9139aafb6bc3948e23a4ab3209d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__mod_8c.html#aed0ed9139aafb6bc3948e23a4ab3209d">module_param</a> (m_param_int, int, 0644)</td></tr>
+<tr class="memdesc:aed0ed9139aafb6bc3948e23a4ab3209d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module parameters definitions.  <a href="#aed0ed9139aafb6bc3948e23a4ab3209d">More...</a><br /></td></tr>
+<tr class="separator:aed0ed9139aafb6bc3948e23a4ab3209d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99b62cb2006d9b3c8b48fa516f9225c"><td class="memItemLeft" align="right" valign="top"><a id="ad99b62cb2006d9b3c8b48fa516f9225c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MODULE_PARM_DESC</b> (m_param_int, &quot;Module parameter of int type, m_param_int&quot;)</td></tr>
+<tr class="separator:ad99b62cb2006d9b3c8b48fa516f9225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb64350a6b0dcbb166d5e1161d00c82"><td class="memItemLeft" align="right" valign="top"><a id="a1bb64350a6b0dcbb166d5e1161d00c82"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>module_param</b> (m_param_char, byte, 0644)</td></tr>
+<tr class="separator:a1bb64350a6b0dcbb166d5e1161d00c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2c4451595f09b6008d860babc22e2d"><td class="memItemLeft" align="right" valign="top"><a id="a5b2c4451595f09b6008d860babc22e2d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MODULE_PARM_DESC</b> (m_param_char, &quot;Module parameter of byte type, m_param_char&quot;)</td></tr>
+<tr class="separator:a5b2c4451595f09b6008d860babc22e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199aa628dd6403df7efe5e8d7b7867db"><td class="memItemLeft" align="right" valign="top"><a id="a199aa628dd6403df7efe5e8d7b7867db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>module_param</b> (m_param_str, charp, 0644)</td></tr>
+<tr class="separator:a199aa628dd6403df7efe5e8d7b7867db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639d6cc5bdc6b03f8ec60b80777f7ce3"><td class="memItemLeft" align="right" valign="top"><a id="a639d6cc5bdc6b03f8ec60b80777f7ce3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MODULE_PARM_DESC</b> (m_param_str, &quot;Module parameter of charp, m_param_str&quot;)</td></tr>
+<tr class="separator:a639d6cc5bdc6b03f8ec60b80777f7ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e0ebe66de7180cb8b8fc1344f0b02c"><td class="memItemLeft" align="right" valign="top"><a id="ad4e0ebe66de7180cb8b8fc1344f0b02c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>module_param_string</b> (m_param_strbuf, m_param_strbuf, BUF_LEN, 0644)</td></tr>
+<tr class="separator:ad4e0ebe66de7180cb8b8fc1344f0b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bbec4b0dac02b5fd7f92fa016d1108"><td class="memItemLeft" align="right" valign="top"><a id="ac6bbec4b0dac02b5fd7f92fa016d1108"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MODULE_PARM_DESC</b> (m_param_strbuf, &quot;Module parameter of string, m_param_strbuf&quot;)</td></tr>
+<tr class="separator:ac6bbec4b0dac02b5fd7f92fa016d1108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Test codes to study kernel module. </p>
 <dl class="section date"><dt>Date</dt><dd>2018/06/27 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Youngeun Park </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="aed0ed9139aafb6bc3948e23a4ab3209d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0ed9139aafb6bc3948e23a4ab3209d">&#9670;&nbsp;</a></span>module_param()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">module_param </td>
+          <td>(</td>
+          <td class="paramtype">m_param_int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0644&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Module parameters definitions. </p>
+<p>Perms should be 0644. Error is caused with 0777, Need to investigate...</p>
+<p>insmod my_mod.ko m_param_int=100 m_param_char=66 m_param_str="panzee" m_param_strbuf="hello" </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
