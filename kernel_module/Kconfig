@@ -1,0 +1,10 @@
+#
+# my_mod device configuration
+#
+
+config MYMOD
+	tristate "My Mod"
+    default m
+	help
+	  This driver is for demonstration of kernel modeul
+
